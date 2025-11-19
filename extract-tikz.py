@@ -34,29 +34,39 @@ def create_standalone_tex(diagram, index, output_dir):
 def compile_to_svg(tex_file, pdflatex_path):
     """Compile LaTeX to PDF then convert to SVG"""
     base_name = tex_file.replace('.tex', '')
+    work_dir = os.path.dirname(tex_file)
+    tex_basename = os.path.basename(tex_file)
     
     # Compile to PDF
-    subprocess.run([pdflatex_path, '-interaction=nonstopmode', tex_file],
+    subprocess.run([pdflatex_path, '-interaction=nonstopmode', tex_basename],
                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
-                   cwd=os.path.dirname(tex_file))
+                   cwd=work_dir)
     
     pdf_file = base_name + '.pdf'
     svg_file = base_name + '.svg'
     
     # Convert PDF to SVG using pdf2svg or dvisvgm
     if os.path.exists(pdf_file):
-        # Try pdf2svg first
-        try:
-            subprocess.run(['pdf2svg', pdf_file, svg_file],
-                          check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        except (subprocess.CalledProcessError, FileNotFoundError):
-            # Fallback to dvisvgm via PDF
+        # Try to find pdf2svg
+        pdf2svg_cmd = None
+        for path in ['/usr/local/bin/pdf2svg', '/opt/homebrew/bin/pdf2svg', 'pdf2svg']:
             try:
-                subprocess.run(['dvisvgm', '--pdf', pdf_file, '-o', svg_file],
-                              check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                subprocess.run([path, '--version'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                pdf2svg_cmd = path
+                break
             except (subprocess.CalledProcessError, FileNotFoundError):
-                print(f"Warning: Could not convert {pdf_file} to SVG. Install pdf2svg or dvisvgm.")
+                continue
+        
+        if pdf2svg_cmd:
+            try:
+                subprocess.run([pdf2svg_cmd, pdf_file, svg_file],
+                              check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            except subprocess.CalledProcessError:
+                print(f"Warning: Could not convert {pdf_file} to SVG.")
                 return None
+        else:
+            print(f"Warning: pdf2svg not found. Install with: brew install pdf2svg")
+            return None
     
     return svg_file if os.path.exists(svg_file) else None
 
