@@ -63,8 +63,6 @@ pandoc "$LATEX_SOURCE" \
   --toc \
   --toc-depth=2 \
   --css=style.css \
-  --metadata title="The Uniform (Co-Irreducible) Dimension of Rings and Modules" \
-  --metadata author="Sorin Bogde" \
   -o docs/index.html
 
 echo "✅ HTML generated: docs/index.html"

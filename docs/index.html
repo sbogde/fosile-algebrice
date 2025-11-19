@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="Sorin Bogde" />
-  <title>The Uniform (Co-Irreducible) Dimension of Rings and Modules</title>
+  <meta name="author" content="Coordonator ştiinţific: Prof. Dr. Tiberiu Dumitrescu Student: Sorin Bogde" />
+  <title>DIMENSIUNEA COIREDUCTIBILĂ A INELELOR ŞI MODULELOR</title>
   <style>
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -32,9 +32,11 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">The Uniform (Co-Irreducible) Dimension of Rings and
-Modules</h1>
-<p class="author">Sorin Bogde</p>
+<h1 class="title">DIMENSIUNEA COIREDUCTIBILĂ A INELELOR ŞI
+MODULELOR</h1>
+<p class="author">Coordonator ştiinţific: Prof. Dr. Tiberiu
+Dumitrescu<br />
+Student: Sorin Bogde</p>
 <p class="date">Universitatea Bucureşti, Facultatea de Matematică<br />
 1999</p>
 </header>
@@ -921,7 +923,191 @@ Fie <span class="math inline">\(\mathfrak{S} = \{ L \leq M ; \; N
 class="math inline">\(\mathfrak{S}\)</span> cu relaţia de ordine
 incluziunea. <span class="math inline">\(\mathfrak{S} \neq
 \varnothing\)</span> deoarece <span class="math inline">\(N \in
-\mathfrak{S}\)</span>. ◻</p>
+\mathfrak{S}\)</span>. Fie <span
+class="math inline">\((L_\lambda)_{\lambda \in \Lambda}\)</span> o
+familie total ordonată de elemente din <span
+class="math inline">\(\mathfrak{S}\)</span> şi <span
+class="math display">\[L := \bigcup_{\lambda \in \Lambda}
+L_\lambda.\]</span> Evident <span class="math inline">\(L \leq
+M_R\)</span>.</p>
+<p>Fie <span class="math inline">\(x \in L \setminus \{0\}\)</span>.
+Atunci există <span class="math inline">\(\lambda_0 \in \Lambda\)</span>
+cu <span class="math inline">\(x \in L_{\lambda_0}\)</span>. Cum <span
+class="math inline">\(N\)</span> este esenţial în <span
+class="math inline">\(L_{\lambda_0}\)</span>, rezultă că există <span
+class="math inline">\(r \in R\)</span> astfel încât <span
+class="math inline">\(xr \in N\)</span> şi <span
+class="math inline">\(xr \neq 0\)</span>, de unde obţinem că <span
+class="math inline">\(L\)</span> este extensie esenţială a lui <span
+class="math inline">\(N\)</span>. Deci <span
+class="math inline">\(\mathfrak{S}\)</span> este inductivă şi, conform
+lemei lui Zorn, <span class="math inline">\(\mathfrak{S}\)</span> admite
+un element maximal <span class="math inline">\(Q\)</span> care satisface
+condiţiile cerute. ◻</p>
+</div>
+<div class="definition">
+<p><strong>Definiţie 2.11</strong>. Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul la dreapta şi <span
+class="math inline">\(N \leq M_R\)</span>. Un submodul <span
+class="math inline">\(K \leq M_R\)</span> se numeşte <em>complement</em>
+al lui <span class="math inline">\(N\)</span> în <span
+class="math inline">\(M\)</span> dacă <span
+class="math inline">\(K\)</span> este un submodul maximal al lui <span
+class="math inline">\(M\)</span> cu proprietatea că <span
+class="math inline">\(K \cap N = 0\)</span>. Un submodul <span
+class="math inline">\(K \leq M_R\)</span> se numeşte <em>submodul
+complement al lui <span class="math inline">\(M\)</span></em> dacă
+există <span class="math inline">\(N \leq M_R\)</span> astfel încât
+<span class="math inline">\(K\)</span> este complement al lui <span
+class="math inline">\(N\)</span> în <span
+class="math inline">\(M\)</span>.</p>
+</div>
+<div class="remark">
+<p><em>Observaţie 2.12</em>. Mulţimea <span
+class="math display">\[\widetilde{\mathfrak{S}}
+  = \{\,L \leq M_R \mid N \cap L = 0\,\}\]</span> este inductivă şi,
+aplicând lema lui Zorn, rezultă că există un complement al lui <span
+class="math inline">\(N\)</span> în <span
+class="math inline">\(M\)</span>. În particular, <span
+class="math inline">\(0\)</span> şi <span
+class="math inline">\(M\)</span> sunt submodule complement ale lui <span
+class="math inline">\(M\)</span>.</p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 2.13</strong>. <em>Fie <span
+class="math inline">\(M_R\)</span>, <span class="math inline">\(N \leq
+M_R\)</span> şi <span class="math inline">\(K \leq M_R\)</span>, <span
+class="math inline">\(K\)</span> un complement al lui <span
+class="math inline">\(N\)</span> în <span
+class="math inline">\(M\)</span>. Există un complement <span
+class="math inline">\(Q\)</span> al lui <span
+class="math inline">\(K\)</span> în <span
+class="math inline">\(M\)</span> astfel încât <span
+class="math inline">\(N \subseteq Q\)</span>. Mai mult, <span
+class="math inline">\(Q\)</span> este o extensie esenţială maximală a
+lui <span class="math inline">\(N\)</span> în <span
+class="math inline">\(M\)</span>.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Se observă uşor că mulţimea <span
+class="math display">\[\widetilde{\mathfrak{S}}
+  = \{\,L \leq M_R \mid K \cap L = 0,\; N \subseteq L\,\}\]</span> este
+inductivă şi lema lui Zorn asigură existenţa lui <span
+class="math inline">\(Q\)</span>.</p>
+<p>Fie <span class="math inline">\(L\)</span> un submodul nenul al lui
+<span class="math inline">\(Q\)</span> astfel încât <span
+class="math inline">\(L \cap N = 0\)</span>. Fie <span
+class="math inline">\(K_1 = L + K\)</span>. Este clar că <span
+class="math inline">\(K \subseteq K_1\)</span>. Dacă <span
+class="math inline">\(x \in N \cap (L + K)\)</span>, atunci <span
+class="math inline">\(x = y + z\)</span> cu <span
+class="math inline">\(y \in L\)</span>, <span class="math inline">\(z
+\in K\)</span>. Dar <span class="math inline">\(z = x - y \in
+Q\)</span>. Cum <span class="math inline">\(Q \cap K = 0\)</span>,
+rezultă <span class="math inline">\(z = 0\)</span> şi deci <span
+class="math inline">\(x = y\)</span>. Din egalitatea <span
+class="math inline">\(L \cap N = 0\)</span> deducem <span
+class="math inline">\(x = y = 0\)</span> şi deci <span
+class="math inline">\(N \cap (L + K) = 0\)</span>, ceea ce contrazice
+faptul că <span class="math inline">\(K\)</span> este un complement al
+lui <span class="math inline">\(N\)</span> în <span
+class="math inline">\(M\)</span>. Obţinem <span class="math inline">\(L
+\cap N \neq 0\)</span> pentru orice <span class="math inline">\(0 \neq L
+\leq Q\)</span>, de unde <span class="math inline">\(Q\)</span> este
+extensie esenţială a lui <span class="math inline">\(N\)</span>.</p>
+<p>Presupunem că există <span class="math inline">\(Q&#39; \leq
+M_R\)</span> cu <span class="math inline">\(N \trianglelefteq
+Q&#39;\)</span> şi <span class="math inline">\(Q \subsetneq
+Q&#39;\)</span>. Cum <span class="math inline">\(Q&#39;\)</span> este
+complement al lui <span class="math inline">\(K\)</span>, rezultă <span
+class="math inline">\(Q&#39; \cap K \neq 0\)</span>. Dar <span
+class="math inline">\(N \cap (Q&#39; \cap K) = 0\)</span> şi <span
+class="math inline">\(0 \neq Q&#39; \cap K \leq Q&#39;\)</span>,
+contradicţie cu <span class="math inline">\(N \trianglelefteq
+Q&#39;\)</span>. Rezultă că <span class="math inline">\(Q\)</span> este
+extensie esenţială maximală a lui <span class="math inline">\(N\)</span>
+în <span class="math inline">\(M\)</span>. ◻</p>
+</div>
+<div class="definition">
+<p><strong>Definiţie 2.14</strong>. Un submodul <span
+class="math inline">\(N\)</span> al lui <span
+class="math inline">\(M_R\)</span> se numeşte <em>închis</em> dacă <span
+class="math inline">\(N\)</span> nu are nicio extensie esenţială în
+<span class="math inline">\(M\)</span> proprie (diferită de <span
+class="math inline">\(N\)</span>).</p>
+</div>
+<div class="corollary">
+<p><strong>Corolar 2.15</strong>. <em>Fie <span
+class="math inline">\(M_R\)</span> un <span
+class="math inline">\(R\)</span>-modul. Submodulele complement ale lui
+<span class="math inline">\(M\)</span> coincid cu submodulele închise
+ale lui <span class="math inline">\(M\)</span>.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Din 1.13 rezultă imediat că orice submodul închis al
+lui <span class="math inline">\(M\)</span> este un submodul complement
+al lui <span class="math inline">\(M\)</span>.</p>
+<p>Invers, fie <span class="math inline">\(K\)</span> un submodul
+complement al lui <span class="math inline">\(M_R\)</span>. Rezultă că
+există <span class="math inline">\(N \leq M_R\)</span> astfel încât
+<span class="math inline">\(K\)</span> este un complement al lui <span
+class="math inline">\(N\)</span> în <span
+class="math inline">\(M\)</span>. Presupunem că <span
+class="math inline">\(K\)</span> are o extensie esenţială în <span
+class="math inline">\(M\)</span> proprie, adică există <span
+class="math inline">\(K&#39; \leq M_R\)</span> cu <span
+class="math inline">\(K \trianglelefteq K&#39;\)</span> şi <span
+class="math inline">\(K \subsetneq K&#39;\)</span>. Atunci <span
+class="math inline">\(K&#39; \cap N \neq 0\)</span>, din maximalitatea
+lui <span class="math inline">\(K\)</span>, iar cum <span
+class="math inline">\(K \trianglelefteq K&#39;\)</span>, rezultă că
+<span class="math display">\[K \cap K&#39; \cap N \neq 0,\]</span>
+contradicţie. ◻</p>
+</div>
+<div class="corollary">
+<p><strong>Corolar 2.16</strong>. <em>Fie <span
+class="math inline">\(N\)</span> un submodul al lui <span
+class="math inline">\(M_R\)</span>. Dacă <span
+class="math inline">\(K\)</span> este un complement al lui <span
+class="math inline">\(N\)</span> în <span
+class="math inline">\(M\)</span>, atunci:</em></p>
+<ol>
+<li><p><em><span class="math inline">\((N + K) \trianglelefteq
+M_R\)</span>.</em></p></li>
+<li><p><em>Morfismul canonic <span class="math inline">\(\pi_K \circ i_N
+: N \to M/K\)</span> este monomorfism esenţial.</em></p></li>
+</ol>
+</div>
+<div class="proof">
+<p><em>Proof.</em> (1) Fie <span class="math inline">\(x \in M \setminus
+\{0\}\)</span>. Dacă <span class="math inline">\(x \notin K\)</span>,
+atunci <span class="math inline">\(K + Rx \neq K\)</span> şi deci <span
+class="math inline">\(N \cap (K + Rx) \neq 0\)</span>. Fie <span
+class="math inline">\(y \in N \cap (K + Rx)\)</span>, <span
+class="math inline">\(y \neq 0\)</span>. Există <span
+class="math inline">\(z \in K\)</span>, <span class="math inline">\(r
+\in R\)</span> cu <span class="math inline">\(y = z + rx\)</span>. Dacă
+<span class="math inline">\(rx = 0\)</span>, atunci <span
+class="math inline">\(y = z\)</span> şi cum <span
+class="math inline">\(N \cap K = 0\)</span> rezultă <span
+class="math inline">\(y = 0\)</span>, contradicţie. Deci <span
+class="math inline">\(rx \neq 0\)</span> şi, cum <span
+class="math inline">\(rx = y - z\)</span>, obţinem <span
+class="math inline">\(rx \in N + K\)</span>, ceea ce ne arată că <span
+class="math inline">\((N + K) \trianglelefteq M_R\)</span>.</p>
+<p>(2) <span class="math inline">\(\mathrm{Im}(\pi_K \circ i_N) = (N +
+K)/K\)</span>. Fie <span class="math inline">\(L/K\)</span> un submodul
+nenul al lui <span class="math inline">\(M/K\)</span>. Atunci <span
+class="math display">\[\frac{N + K}{K} \cap \frac{L}{K}
+   = \frac{(N + K) \cap L}{K}
+   = \frac{N \cap L + K}{K}.\]</span> Cum <span
+class="math inline">\(K\)</span> este un complement al lui <span
+class="math inline">\(N\)</span>, rezultă că <span
+class="math inline">\(N \cap L \neq 0\)</span> şi deci <span
+class="math display">\[\frac{N \cap L + K}{K} \neq 0,\]</span> ceea ce
+ne arată că <span class="math inline">\(\pi_K \circ i_N\)</span> este
+monomorfism esenţial. ◻</p>
 </div>
 </body>
 </html>
