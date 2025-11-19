@@ -59,10 +59,12 @@ echo ""
 echo "Converting LaTeX to HTML with pandoc..."
 pandoc "$LATEX_SOURCE" \
   --standalone \
-  --mathjax \
+  --mathjax=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js \
   --toc \
   --toc-depth=2 \
   --css=style.css \
+  --from=latex+raw_tex \
+  --metadata header-includes='<script src="https://tikzjax.com/v1/tikzjax.js"></script>' \
   -o docs/index.html
 
 echo "✅ HTML generated: docs/index.html"
