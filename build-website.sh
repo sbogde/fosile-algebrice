@@ -57,6 +57,11 @@ mkdir -p docs
 echo "✅ Directory created"
 echo ""
 
+# Extract and compile TikZ diagrams to SVG
+echo "Extracting TikZ diagrams..."
+python3 extract-tikz.py "$LATEX_SOURCE" "$PDFLATEX_PATH"
+echo ""
+
 # Compile PDF (in the source directory)
 echo "Compiling LaTeX to PDF..."
 cd ../antiques-roadshow-algebra-ro
