@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Sorin Bogde" />
+  <title>The Uniform (Co-Irreducible) Dimension of Rings and Modules</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">The Uniform (Co-Irreducible) Dimension of Rings and
+Modules</h1>
+<p class="author">Sorin Bogde</p>
+<p class="date">Universitatea Bucureşti, Facultatea de Matematică<br />
+1999</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#generalităţi" id="toc-generalităţi">Generalităţi</a>
+<ul>
+<li><a href="#module-semisimple" id="toc-module-semisimple">Module
+semisimple</a></li>
+<li><a
+href="#module-noetheriene-artiniene-şi-inele-noetheriene-artiniene"
+id="toc-module-noetheriene-artiniene-şi-inele-noetheriene-artiniene">Module
+noetheriene (artiniene) şi inele noetheriene (artiniene)</a></li>
+<li><a href="#module-de-lungime-finită"
+id="toc-module-de-lungime-finită">Module de lungime finită</a></li>
+<li><a href="#radicalul-jacobson" id="toc-radicalul-jacobson">Radicalul
+Jacobson</a></li>
+<li><a href="#inele-semisimple" id="toc-inele-semisimple">Inele
+semisimple</a></li>
+</ul></li>
+<li><a href="#submodule-esenţiale"
+id="toc-submodule-esenţiale">Submodule esenţiale</a></li>
+</ul>
+</nav>
+<h1 id="generalităţi">Generalităţi</h1>
+<h2 id="module-semisimple">Module semisimple</h2>
+<div class="definition">
+<p><strong>Definiţie 1.1</strong>. Un <span
+class="math inline">\(R\)</span>-modul nenul <span
+class="math inline">\(S\)</span> se numeşte <em>simplu</em> dacă
+singurele sale submodule sunt <span class="math inline">\(0\)</span> şi
+<span class="math inline">\(S\)</span>.</p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 1.2</strong>. <em>Fie <span
+class="math inline">\(S\)</span> un <span
+class="math inline">\(R\)</span>-modul. Următoarele afirmaţii sunt
+echivalente:</em></p>
+<ol>
+<li><p><em><span class="math inline">\(S\)</span> este modul
+simplu.</em></p></li>
+<li><p><em>Pentru orice element nenul <span class="math inline">\(x\in
+S\)</span> avem <span class="math inline">\(S =
+xR\)</span>.</em></p></li>
+<li><p><em><span class="math inline">\(S \simeq R/I\)</span>, unde <span
+class="math inline">\(I\)</span> este un ideal drept
+maximal.</em></p></li>
+</ol>
+</div>
+<div class="lemma">
+<p><strong>Lemă 1.3</strong> (Schur). <em>Fie <span
+class="math inline">\(S\)</span> şi <span
+class="math inline">\(S&#39;\)</span> două <span
+class="math inline">\(R\)</span>-module simple şi <span
+class="math inline">\(f\colon S \to S&#39;\)</span> un morfism de <span
+class="math inline">\(R\)</span>-module. Atunci <span
+class="math inline">\(f = 0\)</span> sau <span
+class="math inline">\(f\)</span> este izomorfism. În particular <span
+class="math inline">\(\mathop{\mathrm{End}}_R(S)\)</span> este
+corp.</em></p>
+</div>
+<div class="definition">
+<p><strong>Definiţie 1.4</strong>. Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul şi <span
+class="math inline">\((S_i)_{i\in I}\)</span> mulţimea submodulelor
+simple ale lui <span class="math inline">\(M\)</span>. Dacă <span
+class="math inline">\(M = \sum_{i\in I} S_i\)</span>, atunci <span
+class="math inline">\(M\)</span> se numeşte <em>semisimplu</em>.</p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 1.5</strong>. <em>Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul semisimplu şi <span
+class="math inline">\(N\)</span> un submodul al său. Atunci există o
+submulţime <span class="math inline">\(J \subseteq I\)</span> astfel
+încât:</em></p>
+<ol>
+<li><p><em>familia <span class="math inline">\((S_j)_{j\in J}\)</span>
+este independentă;</em></p></li>
+<li><p><em><span class="math inline">\(M = N \oplus
+\bigl(\bigoplus_{j\in J} S_j\bigr)\)</span>.</em></p></li>
+</ol>
+</div>
+<div class="corollary">
+<p><strong>Corolar 1.6</strong>. <em>Cu notaţiile de mai sus, pentru
+modulul semisimplu <span class="math inline">\(M\)</span> există <span
+class="math inline">\(J \subseteq I\)</span> astfel încât familia <span
+class="math inline">\((S_j)_{j\in J}\)</span> este independentă şi <span
+class="math display">\[M = \bigoplus_{i\in I} M_i.\]</span></em></p>
+</div>
+<div class="corollary">
+<p><strong>Corolar 1.7</strong>. <em>Dacă <span
+class="math inline">\(M\)</span> este un <span
+class="math inline">\(R\)</span>-modul semisimplu şi <span
+class="math inline">\(N\)</span> un submodul al său, atunci <span
+class="math inline">\(N\)</span> şi <span
+class="math inline">\(M/N\)</span> sunt semisimple.</em></p>
+</div>
+<div class="corollary">
+<p><strong>Corolar 1.8</strong>. <em>O sumă directă de module semisimple
+este modul semisimplu.</em></p>
+</div>
+<div class="theorem">
+<p><strong>Teoremă 1.9</strong>. <em>Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul. Următoarele afirmaţii sunt
+echivalente:</em></p>
+<ol>
+<li><p><em><span class="math inline">\(M\)</span> este
+semisimplu;</em></p></li>
+<li><p><em><span class="math inline">\(M\)</span> este izomorf cu o sumă
+directă de module simple;</em></p></li>
+<li><p><em>orice submodul al său este sumand direct în <span
+class="math inline">\(M\)</span>;</em></p></li>
+<li><p><em>orice şir exact <span class="math display">\[0
+\longrightarrow M&#39; \xrightarrow{\,f\,} M \xrightarrow{\,g\,}
+M&#39;&#39; \longrightarrow 0\]</span> este scindabil.</em></p></li>
+</ol>
+</div>
+<div class="definition">
+<p><strong>Definiţie 1.10</strong>. Suma submodulelor simple ale lui
+<span class="math inline">\(M\)</span> se numeşte <em>soclul</em> lui
+<span class="math inline">\(M\)</span> şi se notează <span
+class="math inline">\(\mathop{\mathrm{soc}}(M)\)</span>. Dacă <span
+class="math inline">\(M\)</span> nu conţine nici un submodul simplu
+atunci punem <span class="math inline">\(\mathop{\mathrm{soc}}(M) =
+0\)</span>.</p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 1.11</strong>. <em>Fie <span
+class="math inline">\(M\)</span> şi <span
+class="math inline">\(N\)</span> două <span
+class="math inline">\(R\)</span>-module şi <span
+class="math inline">\(f\colon M \to N\)</span> un morfism. Atunci <span
+class="math inline">\(f(\mathop{\mathrm{soc}}(M)) \subseteq
+\mathop{\mathrm{soc}}(N)\)</span>.</em></p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 1.12</strong>. <em>Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul şi <span
+class="math inline">\(N\)</span> un submodul al său. Atunci <span
+class="math display">\[\mathop{\mathrm{soc}}(N) =
+\mathop{\mathrm{soc}}(M) \cap N.\]</span></em></p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 1.13</strong>. <em>Dacă <span
+class="math inline">\(M = \bigoplus_{i\in I} M_i\)</span>, atunci <span
+class="math display">\[\mathop{\mathrm{soc}}(M) = \bigoplus_{i\in I}
+\mathop{\mathrm{soc}}(M_i).\]</span></em></p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 1.14</strong>. <em>Fie <span
+class="math inline">\(R\)</span> un inel. Atunci <span
+class="math inline">\(\mathop{\mathrm{soc}}(R_R)\)</span> este un ideal
+bilateral al lui <span class="math inline">\(R\)</span>.</em></p>
+</div>
+<h2
+id="module-noetheriene-artiniene-şi-inele-noetheriene-artiniene">Module
+noetheriene (artiniene) şi inele noetheriene (artiniene)</h2>
+<div class="definition">
+<p><strong>Definiţie 1.15</strong>. Fie <span
+class="math inline">\(R\)</span> un inel şi <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul drept. Spunem că <span
+class="math inline">\(M\)</span> satisface <em>condiţia maximală</em>
+(resp. <em>minimală</em>) dacă orice mulţime nevidă de submodule ale lui
+<span class="math inline">\(M\)</span>, ordonată prin incluziune, admite
+un element maximal (resp. minimal).</p>
+<p>Spunem că <span class="math inline">\(M\)</span> satisface
+<em>condiţia lanţurilor ascendente</em> (resp. <em>descendente</em>)
+dacă orice şir (lanţ) ascendent de submodule ale lui <span
+class="math inline">\(M\)</span> <span class="math display">\[M_1
+\subseteq M_2 \subseteq \cdots \subseteq M_i \subseteq \cdots\]</span>
+(resp. orice şir descendent <span class="math display">\[M_1 \supseteq
+M_2 \supseteq \cdots \supseteq M_i \supseteq \cdots\]</span>) este
+staţionar, adică există <span class="math inline">\(n \ge 1\)</span>
+astfel încât <span class="math inline">\(M_n = M_{n+1} =
+\cdots\)</span>.</p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 1.16</strong>. <em>Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul. Următoarele afirmaţii sunt
+echivalente:</em></p>
+<ol>
+<li><p><em><span class="math inline">\(M\)</span> satisface condiţia
+maximală (minimală);</em></p></li>
+<li><p><em><span class="math inline">\(M\)</span> satisface condiţia
+lanţurilor ascendente (descendente).</em></p></li>
+</ol>
+</div>
+<div class="definition">
+<p><strong>Definiţie 1.17</strong>. Un <span
+class="math inline">\(R\)</span>-modul <span
+class="math inline">\(M\)</span> se numeşte <em>noetherian</em> (resp.
+<em>artinian</em>) dacă satisface condiţia maximală (resp. minimală).
+Inelul <span class="math inline">\(R\)</span> se numeşte noetherian
+(resp. artinian) la dreapta dacă <span
+class="math inline">\(R_R\)</span> este noetherian (resp. artinian).</p>
+</div>
+<div class="example">
+<p><strong>Exemplu 1.18</strong>. </p>
+<ol>
+<li><p><span class="math inline">\(\mathbb{Z}\)</span> este inel
+noetherian dar nu este artinian.</p></li>
+<li><p>Orice grup finit este <span
+class="math inline">\(\mathbb{Z}\)</span>-modul noetherian şi
+artinian.</p></li>
+<li><p>Orice inel finit este noetherian şi artinian.</p></li>
+<li><p><span
+class="math inline">\(\mathbb{Z}[X_1,X_2,\ldots,X_n,\ldots]\)</span> nu
+este nici noetherian, nici artinian: <span class="math display">\[(X_1)
+\subsetneq (X_1,X_2) \subsetneq \cdots \subsetneq
+          (X_1,\ldots,X_n) \subsetneq \cdots\]</span> <span
+class="math display">\[(X_1) \supsetneq (X_1^2) \supsetneq \cdots
+\supsetneq
+          (X_1^k) \supsetneq \cdots\]</span></p></li>
+<li><p><span class="math inline">\(\mathbb{Z}_{p^\infty}\)</span> este
+<span class="math inline">\(\mathbb{Z}\)</span>-modul artinian dar nu
+este noetherian.</p></li>
+</ol>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 1.19</strong>. <em>Fie <span
+class="math inline">\(N, P\)</span> două submodule ale lui <span
+class="math inline">\(M\)</span> astfel încât <span
+class="math inline">\(M = N + P\)</span>. Atunci <span
+class="math inline">\(M\)</span> este noetherian (artinian) dacă şi
+numai dacă <span class="math inline">\(N\)</span> şi <span
+class="math inline">\(P\)</span> sunt noetheriene (artiniene).</em></p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 1.20</strong>. <em>Pentru un <span
+class="math inline">\(R\)</span>-modul <span
+class="math inline">\(M\)</span> următoarele afirmaţii sunt
+echivalente:</em></p>
+<ol>
+<li><p><em><span class="math inline">\(M\)</span> este
+noetherian;</em></p></li>
+<li><p><em>orice submodul al lui <span class="math inline">\(M\)</span>
+este finit generat.</em></p></li>
+</ol>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 1.21</strong>. <em>Pentru un <span
+class="math inline">\(R\)</span>-modul <span
+class="math inline">\(M\)</span> următoarele afirmaţii sunt
+echivalente:</em></p>
+<ol>
+<li><p><em><span class="math inline">\(M\)</span> este
+artinian;</em></p></li>
+<li><p><em>oricare ar fi familia <span class="math inline">\((X_i)_{i\in
+I}\)</span> de submodule ale lui <span class="math inline">\(M\)</span>,
+există <span class="math inline">\(J \subseteq I\)</span>, <span
+class="math inline">\(J\)</span> finită, astfel încât <span
+class="math display">\[\bigcap_{i\in I} X_i = \bigcap_{j\in J}
+X_j.\]</span></em></p></li>
+</ol>
+</div>
+<h2 id="module-de-lungime-finită">Module de lungime finită</h2>
+<div class="definition">
+<p><strong>Definiţie 1.22</strong>. Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul drept nenul. Se numeşte <em>şir
+de compoziţie</em> sau <em>şir Jordan–Hölder</em> al lui <span
+class="math inline">\(M\)</span> un lanţ finit strict ascendent de
+submodule <span class="math display">\[0 = X_0 \subset X_1 \subset
+\cdots \subset X_n = M\]</span> astfel încât <span
+class="math inline">\(X_{i+1}/X_i\)</span> este modul simplu pentru
+<span class="math inline">\(0 \le i \le n-1\)</span>. Numărul <span
+class="math inline">\(n\)</span> se numeşte <em>lungimea şirului</em>,
+iar modulele <span class="math inline">\(X_{i+1}/X_i\)</span> se numesc
+<em>factorii şirului</em>.</p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 1.23</strong>. <em>Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul. Următoarele afirmaţii sunt
+echivalente:</em></p>
+<ol>
+<li><p><em><span class="math inline">\(M\)</span> are un şir de
+compoziţie;</em></p></li>
+<li><p><em><span class="math inline">\(M\)</span> este noetherian şi
+artinian.</em></p></li>
+</ol>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 1.24</strong>. <em>Fie <span
+class="math display">\[0 \longrightarrow M&#39; \longrightarrow M
+\longrightarrow M&#39;&#39; \longrightarrow 0\]</span> un şir exact de
+<span class="math inline">\(R\)</span>-module drepte. Atunci <span
+class="math inline">\(M\)</span> admite un şir de compoziţie dacă şi
+numai dacă <span class="math inline">\(M&#39;\)</span> şi <span
+class="math inline">\(M&#39;&#39;\)</span> admit un şir de
+compoziţie.</em></p>
+</div>
+<p>Dacă <span class="math display">\[0 = M_0 \subseteq M_1 \subseteq
+\cdots \subseteq M_n = M,\qquad
+  0 = N_0 \subseteq N_1 \subseteq \cdots \subseteq N_p = M\]</span> sunt
+două şiruri de compoziţie ale lui <span
+class="math inline">\(M\)</span>, vom spune că ele sunt
+<em>echivalente</em> dacă <span class="math inline">\(n=p\)</span> şi
+există o bijecţie <span class="math inline">\(\sigma : \{0,\ldots,n-1\}
+\to \{0,\ldots,n-1\}\)</span> astfel încât <span
+class="math display">\[M_{i+1}/M_i \cong M_{\sigma(i)+1}/M_{\sigma(i)}
+  \quad (0 \le i \le n-1).\]</span></p>
+<div class="theorem">
+<p><strong>Teoremă 1.25</strong> (Jordan–Hölder). <em>Dacă un <span
+class="math inline">\(R\)</span>-modul <span
+class="math inline">\(M\)</span> are două şiruri de compoziţie <span
+class="math display">\[0 = M_0 \subseteq M_1 \subseteq \cdots \subseteq
+M_n = M,\qquad
+  0 = N_0 \subseteq N_1 \subseteq \cdots \subseteq N_p = M,\]</span>
+atunci aceste două şiruri sunt echivalente.</em></p>
+</div>
+<div class="definition">
+<p><strong>Definiţie 1.26</strong>. Un <span
+class="math inline">\(R\)</span>-modul <span
+class="math inline">\(M\)</span> care admite un şir de compoziţie se
+numeşte <em>modul de lungime finită</em>. Lungimea şirurilor de
+compoziţie se numeşte <em>lungimea</em> lui <span
+class="math inline">\(M\)</span> şi se notează <span
+class="math inline">\(l(M)\)</span>. Dacă <span
+class="math inline">\(M\)</span> nu admite nici un şir de com­po­zi­ţie,
+atunci spunem că <span class="math inline">\(M\)</span> este <em>de
+lungime infinită</em> şi scriem <span
+class="math inline">\(l(M)=\infty\)</span>.</p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 1.27</strong>. <em>Fie <span
+class="math display">\[0 \longrightarrow M&#39; \longrightarrow M
+\longrightarrow M&#39;&#39; \longrightarrow 0\]</span> un şir exact de
+<span class="math inline">\(R\)</span>-module de lungime finită. Atunci
+<span class="math display">\[l(M) = l(M&#39;) +
+l(M&#39;&#39;).\]</span></em></p>
+</div>
+<div class="corollary">
+<p><strong>Corolar 1.28</strong>. <em>Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul de lungime finită şi <span
+class="math inline">\(N,L\)</span> două submodule ale sale.
+Atunci:</em></p>
+<ol>
+<li><p><em><span class="math inline">\(l(M) = l(N) +
+l(M/N)\)</span>;</em></p></li>
+<li><p><em><span class="math inline">\(l(N+L) + l(N\cap L) = l(N) +
+l(L)\)</span>.</em></p></li>
+</ol>
+</div>
+<div class="corollary">
+<p><strong>Corolar 1.29</strong>. <em>Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul de lungime finită şi <span
+class="math inline">\(M_1,M_2,\ldots,M_n\)</span> submodule ale sale
+astfel încât <span class="math display">\[M = M_1 \oplus M_2 \oplus
+\cdots \oplus M_n.\]</span> Atunci <span class="math display">\[l(M) =
+\sum_{i=1}^{n} l(M_i).\]</span></em></p>
+</div>
+<h2 id="radicalul-jacobson">Radicalul Jacobson</h2>
+<h3 class="unnumbered" id="radicalul-jacobson-al-unui-modul">Radicalul
+Jacobson al unui modul</h3>
+<div class="definition">
+<p><strong>Definiţie 1.30</strong>. Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul. Intersecţia tuturor submodulelor
+maximale ale lui <span class="math inline">\(M\)</span> se numeşte
+<em>radicalul Jacobson</em> al modulului <span
+class="math inline">\(M\)</span> şi se notează <span
+class="math inline">\(\mathop{\mathrm{Rad}}(M)\)</span>. Dacă <span
+class="math inline">\(M\)</span> nu are nici un submodul maximal, atunci
+prin convenţie punem <span
+class="math inline">\(\mathop{\mathrm{Rad}}(M)=M\)</span>.</p>
+</div>
+<div class="remark">
+<p><em>Observaţie 1.31</em>. Dacă <span class="math inline">\(M\)</span>
+este un <span class="math inline">\(R\)</span>-modul finit generat,
+atunci <span class="math inline">\(\mathop{\mathrm{Rad}}(M)\ne
+M\)</span>.</p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 1.32</strong>. <em>Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul. Atunci <span
+class="math display">\[\mathop{\mathrm{Rad}}(M)
+  = \bigcap_{\substack{f : M \to S\\ S\ \text{simplu}}} \ker(f)
+  = \bigcap_{\substack{f : M \to X\\ X\ \text{semisimplu}}}
+\ker(f).\]</span></em></p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 1.33</strong>. <em>Fie <span
+class="math inline">\(f : M \to N\)</span> un morfism de <span
+class="math inline">\(R\)</span>-module. Atunci <span
+class="math inline">\(f(\mathop{\mathrm{Rad}}(M)) \subseteq
+\mathop{\mathrm{Rad}}(N)\)</span>. Dacă, în plus, <span
+class="math inline">\(f\)</span> este epimorfism şi <span
+class="math inline">\(\ker(f) \subseteq
+\mathop{\mathrm{Rad}}(M)\)</span>, atunci <span
+class="math inline">\(f(\mathop{\mathrm{Rad}}(M)) =
+\mathop{\mathrm{Rad}}(N)\)</span>.</em></p>
+</div>
+<div class="corollary">
+<p><strong>Corolar 1.34</strong>. <em>Pentru orice <span
+class="math inline">\(R\)</span>-modul <span
+class="math inline">\(M\)</span> are loc egalitatea <span
+class="math inline">\(\mathop{\mathrm{Rad}}(M/\mathop{\mathrm{Rad}}(M))
+= 0\)</span>.</em></p>
+</div>
+<div class="corollary">
+<p><strong>Corolar 1.35</strong>. <em>Dacă <span
+class="math inline">\(M\)</span> este un <span
+class="math inline">\(R\)</span>-modul semisimplu, atunci <span
+class="math inline">\(\mathop{\mathrm{Rad}}(M)=0\)</span>.</em></p>
+</div>
+<div class="corollary">
+<p><strong>Corolar 1.36</strong>. <em>Dacă <span class="math inline">\(M
+= \bigoplus_{i\in I} M_i\)</span>, atunci <span
+class="math display">\[\mathop{\mathrm{Rad}}(M) = \bigoplus_{i\in I}
+\mathop{\mathrm{Rad}}(M_i).\]</span></em></p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 1.37</strong>. <em>Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul astfel încât <span
+class="math inline">\(\mathop{\mathrm{Rad}}(M)\ne M\)</span>. Atunci
+<span class="math display">\[\mathop{\mathrm{Rad}}(M)
+  = \bigcap \{\,L \le M \mid L \text{ este submodul
+superfluu}\,\}.\]</span></em></p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 1.38</strong> (Lema lui Nakayama). <em>Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul finit generat şi <span
+class="math inline">\(N\)</span> un submodul al său. Dacă <span
+class="math inline">\(N + \mathop{\mathrm{Rad}}(M) = M\)</span>, atunci
+<span class="math inline">\(N = M\)</span>. (Adică <span
+class="math inline">\(\mathop{\mathrm{Rad}}(M)\)</span> este cel mai
+mare submodul superfluu al lui <span
+class="math inline">\(M\)</span>.)</em></p>
+</div>
+<h3 class="unnumbered" id="radicalul-jacobson-al-unui-inel">Radicalul
+Jacobson al unui inel</h3>
+<p>Fie <span class="math inline">\(R\)</span> un inel. Considerăm
+idealul stâng <span class="math inline">\(\mathop{\mathrm{Rad}}({}_R
+R)\)</span> ca intersecţie a idealelor stângi maximale ale lui <span
+class="math inline">\(R\)</span> şi <span
+class="math inline">\(\mathop{\mathrm{Rad}}(R_R)\)</span> ca intersecţie
+a idealelor drepte maximale ale lui <span
+class="math inline">\(R\)</span>.</p>
+<div class="proposition">
+<p><strong>Propoziţie 1.39</strong>. </p>
+<ol>
+<li><p><em><span
+class="math inline">\(\mathop{\mathrm{Rad}}(R_R)\)</span> este un ideal
+bilateral.</em></p></li>
+<li><p><em><span class="math inline">\(\mathop{\mathrm{Rad}}(R_R) =
+\{\,r \in R \mid 1-ar \in U(R)\ \text{pentru orice } a \in
+R\,\}\)</span>.</em></p></li>
+<li><p><em><span class="math inline">\(\mathop{\mathrm{Rad}}(R_R) =
+\mathop{\mathrm{Rad}}({}_R R)\)</span>.</em></p></li>
+</ol>
+</div>
+<div class="definition">
+<p><strong>Definiţie 1.40</strong>. Idealul bilateral <span
+class="math inline">\(\mathop{\mathrm{Rad}}(R_R) =
+\mathop{\mathrm{Rad}}({}_R R)\)</span> se numeşte <em>radicalul
+Jacobson</em> al inelului <span class="math inline">\(R\)</span> şi se
+notează <span
+class="math inline">\(\mathop{\mathrm{Rad}}(R)\)</span>.</p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 1.41</strong>. </p>
+<ol>
+<li><p><em>Dacă <span class="math inline">\(J\)</span> este un ideal
+stâng (resp. drept sau bilateral) cu proprietatea că <span
+class="math inline">\(1-x\)</span> este inversabil pentru orice <span
+class="math inline">\(x \in J\)</span>, atunci <span
+class="math inline">\(J \subseteq
+\mathop{\mathrm{Rad}}(R)\)</span>.</em></p></li>
+<li><p><em>Dacă <span class="math inline">\(J\)</span> este un nilideal
+stâng (resp. drept sau bilateral), atunci <span class="math inline">\(J
+\subseteq \mathop{\mathrm{Rad}}(R)\)</span>.</em></p></li>
+</ol>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 1.42</strong>. <em>Fie <span
+class="math inline">\(\varphi : R \to S\)</span> un morfism surjectiv de
+inele. Atunci <span
+class="math inline">\(\varphi(\mathop{\mathrm{Rad}}(R)) \subseteq
+\mathop{\mathrm{Rad}}(S)\)</span>. Dacă <span
+class="math inline">\(\ker(\varphi)
+\subseteq \mathop{\mathrm{Rad}}(R)\)</span>, atunci <span
+class="math inline">\(\varphi(\mathop{\mathrm{Rad}}(R)) =
+\mathop{\mathrm{Rad}}(S)\)</span>.</em></p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 1.43</strong>. <em>Dacă <span
+class="math inline">\((R_i)_{i\in I}\)</span> este o familie de inele,
+atunci <span
+class="math display">\[\mathop{\mathrm{Rad}}\Bigl(\prod_{i\in I}
+R_i\Bigr) = \prod_{i\in I} \mathop{\mathrm{Rad}}(R_i).\]</span></em></p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 1.44</strong>. <em>Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul. Atunci <span
+class="math inline">\(M\,\mathop{\mathrm{Rad}}(R) \subseteq
+\mathop{\mathrm{Rad}}(M)\)</span>.</em></p>
+</div>
+<div class="theorem">
+<p><strong>Teoremă 1.45</strong>. <em>Dacă <span
+class="math inline">\(R\)</span> este un inel artinian, atunci <span
+class="math inline">\(\mathop{\mathrm{Rad}}(R)\)</span> este
+nilpotent.</em></p>
+</div>
+<h2 id="inele-semisimple">Inele semisimple</h2>
+<div class="theorem">
+<p><strong>Teoremă 1.46</strong>. <em>Pentru un inel <span
+class="math inline">\(R\)</span> următoarele afirmaţii sunt
+echivalente:</em></p>
+<ol>
+<li><p><em>orice <span class="math inline">\(R\)</span>-modul drept
+nenul este semisimplu;</em></p></li>
+<li><p><em><span class="math inline">\(R\)</span> este <span
+class="math inline">\(R\)</span>-modul drept semisimplu;</em></p></li>
+<li><p><em><span class="math inline">\(R\)</span> este artinian şi <span
+class="math inline">\(\mathop{\mathrm{Rad}}(R)=0\)</span>.</em></p></li>
+</ol>
+</div>
+<div class="definition">
+<p><strong>Definiţie 1.47</strong>. Un inel <span
+class="math inline">\(R\)</span> care satisface una din condiţiile de
+mai sus se numeşte <em>inel semisimplu</em>.</p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 1.48</strong>. <em>Fie <span
+class="math inline">\(R\)</span> un inel semisimplu şi <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul nenul. Următoarele afirmaţii sunt
+echivalente:</em></p>
+<ol>
+<li><p><em><span class="math inline">\(M\)</span> este de lungime
+finită;</em></p></li>
+<li><p><em><span class="math inline">\(M\)</span> este
+noetherian;</em></p></li>
+<li><p><em><span class="math inline">\(M\)</span> este
+artinian.</em></p></li>
+</ol>
+</div>
+<div class="theorem">
+<p><strong>Teoremă 1.49</strong>. <em>Fie <span
+class="math inline">\(R\)</span> un inel artinian la dreapta şi <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul nenul. Următoarele afirmaţii sunt
+echivalente:</em></p>
+<ol>
+<li><p><em><span class="math inline">\(M\)</span> este de lungime
+finită;</em></p></li>
+<li><p><em><span class="math inline">\(M\)</span> este
+noetherian;</em></p></li>
+<li><p><em><span class="math inline">\(M\)</span> este
+artinian.</em></p></li>
+</ol>
+</div>
+<div class="corollary">
+<p><strong>Corolar 1.50</strong> (Hopkins). <em>Un inel artinian la
+dreapta (respectiv la stânga) este noetherian la dreapta (respectiv la
+stânga).</em></p>
+</div>
+<h1 id="submodule-esenţiale">Submodule esenţiale</h1>
+<div id="def:submodul-esential" class="definition">
+<p><strong>Definiţie 2.1</strong>. Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul drept. Un submodul <span
+class="math inline">\(N\)</span> al lui <span
+class="math inline">\(M\)</span> se numeşte <em>esenţial</em> (sau
+spunem că <span class="math inline">\(M\)</span> este o extensie
+esenţială a lui <span class="math inline">\(N\)</span>) dacă <span
+class="math inline">\(N \cap N&#39; \neq 0\)</span> pentru orice
+submodul nenul <span class="math inline">\(N&#39;\)</span> al lui <span
+class="math inline">\(M\)</span>. În acest caz vom folosi notaţia <span
+class="math inline">\(N \trianglelefteq M_R\)</span>.</p>
+<p>Un monomorfism de <span class="math inline">\(R\)</span>-module la
+dreapta <span class="math inline">\(f : M \to N\)</span> se numeşte
+<em>esenţial</em> dacă <span class="math inline">\(\operatorname{Im}
+f\)</span> este submodul esenţial în <span
+class="math inline">\(N\)</span> (adică <span
+class="math inline">\(\operatorname{Im} f \trianglelefteq
+N_R\)</span>).</p>
+</div>
+<div class="example*">
+<p><strong>Exemplu 2.1</strong>. </p>
+<ol>
+<li><p><span class="math inline">\(n\mathbb{Z}
+\trianglelefteq\mathbb{Z}_\mathbb{Z}\)</span> pentru orice <span
+class="math inline">\(n \geq 1\)</span>.</p></li>
+<li><p>Orice submodul al lui <span
+class="math inline">\(\mathbb{Z}_{p^\infty}\)</span> este
+esenţial.</p></li>
+</ol>
+</div>
+<div class="remark">
+<p><em>Observaţie 2.2</em>. Fie <span class="math inline">\(M\)</span>
+un <span class="math inline">\(R\)</span>-modul drept şi <span
+class="math inline">\(N\)</span> un submodul al lui <span
+class="math inline">\(M\)</span>. Atunci <span class="math inline">\(N
+\trianglelefteq M_R\)</span> dacă şi numai dacă pentru orice <span
+class="math inline">\(x \in M\)</span>, <span class="math inline">\(x
+\neq 0\)</span>, există <span class="math inline">\(r \in R\)</span>
+astfel încât <span class="math inline">\(xr \in N \setminus
+\{0\}\)</span>.</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> „<span class="math inline">\(\Rightarrow\)</span>”
+Fie <span class="math inline">\(x \in M \setminus \{0\}\)</span>. Cum
+<span class="math inline">\(0 \neq xR \subseteq M_R\)</span> şi <span
+class="math inline">\(N \trianglelefteq M_R\)</span>, rezultă că <span
+class="math inline">\(xR \cap N \neq 0\)</span>, deci există <span
+class="math inline">\(xr \in xR \cap N \setminus \{0\}\)</span>.</p>
+<p>„<span class="math inline">\(\Leftarrow\)</span>” Fie <span
+class="math inline">\(N&#39; \leq M_R\)</span>, <span
+class="math inline">\(N&#39; \neq 0\)</span>. Pentru <span
+class="math inline">\(x \in N&#39; \setminus \{0\}\)</span> există <span
+class="math inline">\(r \in R\)</span> astfel încât <span
+class="math inline">\(xr \in N \setminus \{0\}\)</span>, deci <span
+class="math inline">\(N \cap N&#39; \neq 0\)</span>. ◻</p>
+</div>
+<div class="definition">
+<p><strong>Definiţie 2.3</strong>. Un monomorfism de <span
+class="math inline">\(R\)</span>-module la dreapta <span
+class="math inline">\(f : N_R \to M_R\)</span> se numeşte esenţial dacă
+<span class="math inline">\(\operatorname{Im} f \trianglelefteq
+M_R\)</span>. Se observă imediat că dacă <span
+class="math inline">\(N\)</span> este un submodul al lui <span
+class="math inline">\(M\)</span> atunci incluziunea canonică <span
+class="math inline">\(i_N : N \to M\)</span> este monomorfism esenţial
+dacă şi numai dacă <span class="math inline">\(N \trianglelefteq
+M_R\)</span>.</p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 2.4</strong>. <em>Un monomorfism <span
+class="math inline">\(f : N_R \to M_R\)</span> este esenţial dacă şi
+numai dacă pentru orice <span class="math inline">\(R\)</span>-modul
+drept <span class="math inline">\(M&#39;\)</span> şi orice <span
+class="math inline">\(g \in \mathop{\mathrm{Hom}}(M,M&#39;)\)</span>,
+faptul că <span class="math inline">\(g \circ f\)</span> este
+monomorfism implică <span class="math inline">\(g\)</span>
+monomorfism.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> <br />
+„<span class="math inline">\(\Rightarrow\)</span>” Fie <span
+class="math inline">\(g\)</span> ca în enunţ astfel încât <span
+class="math inline">\(g \circ f\)</span> este monomorfism. Presupunem
+<span class="math inline">\(g \neq 0\)</span>. Fie <span
+class="math inline">\(x \in \mathop{\mathrm{Ker}}g \cap
+\operatorname{Im} f \setminus \{0\}\)</span>. Există <span
+class="math inline">\(x&#39; \in N\)</span> astfel încât <span
+class="math inline">\(x = f(x&#39;)\)</span> şi <span
+class="math inline">\(g(x) = 0\)</span>, de unde <span
+class="math inline">\(g(f(x&#39;)) = 0\)</span>. Cum <span
+class="math inline">\(g \circ f\)</span> este monomorfism, rezultă <span
+class="math inline">\(x&#39; = 0\)</span> şi deci <span
+class="math inline">\(x = 0\)</span>, contradicţie.</p>
+<p>„<span class="math inline">\(\Leftarrow\)</span>” Dacă <span
+class="math inline">\(f\)</span> nu este monomorfism esenţial atunci
+există <span class="math inline">\(N&#39; \leq M_R\)</span>, <span
+class="math inline">\(N&#39; \neq 0\)</span>, astfel încât <span
+class="math inline">\(N&#39; \cap \operatorname{Im} f = 0\)</span>.
+Considerăm proiecţia canonică <span class="math inline">\(\pi_{N&#39;} :
+M \to M/N&#39;\)</span>. Dacă <span class="math inline">\(x \in
+\mathop{\mathrm{Ker}}(\pi_{N&#39;} \circ f)\)</span>, atunci <span
+class="math inline">\(f(x) \in N&#39;\)</span>, deci <span
+class="math inline">\(f(x) = 0\)</span>, adică <span
+class="math inline">\(x = 0\)</span>. Obţinem astfel că <span
+class="math inline">\(\pi_{N&#39;} \circ f\)</span> este injectiv, de
+unde rezultă că <span class="math inline">\(\pi_{N&#39;}\)</span> este
+injectiv, ceea ce implică <span class="math inline">\(N&#39; =
+0\)</span>, contradicţie. ◻</p>
+</div>
+<div class="corollary">
+<p><strong>Corolar 2.5</strong>. <em>Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul la dreapta şi <span
+class="math inline">\(N \leq M_R\)</span>. Atunci următoarele afirmaţii
+sunt echivalente:</em></p>
+<ol>
+<li><p><em><span class="math inline">\(N \trianglelefteq
+M_R\)</span>;</em></p></li>
+<li><p><em>incluziunea <span class="math inline">\(i_N : N \to
+M\)</span> este monomorfism esenţial;</em></p></li>
+<li><p><em>pentru orice <span class="math inline">\(f \in
+\mathop{\mathrm{Hom}}(M,M&#39;)\)</span> cu <span
+class="math inline">\(M&#39;\)</span> <span
+class="math inline">\(R\)</span>-modul arbitrar, faptul că <span
+class="math inline">\(f \circ i_N\)</span> este monomorfism implică
+<span class="math inline">\(f\)</span> monomorfism.</em></p></li>
+</ol>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 2.6</strong>. <em>Fie <span
+class="math inline">\(f : N_R \to M_R\)</span> şi <span
+class="math inline">\(g : M_R \to P_R\)</span> două monomorfisme. Atunci
+<span class="math inline">\(g \circ f\)</span> este esenţial dacă şi
+numai dacă <span class="math inline">\(g\)</span> şi <span
+class="math inline">\(f\)</span> sunt esenţiale.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> <br />
+„<span class="math inline">\(\Leftarrow\)</span>” Fie <span
+class="math inline">\(z \in P \setminus \{0\}\)</span>. Cum <span
+class="math inline">\(g\)</span> este esenţial, există <span
+class="math inline">\(r \in R\)</span> astfel încât <span
+class="math inline">\(zr \in \operatorname{Im} g \setminus
+\{0\}\)</span>. Există <span class="math inline">\(y \in M \setminus
+\{0\}\)</span> astfel încât <span class="math inline">\(zr =
+g(y)\)</span>.</p>
+<p>Cum <span class="math inline">\(f\)</span> este esenţial, există
+<span class="math inline">\(r&#39; \in R\)</span> astfel încât <span
+class="math inline">\(y r&#39; \in \mathrm{Im}\, f \setminus
+\{0\}\)</span>. De aici există <span class="math inline">\(x \in N
+\setminus \{0\}\)</span> astfel încât <span class="math inline">\(y
+r&#39; = f(x)\)</span>. Dar <span class="math inline">\(zr&#39; = g(y)
+r&#39; = g(y r&#39;) = g(f(x))\)</span>. Dacă <span
+class="math inline">\(zr&#39; = 0\)</span>, atunci <span
+class="math inline">\(g(f(x)) = 0\)</span> şi deci <span
+class="math inline">\(x = 0\)</span>, contradicţie. Obţinem astfel că
+<span class="math inline">\(zr&#39; \in \mathrm{Im}(g \circ f)\)</span>
+şi că <span class="math inline">\(zr&#39; \neq 0\)</span>, ceea ce ne
+arată că <span class="math inline">\(g \circ f\)</span> este
+esenţial.</p>
+<p>„<span class="math inline">\(\Rightarrow\)</span>” Fie <span
+class="math inline">\(y \in M \setminus \{0\}\)</span>. Cum <span
+class="math inline">\(g\)</span> este monomorfism, <span
+class="math inline">\(g(y) \neq 0\)</span>. Deci există <span
+class="math inline">\(r \in R\)</span> astfel încât <span
+class="math inline">\(g(yr) \in \mathrm{Im}\, g \setminus \{0\}\)</span>
+şi <span class="math inline">\(g(yr) \neq 0\)</span>. Rezultă că există
+<span class="math inline">\(x \in N \setminus \{0\}\)</span> astfel
+încât <span class="math inline">\(g(yr) = g(f(x))\)</span> de unde <span
+class="math inline">\(yr = f(x) \in \mathrm{Im}\, f\)</span>, ceea ce ne
+arată că <span class="math inline">\(f\)</span> este monomorfism
+esenţial.</p>
+<p>Dacă <span class="math inline">\(z \in P \setminus \{0\}\)</span>
+există <span class="math inline">\(r \in R\)</span> astfel încât <span
+class="math inline">\(zr \in \mathrm{Im}(g \circ f)\)</span> şi <span
+class="math inline">\(zr \neq 0\)</span>. Cum <span
+class="math inline">\(\mathrm{Im}(g \circ f) \subseteq \mathrm{Im}
+g\)</span>, rezultă că <span class="math inline">\(zr \in \mathrm{Im}
+g\)</span>, şi deci <span class="math inline">\(g\)</span> este
+monomorfism esenţial. ◻</p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 2.7</strong>. <em>Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul la dreapta şi <span
+class="math inline">\(L_1, L_2, \ldots, L_n\)</span> submodule ale lui
+<span class="math inline">\(M\)</span>. Atunci:</em></p>
+<p><em>1) <span class="math inline">\(\displaystyle \bigcap_{i=1}^n
+L_i\)</span> este esenţial în <span class="math inline">\(M\)</span>
+dacă şi numai dacă <span class="math inline">\(L_i\)</span> este
+esenţial în <span class="math inline">\(M\)</span> pentru orice <span
+class="math inline">\(i = 1,\ldots,n\)</span>.</em></p>
+<p><em>2) Dacă <span class="math inline">\(L_1 \subseteq L_2\)</span> şi
+<span class="math inline">\(L_1\)</span> este esenţial în <span
+class="math inline">\(M\)</span>, atunci <span
+class="math inline">\(L_2\)</span> este esenţial în <span
+class="math inline">\(M\)</span>.</em></p>
+<p><em>Demonstraţia este evidentă.</em></p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 2.8</strong>. <em>Fie <span
+class="math inline">\(K\)</span> şi <span
+class="math inline">\(L\)</span> două submodule ale lui <span
+class="math inline">\(M\)</span>. 1) Dacă <span class="math inline">\(K
+\subseteq L \subseteq M\)</span>, atunci <span class="math inline">\(K
+\, \trianglelefteq\, M\)</span> dacă şi numai dacă <span
+class="math inline">\(K \, \trianglelefteq\, L\)</span> şi <span
+class="math inline">\(L \, \trianglelefteq\, M\)</span>.</em></p>
+<p><em>2) Dacă <span class="math inline">\(h : K_R \to M_R\)</span> este
+morfism de module şi <span class="math inline">\(L \, \trianglelefteq\,
+M\)</span>, atunci <span class="math inline">\(h^{-1}(L) \,
+\trianglelefteq\, K\)</span>.</em></p>
+<p><em>3) Dacă <span class="math inline">\(L_1, L_2 \leq M_R\)</span> şi
+<span class="math inline">\(K_1 \, \trianglelefteq\, L_1\)</span>, <span
+class="math inline">\(K_2 \, \trianglelefteq\, L_2\)</span>, atunci
+<span class="math inline">\(K_1 \cap K_2 \, \trianglelefteq\, L_1 \cap
+L_2\)</span>.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> <br />
+1) Se aplică 1.5 şi 1.6.</p>
+<p>2) Fie <span class="math inline">\(U\)</span> submodul nenul al lui
+<span class="math inline">\(K\)</span>. (i) Dacă <span
+class="math inline">\(h(U) = 0\)</span>, atunci <span
+class="math inline">\(U \subseteq \ker h \subseteq h^{-1}(L)\)</span>,
+ceea ce implică <span class="math inline">\(U \cap h^{-1}(L) \neq
+0\)</span>. (ii) Dacă <span class="math inline">\(h(U) \neq 0\)</span>,
+atunci <span class="math inline">\(h(U) \cap L \neq 0\)</span> şi deci
+există <span class="math inline">\(u \in U\)</span> astfel încât <span
+class="math inline">\(h(u) \in L\)</span>, <span
+class="math inline">\(h(u) \neq 0\)</span>, de unde <span
+class="math inline">\(u \in U \cap h^{-1}(L)\)</span> şi <span
+class="math inline">\(u \neq 0\)</span>. Din (i) şi (ii) rezultă că
+<span class="math inline">\(h^{-1}(L) \, \trianglelefteq\,
+K\)</span>.</p>
+<p>3) Dacă <span class="math inline">\(0 \neq X \leq L_1 \cap
+L_2\)</span> atunci <span class="math inline">\(X \subseteq L_1\)</span>
+ceea ce implică <span class="math inline">\(0 \neq X \cap K_1 \leq
+L_1\)</span>. Dar cum <span class="math inline">\(X \subseteq
+L_2\)</span>, rezultă <span class="math inline">\(0 \neq (X \cap K_1)
+\cap L_2 = X \cap (K_1 \cap K_2)\)</span>, şi deci <span
+class="math inline">\(K_1 \cap K_2 \, \trianglelefteq\, L_1 \cap
+L_2\)</span>. ◻</p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 2.9</strong>. <em>Fie <span
+class="math inline">\((K_\lambda)_{\lambda \in \Lambda}\)</span>, <span
+class="math inline">\((L_\lambda)_{\lambda \in \Lambda}\)</span> două
+familii de submodule ale lui <span class="math inline">\(M\)</span>.
+Dacă <span class="math inline">\((K_\lambda)_{\lambda \in
+\Lambda}\)</span> este familie independentă în <span
+class="math inline">\(M\)</span> şi <span
+class="math inline">\(K_\lambda \, \trianglelefteq\, L_\lambda\)</span>
+pentru orice <span class="math inline">\(\lambda \in \Lambda\)</span>,
+atunci <span class="math inline">\((L_\lambda)_{\lambda \in
+\Lambda}\)</span> este familie independentă în <span
+class="math inline">\(M\)</span> şi <span
+class="math inline">\((\oplus_{\lambda \in \Lambda} K_\lambda) \,
+\trianglelefteq\,
+(\oplus_{\lambda \in \Lambda} L_\lambda)\)</span>.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> <br />
+Fie <span class="math inline">\(K_1 \, \trianglelefteq\, L_1\)</span>,
+<span class="math inline">\(K_2 \, \trianglelefteq\, L_2\)</span> astfel
+încât <span class="math inline">\(K_1 \cap K_2 = 0\)</span>. Din 1.8(3)
+rezultă că <span class="math inline">\(0 \, \trianglelefteq\, L_1 \cap
+L_2\)</span>, adică <span class="math inline">\(L_1 \cap L_2 =
+0\)</span>.</p>
+<p>Fie proiecţiile canonice <span class="math inline">\(\pi_1 : L_1
+\oplus L_2 \to L_1\)</span>, <span class="math inline">\(\pi_2 : L_1
+\oplus L_2 \to L_2\)</span>. Cum <span class="math inline">\(K_1 \,
+\trianglelefteq\, L_1\)</span>, <span class="math inline">\(K_2 \,
+\trianglelefteq\, L_2\)</span> rezultă că</p>
+<p><span class="math display">\[\pi_1^{-1}(K_1)
+  = K_1 \oplus 0 \, \trianglelefteq\, L_1 \oplus L_2,\]</span> şi <span
+class="math display">\[\pi_2^{-1}(K_2)
+  = 0 \oplus K_2 \, \trianglelefteq\, L_1 \oplus L_2.\]</span></p>
+<p>Deci <span class="math display">\[K_1 \oplus K_2
+  = (\pi_1^{-1}(K_1)) \cap (\pi_2^{-1}(K_2))
+  \, \trianglelefteq\, L_1 \oplus L_2.\]</span></p>
+<p>Prin inducţie se obţine afirmaţia pentru mulţimi finite. În cazul
+general, fie <span class="math inline">\(0 \neq m \in \oplus_{\lambda
+\in \Lambda} L_\lambda\)</span>. Atunci există o mulţime finită <span
+class="math inline">\(\Lambda_0 \subseteq \Lambda\)</span> cu <span
+class="math inline">\(m \in \oplus_{\lambda \in \Lambda_0}
+L_\lambda\)</span>. Cum <span class="math inline">\((\oplus_{\lambda \in
+\Lambda_0} K_\lambda) \, \trianglelefteq\,
+(\oplus_{\lambda \in \Lambda_0} L_\lambda)\)</span>, există <span
+class="math inline">\(r \in R\)</span> astfel încât <span
+class="math inline">\(rm \in (\oplus_{\lambda \in \Lambda_0} K_\lambda)
+\setminus \{0\}
+\subseteq (\oplus_{\lambda \in \Lambda} K_\lambda) \setminus
+\{0\}\)</span>. Rezultă că <span class="math inline">\((\oplus_{\lambda
+\in \Lambda} K_\lambda) \, \trianglelefteq\,
+(\oplus_{\lambda \in \Lambda} L_\lambda)\)</span>. ◻</p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 2.10</strong>. <em>Fie <span
+class="math inline">\(N\)</span> un submodul al lui <span
+class="math inline">\(M\)</span>. Atunci există un submodul <span
+class="math inline">\(Q\)</span>, <span class="math inline">\(N
+\subseteq Q \subseteq M\)</span>, astfel încât <span
+class="math inline">\(Q\)</span> este o extensie esenţială maximală a
+lui <span class="math inline">\(N\)</span> conţinută în <span
+class="math inline">\(M\)</span>.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> <br />
+Fie <span class="math inline">\(\mathfrak{S} = \{ L \leq M ; \; N
+\subseteq L \subseteq M, \; N \, \ulcorner \, L \}\)</span>, <span
+class="math inline">\(\mathfrak{S}\)</span> cu relaţia de ordine
+incluziunea. <span class="math inline">\(\mathfrak{S} \neq
+\varnothing\)</span> deoarece <span class="math inline">\(N \in
+\mathfrak{S}\)</span>. ◻</p>
+</div>
+</body>
+</html>
