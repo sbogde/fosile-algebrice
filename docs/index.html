@@ -64,6 +64,8 @@ injective</a>
 <ul>
 <li><a href="#module-injective-1" id="toc-module-injective-1">Module
 injective</a></li>
+<li><a href="#anvelope-injective" id="toc-anvelope-injective">Anvelope
+injective</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1235,7 +1237,772 @@ avem că morfismele <span class="math inline">\(\pi_\alpha \circ f : N
 \to M_\alpha\)</span> pot fi extinse la <span
 class="math inline">\(g_\alpha : M \to M_\alpha\)</span>. Există <span
 class="math inline">\(g : M \to P\)</span> astfel încât <span
-class="math inline">\(g_{\mid N} = f\)</span>. ◻</p>
+class="math inline">\(g_{\mid N} = f\)</span>.</p>
+<p><img src="diagrams/diagram_3.svg" alt="Commutative diagram" style="max-width: 100%; height: auto; display: block; margin: 1em auto;"></p>
+<p><span class="math inline">\(&quot;\Rightarrow&quot;\)</span> Fie
+<span class="math inline">\(\forall \alpha \in \Lambda\)</span> şi <span
+class="math inline">\(f : N \to M_\alpha\)</span>. Considerând
+incluziunea canonică <span class="math inline">\(\varepsilon_\alpha :
+M_\alpha \to P\)</span>, cum <span class="math inline">\(P\)</span> este
+<span class="math inline">\(M\)</span>-injectiv, există <span
+class="math inline">\(g : M \to P\)</span> care îl extinde pe <span
+class="math inline">\(\varepsilon_\alpha \circ f : N \to P\)</span>.
+Atunci <span class="math inline">\(\varepsilon_\alpha : M_\alpha \to
+P\)</span> îl extinde pe <span class="math inline">\(f\)</span> şi deci
+<span class="math inline">\(M_\alpha\)</span> este <span
+class="math inline">\(M\)</span>-injectiv.</p>
+<p><img src="diagrams/diagram_4.svg" alt="Commutative diagram" style="max-width: 100%; height: auto; display: block; margin: 1em auto;"> ◻</p>
+</div>
+<div class="corollary">
+<p><strong>Corolar 3.3</strong>. </p>
+<ol>
+<li><p><em>Fie <span class="math inline">\((Q_\alpha)_{\alpha \in
+\Lambda}\)</span> o familie de <span
+class="math inline">\(R\)</span>-module. Atunci <span
+class="math inline">\(\prod_{\alpha \in \Lambda} Q_\alpha\)</span> este
+injectiv dacă şi numai dacă <span
+class="math inline">\(Q_\alpha\)</span> este injectiv pentru orice <span
+class="math inline">\(\alpha\in\Lambda\)</span>.</em></p></li>
+<li><p><em><span class="math inline">\(Q_1 \oplus Q_2\)</span> este
+<span class="math inline">\(R\)</span>-modul injectiv dacă şi numai dacă
+<span class="math inline">\(Q_i\)</span> este injectiv pentru <span
+class="math inline">\(i=1,2\)</span>. În particular, un sumand direct al
+unui modul injectiv este injectiv.</em></p></li>
+</ol>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 3.4</strong>. <em>Fie <span
+class="math inline">\(Q\)</span> un <span
+class="math inline">\(R\)</span>-modul.</em></p>
+<ol>
+<li><p><em>Dacă <span class="math inline">\(0 \to M&#39; \xrightarrow{f}
+M \xrightarrow{g} M&#39;&#39; \to 0\)</span> este un şir exact de <span
+class="math inline">\(R\)</span>-module şi <span
+class="math inline">\(Q\)</span> este <span
+class="math inline">\(M\)</span>-injectiv, atunci <span
+class="math inline">\(Q\)</span> este <span
+class="math inline">\(M&#39;\)</span>-injectiv şi <span
+class="math inline">\(M&#39;&#39;\)</span>-injectiv.</em></p></li>
+<li><p><em>Dacă <span class="math inline">\((M_\alpha)_{\alpha \in
+\Lambda}\)</span> este o familie de submodule ale lui <span
+class="math inline">\(M\)</span> astfel încât <span
+class="math inline">\(M = \sum_{\alpha\in\Lambda} M_\alpha\)</span> şi
+<span class="math inline">\(Q\)</span> este <span
+class="math inline">\(M_\alpha\)</span>-injectiv pentru orice <span
+class="math inline">\(\alpha\)</span>, atunci <span
+class="math inline">\(Q\)</span> este <span
+class="math inline">\(M\)</span>-injectiv.</em></p></li>
+<li><p><em>Fie <span
+class="math inline">\((N_\alpha)_{\alpha\in\Lambda}\)</span> o familie
+de <span class="math inline">\(R\)</span>-module. Atunci <span
+class="math inline">\(Q\)</span> este <span
+class="math inline">\(\bigoplus_{\alpha\in\Lambda}
+N_\alpha\)</span>-injectiv dacă şi numai dacă <span
+class="math inline">\(Q\)</span> este <span
+class="math inline">\(N_\alpha\)</span>-injectiv pentru orice <span
+class="math inline">\(\alpha\in\Lambda\)</span>.</em></p></li>
+</ol>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Pentru a arăta că <span
+class="math inline">\(Q\)</span> este <span
+class="math inline">\(M&#39;\)</span>-injectiv, considerăm <span
+class="math inline">\(N\)</span> un submodul al lui <span
+class="math inline">\(M&#39;\)</span> și <span
+class="math inline">\(\varphi : N \rightarrow Q\)</span> un morfism de
+<span class="math inline">\(R\)</span>-module. Cum <span
+class="math inline">\(Q\)</span> este <span
+class="math inline">\(M\)</span>-injectiv, există <span
+class="math inline">\(\phi : M \to Q\)</span> astfel încât <span
+class="math inline">\(g \circ f\!\mid_{N} = \varphi\)</span> și deci
+<span class="math inline">\(\psi \circ f : M&#39; \to Q\)</span> este un
+morfism care îl extinde pe <span class="math inline">\(\varphi\)</span>.
+<img src="diagrams/diagram_5.svg" alt="Commutative diagram" style="max-width: 100%; height: auto; display: block; margin: 1em auto;"></p>
+<p>Fie <span class="math inline">\(h : L \to M&#39;&#39;\)</span> un
+monomorfism. Putem presupune, fără a restrânge generalitatea, că <span
+class="math inline">\(M&#39; \le M\)</span> și <span
+class="math inline">\(M&#39;&#39; = M / M&#39;\)</span>. Cum <span
+class="math inline">\(L \cong h(L) \le M&#39;&#39;\)</span>, există
+<span class="math inline">\(P \le M\)</span>, <span
+class="math inline">\(M&#39; \subseteq P\)</span> astfel încât <span
+class="math inline">\(h(L) = P / M&#39;\)</span> și deci <span
+class="math inline">\(L \cong P/M&#39;\)</span>. Obținem diagrama
+comutativă:</p>
+<p><img src="diagrams/diagram_6.svg" alt="Commutative diagram" style="max-width: 100%; height: auto; display: block; margin: 1em auto;"></p>
+<p>Cum <span class="math inline">\(Q\)</span> este <span
+class="math inline">\(M\)</span>-injectiv, aplicând functorul <span
+class="math inline">\(\mathop{\mathrm{Hom}}(-,Q)\)</span> obținem
+diagrama comutativă:</p>
+<p><img src="diagrams/diagram_7.svg" alt="Commutative diagram" style="max-width: 100%; height: auto; display: block; margin: 1em auto;"></p>
+<p>Obținem că <span class="math inline">\(h^{*} =
+\mathop{\mathrm{Hom}}(h,Q)\)</span> este epimorfism, ceea ce arată că
+<span class="math inline">\(Q\)</span> este <span
+class="math inline">\(M&#39;&#39;\)</span>-injectiv.</p>
+<p>2) Fie <span class="math inline">\(N\)</span> un submodul al lui
+<span class="math inline">\(M\)</span> şi <span class="math inline">\(f
+: N \to Q\)</span> un morfism de <span
+class="math inline">\(R\)</span>-module. Considerăm mulţimea <span
+class="math display">\[\mathfrak{S} = \{(L,h) \mid N \le L \le M,\; h :
+L \to Q,\; h\!\mid_{N} = f\}.\]</span> Cum <span
+class="math inline">\((N,f) \in \mathfrak{S}\)</span>, avem <span
+class="math inline">\(\mathfrak{S} \ne \varnothing\)</span>. Definim pe
+<span class="math inline">\(\mathfrak{S}\)</span> relaţia de ordine
+<span class="math inline">\((L_1,h_1) \preccurlyeq (L_2,h_2)\)</span>
+dacă şi numai dacă <span class="math inline">\(L_1 \le L_2\)</span> şi
+<span class="math inline">\(h_2\!\mid_{L_1} = h_1\)</span>. Se observă
+că <span class="math inline">\(\mathfrak{S}\)</span> este inductivă şi,
+din lema lui Zorn, rezultă că există <span
+class="math inline">\((L_0,g_0)\)</span> element maximal al lui <span
+class="math inline">\(\mathfrak{S}\)</span>. Pentru a arăta că <span
+class="math inline">\(L_0 = M\)</span> este suficient să arătăm că <span
+class="math inline">\(M_\alpha \le L_0\)</span> pentru orice <span
+class="math inline">\(\alpha \in \Lambda\)</span>.</p>
+<p>Considerând diagrama</p>
+<p><img src="diagrams/diagram_8.svg" alt="Commutative diagram" style="max-width: 100%; height: auto; display: block; margin: 1em auto;"></p>
+<p>rezultă că există <span class="math inline">\(h_\alpha : M_\alpha \to
+Q\)</span> astfel încât <span class="math inline">\(h_\alpha \circ
+i_\alpha = g_0 \circ i_\alpha\)</span>. Definim <span
+class="math inline">\(h^{*} : L_0 + M_\alpha \to Q\)</span>, <span
+class="math inline">\(h^{*}(l + m_\alpha) = g_0(l) +
+h_\alpha(m_\alpha)\)</span>, pentru orice <span class="math inline">\(l
+\in L_0\)</span>, <span class="math inline">\(m_\alpha \in
+M_\alpha\)</span>. Dacă <span class="math inline">\(l + m_\alpha =
+0\)</span>, atunci <span class="math inline">\(l = -m_\alpha \in L_0
+\cap M_\alpha\)</span> şi deci <span class="math inline">\(h^{*}(l +
+m_\alpha) = g_0(l) + h_\alpha(l)\)</span>, ceea ce arată că <span
+class="math inline">\(h^{*}\)</span> este bine definită. Atunci <span
+class="math inline">\((L_0 + M_\alpha, h^{*}) \in \mathfrak{S}\)</span>
+şi, cum <span class="math inline">\((L_0,g_0) \preccurlyeq (L_0 +
+M_\alpha, h^{*})\)</span>, din maximalitatea lui <span
+class="math inline">\((L_0,g_0)\)</span> rezultă că <span
+class="math inline">\(L_0 = L_0 + M_\alpha\)</span>, adică <span
+class="math inline">\(M_\alpha \le L_0\)</span> pentru orice <span
+class="math inline">\(\alpha \in \Lambda\)</span>.</p>
+<p>3) „<span class="math inline">\(\Rightarrow\)</span>” Cum <span
+class="math inline">\(N_\alpha \le N\)</span> şi <span
+class="math inline">\(Q\)</span> este <span
+class="math inline">\(N\)</span>-injectiv, avem că <span
+class="math inline">\(Q\)</span> este <span
+class="math inline">\(N_\alpha\)</span>-injectiv pentru orice <span
+class="math inline">\(\alpha \in \Lambda\)</span>.</p>
+<p>„<span class="math inline">\(\Leftarrow\)</span>” Fie <span
+class="math inline">\(N&#39;_\alpha = i_\alpha(N_\alpha)\)</span>. Cum
+<span class="math inline">\(Q\)</span> este <span
+class="math inline">\(N_\alpha\)</span>-injectiv şi <span
+class="math inline">\(N&#39;_\alpha \cong N_\alpha\)</span>, rezultă că
+<span class="math inline">\(Q\)</span> este <span
+class="math inline">\(N&#39;_\alpha\)</span>-injectiv. Apoi aplicăm
+(2). ◻</p>
+</div>
+<div class="corollary">
+<p><strong>Corolar 3.5</strong>. </p>
+<ol>
+<li><p><em><span class="math inline">\(Q_1 \oplus Q_2\)</span> este
+<span class="math inline">\(R\)</span>-modul quasi-injectiv dacă şi
+numai dacă <span class="math inline">\(Q_i\)</span> este <span
+class="math inline">\(Q_j\)</span>-injectiv pentru orice <span
+class="math inline">\(i,j = 1,2\)</span>. În particular, un sumand
+direct al unui modul quasi-injectiv este quasi-injectiv.</em></p></li>
+<li><p><em><span class="math inline">\(Q^{n}\)</span> este <span
+class="math inline">\(R\)</span>-modul quasi-injectiv dacă şi numai dacă
+<span class="math inline">\(Q\)</span> este
+quasi-injectiv.</em></p></li>
+</ol>
+</div>
+<div class="corollary">
+<p><strong>Corolar 3.6</strong>. <em>Fie <span
+class="math inline">\(Q\)</span> şi <span
+class="math inline">\(M\)</span> două <span
+class="math inline">\(R\)</span>-module. Atunci <span
+class="math inline">\(Q\)</span> este <span
+class="math inline">\(M\)</span>-injectiv dacă şi numai dacă <span
+class="math inline">\(Q\)</span> este <span
+class="math inline">\(mR\)</span>-injectiv pentru orice <span
+class="math inline">\(m \in M\)</span>.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> „<span class="math inline">\(\Rightarrow\)</span>”
+este evident.</p>
+<p>„<span class="math inline">\(\Leftarrow\)</span>” Cum <span
+class="math inline">\(M = \sum_{m \in M} mR\)</span>, din 2.1.4(2)
+rezultă că <span class="math inline">\(Q\)</span> este <span
+class="math inline">\(M\)</span>-injectiv. ◻</p>
+</div>
+<div id="thm:Baer-ro" class="theorem">
+<p><strong>Teoremă 3.7</strong> (Criteriul lui Baer). <em>Pentru un
+<span class="math inline">\(R\)</span>-modul <span
+class="math inline">\(Q\)</span> următoarele afirmaţii sunt
+echivalente:</em></p>
+<ol>
+<li><p><em><span class="math inline">\(Q\)</span> este
+injectiv.</em></p></li>
+<li><p><em><span class="math inline">\(Q\)</span> este <span
+class="math inline">\(R\)</span>-injectiv.</em></p></li>
+<li><p><em>Pentru orice ideal drept <span
+class="math inline">\(I\)</span> al lui <span
+class="math inline">\(R\)</span> şi orice morfism <span
+class="math inline">\(f : I \to Q\)</span> există <span
+class="math inline">\(x \in Q\)</span> astfel încât <span
+class="math inline">\(f(a) = xa\)</span> pentru orice <span
+class="math inline">\(a \in I\)</span>.</em></p></li>
+</ol>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Implicaţia <span class="math inline">\((1)
+\Rightarrow (2)\)</span> este evidentă.</p>
+<p><span class="math inline">\((2) \Rightarrow (1)\)</span>. Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul şi <span class="math inline">\(x
+\in M\)</span>. Cum <span class="math inline">\(\varphi_x : R \to
+xR\)</span>, <span class="math inline">\(\varphi_x(a) = xa\)</span>
+pentru orice <span class="math inline">\(a \in R\)</span>, este morfism
+surjectiv de <span class="math inline">\(R\)</span>-module, rezultă că
+<span class="math inline">\(R / \mathop{\mathrm{Ker}}\varphi_x \cong
+xR\)</span>. Cum <span class="math inline">\(Q\)</span> este <span
+class="math inline">\(R\)</span>-injectiv, din 2.1.4(1) rezultă că <span
+class="math inline">\(Q\)</span> este <span class="math inline">\(R /
+\mathop{\mathrm{Ker}}\varphi_x\)</span>-injectiv şi deci <span
+class="math inline">\(Q\)</span> este <span
+class="math inline">\(xR\)</span>-injectiv pentru orice <span
+class="math inline">\(x \in M\)</span>. Atunci, din 2.1.6 obţinem că
+<span class="math inline">\(Q\)</span> este <span
+class="math inline">\(M\)</span>-injectiv.</p>
+<p><span class="math inline">\((2) \Rightarrow (3)\)</span>. Fie <span
+class="math inline">\(I\)</span> un ideal drept al lui <span
+class="math inline">\(R\)</span> şi <span class="math inline">\(f : I
+\to Q\)</span>. Există <span class="math inline">\(g : R \to Q\)</span>
+astfel încât <span class="math inline">\(g\!\mid_{I} = f\)</span>. Fie
+<span class="math inline">\(x = g(1) \in Q\)</span>. Atunci <span
+class="math inline">\(f(a) = g(a) = ag(1) = xa\)</span> pentru orice
+<span class="math inline">\(a \in I\)</span>.</p>
+<p><span class="math inline">\((3) \Rightarrow (2)\)</span>. Dacă pentru
+un morfism <span class="math inline">\(f : I \to Q\)</span> există <span
+class="math inline">\(x \in Q\)</span> cu <span
+class="math inline">\(f(a) = xa\)</span> pentru orice <span
+class="math inline">\(a \in I\)</span>, atunci, definind <span
+class="math inline">\(g : R \to Q\)</span> prin <span
+class="math inline">\(g(r) = xr\)</span> pentru orice <span
+class="math inline">\(r \in R\)</span>, rezultă că <span
+class="math inline">\(g\!\mid_{I} = f\)</span>. ◻</p>
+</div>
+<div class="definition">
+<p><strong>Definiţie 3.8</strong>. </p>
+<ol>
+<li><p>Un <span class="math inline">\(R\)</span>-modul <span
+class="math inline">\(Q\)</span> se numeşte <em>divizibil</em> dacă
+pentru orice <span class="math inline">\(y \in Q\)</span> şi orice <span
+class="math inline">\(a \in R\)</span> nendivizor al lui zero, există
+<span class="math inline">\(x \in Q\)</span> astfel încât <span
+class="math inline">\(ax = y\)</span>. Se verifică uşor că orice modul
+factor al unui modul divizibil este divizibil.</p></li>
+<li><p>Un domeniu de integritate comutativ se numeşte <em>PID-inel</em>
+dacă orice ideal al său este principal.</p></li>
+</ol>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 3.9</strong>. </p>
+<ol>
+<li><p><em>Orice modul injectiv este divizibil.</em></p></li>
+<li><p><em>Fie <span class="math inline">\(R\)</span> un
+PID-inel.</em></p>
+<ol>
+<li><p><em>Dacă <span class="math inline">\(Q\)</span> este un <span
+class="math inline">\(R\)</span>-modul, atunci <span
+class="math inline">\(Q\)</span> este injectiv dacă şi numai dacă este
+divizibil.</em></p></li>
+<li><p><em>Dacă <span class="math inline">\(I\)</span> este un ideal
+nenul al lui <span class="math inline">\(R\)</span>, atunci <span
+class="math inline">\(R/I\)</span> este <span
+class="math inline">\(R\)</span>-modul quasi-injectiv. În particular,
+<span class="math inline">\(\mathbb{Z}_n\)</span> este <span
+class="math inline">\(\mathbb{Z}\)</span>-modul quasi-injectiv, <span
+class="math inline">\(\forall n \ge 1\)</span>.</em></p></li>
+</ol></li>
+</ol>
+</div>
+<div class="proof">
+<p><em>Proof.</em> 1) Fie <span class="math inline">\(Q\)</span> un
+<span class="math inline">\(R\)</span>-modul divizibil, <span
+class="math inline">\(y \in Q\)</span> şi <span class="math inline">\(a
+\in R\)</span> nendivizor al lui zero. Definim <span
+class="math inline">\(f : aR \to Q\)</span> prin <span
+class="math inline">\(f(ax) = yx\)</span> pentru orice <span
+class="math inline">\(x \in R\)</span>. Cum <span
+class="math inline">\(a\)</span> este nendivizor al lui zero, <span
+class="math inline">\(f\)</span> este bine definită. Folosind criteriul
+lui Baer rezultă că există <span class="math inline">\(x \in Q\)</span>
+astfel încât <span class="math inline">\(f(\lambda) = x\lambda\)</span>,
+pentru orice <span class="math inline">\(\lambda \in I\)</span>. Deci
+<span class="math inline">\(y = f(a) = f(a \cdot 1) = xa\)</span>.</p>
+<p>2) <span class="math inline">\((i)\)</span> Implicaţia „<span
+class="math inline">\(\Rightarrow\)</span>” este evidentă din (1).</p>
+<p>„<span class="math inline">\(\Leftarrow\)</span>” Fie <span
+class="math inline">\(Q\)</span> un <span
+class="math inline">\(R\)</span>-modul divizibil şi <span
+class="math inline">\(I\)</span> un ideal drept al lui <span
+class="math inline">\(R\)</span>. Atunci există <span
+class="math inline">\(a \in R\)</span> astfel încât <span
+class="math inline">\(I = aR\)</span>. Considerăm <span
+class="math inline">\(f : I \to Q\)</span> un morfism de <span
+class="math inline">\(R\)</span>-module. Există <span
+class="math inline">\(x \in Q\)</span> astfel încât <span
+class="math inline">\(f(a) = xa\)</span>. Atunci <span
+class="math inline">\(f(ar) = xar\)</span> pentru orice <span
+class="math inline">\(r \in R\)</span> şi deci, conform criteriului lui
+Baer, <span class="math inline">\(Q\)</span> este injectiv.</p>
+<p>(ii) Fie <span class="math inline">\(I = aR\)</span> şi <span
+class="math inline">\(J = bR\)</span> ideale nenule ale lui <span
+class="math inline">\(R\)</span> astfel încât <span
+class="math inline">\(I \subseteq J\)</span> şi <span
+class="math inline">\(f : J/I \to R/I\)</span> un morfism de <span
+class="math inline">\(R\)</span>-module. Există <span
+class="math inline">\(c \in R\)</span> astfel încât <span
+class="math inline">\(a = bc\)</span>. Dacă <span
+class="math inline">\(f(\bar{b}) = \hat{x} \in R/I\)</span>, atunci
+<span class="math inline">\(x \in I\)</span> şi deci există <span
+class="math inline">\(a_1 \in R\)</span> astfel încât <span
+class="math inline">\(x = aa_1\)</span>. Rezultă că <span
+class="math inline">\(x = ba_1\)</span>. Definim <span
+class="math inline">\(g : R/I \to R/I\)</span>, <span
+class="math inline">\(g(\bar{r}) = \widehat{ar_1}\)</span> pentru orice
+<span class="math inline">\(r \in R\)</span>. Atunci <span
+class="math inline">\(g\)</span> este morfism de <span
+class="math inline">\(R\)</span>-module şi <span
+class="math inline">\(g(\bar{b}) = \hat{x}\)</span>, deci <span
+class="math inline">\(g\!\mid_{J/I} = f\)</span>, ceea ce arată că <span
+class="math inline">\(R/I\)</span> este quasi-injectiv. ◻</p>
+</div>
+<div class="corollary">
+<p><strong>Corolar 3.10</strong>. <em>Un grup abelian <span
+class="math inline">\(G\)</span> este <span
+class="math inline">\(\mathbb{Z}\)</span>-modul injectiv dacă şi numai
+dacă <span class="math inline">\(G\)</span> este divizibil.</em></p>
+</div>
+<div class="corollary">
+<p><strong>Corolar 3.11</strong>. </p>
+<ol>
+<li><p><em><span class="math inline">\(\mathbb{Q}\)</span> şi <span
+class="math inline">\(\mathbb{Z}_{p^\infty}\)</span> sunt <span
+class="math inline">\(\mathbb{Z}\)</span>-module
+injective.</em></p></li>
+<li><p><em>Orice sumă directă de <span
+class="math inline">\(\mathbb{Z}\)</span>-module injective este <span
+class="math inline">\(\mathbb{Z}\)</span>-modul injectiv.</em></p></li>
+<li><p><em>Orice grup factor al unui <span
+class="math inline">\(\mathbb{Z}\)</span>-modul injectiv este
+injectiv.</em></p></li>
+</ol>
+</div>
+<div class="lemma">
+<p><strong>Lemă 3.12</strong>. <em>Fie inelele <span
+class="math inline">\(A, S, T\)</span> şi bimodulele <span
+class="math inline">\({}_S M_A\)</span>, <span
+class="math inline">\({}_A N_T\)</span>. Atunci <span
+class="math inline">\(\mathop{\mathrm{Hom}}_A(M,N)\)</span> are o
+structură de bimodul <span class="math inline">\(S\)</span>-stâng şi
+<span class="math inline">\(T\)</span>-drept prin operaţiile: <span
+class="math display">\[(s \cdot f)(x) = f(xs), \qquad (f \cdot t)(x) =
+f(x)t,\]</span> unde <span class="math inline">\(s \in S\)</span>, <span
+class="math inline">\(t \in T\)</span>, <span class="math inline">\(x
+\in M\)</span>, <span class="math inline">\(f \in
+\mathop{\mathrm{Hom}}_A(M,N)\)</span>.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Fie <span class="math inline">\(a,b \in A\)</span> şi
+<span class="math inline">\(x,y \in M\)</span>. Atunci: <span
+class="math display">\[(s \cdot f)(ax + by)
+= f((ax+by)s)
+= f(a(xs)) + f(b(ys)) = a f(xs) + b f(ys)
+= a (s \cdot f)(x) + b (s \cdot f)(y),\]</span> şi deci <span
+class="math inline">\(s \cdot f \in
+\mathop{\mathrm{Hom}}_A(M,N)\)</span>. Analog <span
+class="math inline">\(f \cdot t \in
+\mathop{\mathrm{Hom}}_A(M,N)\)</span>.</p>
+<p>Pentru <span class="math inline">\(s,s&#39; \in S\)</span> şi <span
+class="math inline">\(f,g \in \mathop{\mathrm{Hom}}_A(M,N)\)</span>:
+<span class="math display">\[(s \cdot (f+g))(x) = (f+g)(xs) = f(xs) +
+g(xs) = (s\cdot f)(x) + (s \cdot g)(x).
+\tag{1}\]</span></p>
+<p><span class="math display">\[((s+s&#39;) \cdot f)(x) = f(x(s+s&#39;))
+= f(xs + xs&#39;) = f(xs) + f(xs&#39;) = (s\cdot f)(x) + (s&#39; \cdot
+f)(x).
+\tag{2}\]</span></p>
+<p><span class="math display">\[((ss&#39;) \cdot f)(x) = f(x(ss&#39;)) =
+f((xs)s&#39;) = (s&#39; \cdot f)(xs) = (s \cdot (s&#39; \cdot f))(x).
+\tag{3}\]</span></p>
+<p><span class="math display">\[(1_S \cdot f)(x) = f(x1_S) = f(x).
+\tag{4}\]</span></p>
+<p>Din (1)–(4) avem că <span
+class="math inline">\(\mathop{\mathrm{Hom}}_A(M,N)\)</span> este <span
+class="math inline">\(S\)</span>-modul stâng. La fel se arată că este şi
+<span class="math inline">\(T\)</span>-modul drept. Prin urmare <span
+class="math inline">\(\mathop{\mathrm{Hom}}_A(M,N)\)</span> este un
+bimodul <span class="math inline">\(S\)</span>-stâng şi <span
+class="math inline">\(T\)</span>-drept. ◻</p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 3.13</strong> (Eckmann–Schopf). <em>Fie <span
+class="math inline">\(Q\)</span> un grup abelian divizibil. Atunci <span
+class="math inline">\(R\)</span>-modulul stâng <span
+class="math inline">\(\mathop{\mathrm{Hom}}_\mathbb{Z}(R,Q)\)</span>
+este injectiv.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Conform lemei precedente, <span
+class="math inline">\(\mathop{\mathrm{Hom}}_{\mathbb{Z}}(R,Q)\)</span>
+are o structură de <span class="math inline">\(R\)</span>-modul stâng
+dată de operaţia <span class="math display">\[(r \cdot f)(a) = f(ar),
+\qquad \forall a,r \in R,\ f \in
+\mathop{\mathrm{Hom}}_{\mathbb{Z}}(R,Q).\]</span> Fie <span
+class="math inline">\(I\)</span> un ideal stâng al lui <span
+class="math inline">\(R\)</span> şi <span class="math inline">\(h : I
+\to \mathop{\mathrm{Hom}}_{\mathbb{Z}}(R,Q)\)</span> un morfism de <span
+class="math inline">\(R\)</span>-module stângi. Atunci aplicaţia <span
+class="math display">\[\gamma : \mathbb{Z}I \longrightarrow \mathbb{Z}Q,
+\qquad
+\gamma(a) = h(a)(1)\]</span> defineşte un morfism de <span
+class="math inline">\(\mathbb{Z}\)</span>–module. Cum <span
+class="math inline">\(Q\)</span> este <span
+class="math inline">\(\mathbb{Z}\)</span>–injectiv, există <span
+class="math inline">\(\widetilde{\gamma} : \mathbb{Z}R \to
+\mathbb{Z}Q\)</span> astfel încât <span
+class="math inline">\(\widetilde{\gamma}_{\mid I} = \gamma\)</span>.
+Pentru <span class="math inline">\(a \in I\)</span> şi <span
+class="math inline">\(r \in R\)</span> avem <span
+class="math display">\[(a \cdot \widetilde{\gamma})(r)
+  = \widetilde{\gamma}(ra)
+  = h(ra)(1)
+  = (r \cdot h(a))(1)
+  = h(a)(r),\]</span> deci <span class="math inline">\(h(a) = a \cdot
+\widetilde{\gamma}\)</span> pentru orice <span class="math inline">\(a
+\in I\)</span>. Conform criteriului lui Baer, <span
+class="math inline">\(\mathop{\mathrm{Hom}}_{\mathbb{Z}}(R,Q)\)</span>
+este <span class="math inline">\(R\)</span>–modul stâng injectiv. ◻</p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 3.14</strong>. <em>Orice <span
+class="math inline">\(R\)</span>-modul stâng <span
+class="math inline">\(M\)</span> poate fi scufundat într-un <span
+class="math inline">\(R\)</span>-modul stâng injectiv.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Există un <span
+class="math inline">\(\mathbb{Z}\)</span>-modul liber de forma <span
+class="math inline">\(\mathbb{Z}^{(A)}\)</span> şi un <span
+class="math inline">\(\mathbb{Z}\)</span>-morfism surjectiv <span
+class="math inline">\(f : \mathbb{Z}^{(A)} \to M\)</span>. Atunci <span
+class="math display">\[\mathbb{Z}M \cong \mathbb{Z}^{(A)} / \ker f
+  \subseteq \mathbb{Q}^{(A)} / \ker f,\]</span> şi deci există un grup
+abelian divizibil <span class="math inline">\(G\)</span> astfel încât
+<span class="math inline">\(\mathbb{Z}M \subseteq \mathbb{Z}G\)</span>.
+Aplicând functorul <span
+class="math inline">\(\mathop{\mathrm{Hom}}_{\mathbb{Z}}(R,-)\)</span>
+obţinem un monomorfism <span class="math display">\[{}_R M \cong
+\mathop{\mathrm{Hom}}_{\mathbb{Z}}(R,M)
+   \hookrightarrow \mathop{\mathrm{Hom}}_{\mathbb{Z}}(R,G).\]</span> Cum
+<span class="math inline">\(G\)</span> este divizibil, din
+Propoziţia 2.1.13 rezultă că <span
+class="math inline">\(\mathop{\mathrm{Hom}}_{\mathbb{Z}}(R,G)\)</span>
+este <span class="math inline">\(R\)</span>-modul stâng injectiv. Prin
+urmare <span class="math inline">\(M\)</span> se scufundă într-un <span
+class="math inline">\(R\)</span>-modul stâng injectiv. ◻</p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 3.15</strong>. <em>Fie <span
+class="math inline">\(Q\)</span> un <span
+class="math inline">\(R\)</span>-modul. Atunci <span
+class="math inline">\(Q\)</span> este injectiv dacă şi numai dacă orice
+şir exact de forma <span class="math display">\[0 \longrightarrow Q
+\xrightarrow{f} M \xrightarrow{g} M&#39; \longrightarrow 0\]</span> este
+scindat.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> „<span class="math inline">\(\Rightarrow\)</span>”
+Presupunem că <span class="math inline">\(Q\)</span> este injectiv. Din
+exactitatea şirului avem că <span class="math inline">\(f\)</span> este
+monomorfism. Prin injectivitatea lui <span
+class="math inline">\(Q\)</span> există <span class="math inline">\(h :
+M \to Q\)</span> astfel încât <span class="math inline">\(h f =
+\mathrm{id}_Q\)</span>, ceea ce arată că şirul este scindat.</p>
+<p>„<span class="math inline">\(\Leftarrow\)</span>” Folosind
+Propoziţia 2.1.14, există un <span
+class="math inline">\(R\)</span>-modul injectiv <span
+class="math inline">\(Q&#39;\)</span> şi un monomorfism <span
+class="math inline">\(i : Q \to Q&#39;\)</span>. Avem un şir exact <span
+class="math display">\[0 \longrightarrow Q \xrightarrow{i} Q&#39;
+\longrightarrow Q&#39;/i(Q) \longrightarrow 0.\]</span> Prin ipoteză
+acest şir este scindat, deci <span class="math inline">\(Q\)</span> este
+sumand direct în <span class="math inline">\(Q&#39;\)</span>. Un sumand
+direct al unui modul injectiv este injectiv, aşadar <span
+class="math inline">\(Q\)</span> este injectiv. ◻</p>
+</div>
+<h2 id="anvelope-injective">Anvelope injective</h2>
+<div class="definition">
+<p><strong>Definiţie 3.16</strong>. Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul. O pereche <span
+class="math inline">\((E,i)\)</span> se numeşte <em>anvelopă
+injectivă</em> a lui <span class="math inline">\(M\)</span> dacă <span
+class="math inline">\(E\)</span> este modul injectiv şi <span
+class="math inline">\(i : M \to E\)</span> este un monomorfism
+esenţial.</p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 3.17</strong>. <em>Fie <span
+class="math inline">\(Q\)</span> un <span
+class="math inline">\(R\)</span>-modul injectiv. Atunci orice submodul
+complement al lui <span class="math inline">\(Q\)</span> este sumand
+direct în <span class="math inline">\(Q\)</span>.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Fie <span class="math inline">\(K\)</span> un
+submodul al lui <span class="math inline">\(Q\)</span> şi <span
+class="math inline">\(N\)</span> un complement al lui <span
+class="math inline">\(K\)</span> în <span
+class="math inline">\(Q\)</span>, adică <span class="math inline">\(K
+\cap N = 0\)</span> şi <span class="math inline">\(K+N\)</span> este
+submodul esenţial în <span class="math inline">\(Q\)</span>. Atunci
+<span class="math inline">\((K+N)/N \cong Q/N\)</span>. Definim <span
+class="math inline">\(g : (K+N)/N \to Q\)</span> prin <span
+class="math display">\[g((x+y)+N) = x, \qquad x \in K,\ y \in
+N.\]</span> Cum <span class="math inline">\(K \cap N = 0\)</span>,
+aplicaţia <span class="math inline">\(g\)</span> este bine definită şi
+este monomorfism. Injectivitatea lui <span
+class="math inline">\(Q\)</span> asigură existenţa unui morfism <span
+class="math inline">\(h : Q/N \to Q\)</span> astfel încât <span
+class="math inline">\(h_{\mid (K+N)/N} = g\)</span>. Deoarece <span
+class="math inline">\((K+N)/N \cong Q/N\)</span> şi <span
+class="math inline">\(g\)</span> este monomorfism, şi <span
+class="math inline">\(h\)</span> este monomorfism. Avem <span
+class="math inline">\(K = \operatorname{Im} g = h((K+N)/N) \subseteq
+h(Q/N)\)</span>. Cum <span class="math inline">\(K\)</span> este
+submodul închis, rezultă <span class="math inline">\(K =
+h(Q/N)\)</span>. Din <span class="math inline">\(h\)</span> monomorfism
+obţinem <span class="math inline">\((K+N)/N = Q/N\)</span>, deci <span
+class="math inline">\(K+N = Q\)</span>. Prin urmare <span
+class="math inline">\(K\)</span> este un sumand direct în <span
+class="math inline">\(Q\)</span>. ◻</p>
+</div>
+<div class="theorem">
+<p><strong>Teoremă 3.18</strong> (Eckmann–Schopf). <em>Orice <span
+class="math inline">\(R\)</span>-modul <span
+class="math inline">\(M\)</span> are o anvelopă injectivă unică până la
+un izomorfism.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Din Propoziţia 2.1.14 există un <span
+class="math inline">\(R\)</span>-modul injectiv <span
+class="math inline">\(Q\)</span> astfel încât <span
+class="math inline">\(M \leq Q\)</span>. Fie <span
+class="math inline">\(E\)</span> o extensie esenţială maximală a lui
+<span class="math inline">\(M\)</span> în <span
+class="math inline">\(Q\)</span>. Atunci <span
+class="math inline">\(E\)</span> este un submodul complement în <span
+class="math inline">\(Q\)</span>, iar din propoziţia precedentă rezultă
+că <span class="math inline">\(E\)</span> este injectiv. Astfel <span
+class="math inline">\((E,i)\)</span>, cu <span class="math inline">\(i :
+M \hookrightarrow E\)</span> incluziunea, este o anvelopă injectivă a
+lui <span class="math inline">\(M\)</span>.</p>
+<p>Pentru unicitate, fie <span class="math inline">\((E_1,i_1)\)</span>
+şi <span class="math inline">\((E_2,i_2)\)</span> două anvelope
+injective ale lui <span class="math inline">\(M\)</span>. Cum <span
+class="math inline">\(E_2\)</span> este injectiv, există <span
+class="math inline">\(f : E_1 \to E_2\)</span> astfel încât <span
+class="math inline">\(f i_1 = i_2\)</span>. Morfismul <span
+class="math inline">\(i_2\)</span> este monomorfism, iar <span
+class="math inline">\(i_1\)</span> este monomorfism esenţial, deci
+(folosind 1.4) rezultă că <span class="math inline">\(f\)</span> este
+monomorfism. Avem <span class="math inline">\(E_1 \cong f(E_1)\)</span>
+şi <span class="math inline">\(E_2 = f(E_1) \oplus E_3\)</span> pentru
+un anumit submodul <span class="math inline">\(E_3\)</span>. Dar <span
+class="math inline">\(i_2(M) \subseteq f(E_1)\)</span>, deci <span
+class="math inline">\(i_2(M) \cap E_3 = 0\)</span>. Cum <span
+class="math inline">\(i_2\)</span> este monomorfism esenţial, rezultă
+<span class="math inline">\(E_3 = 0\)</span>, deci <span
+class="math inline">\(E_2 = f(E_1)\)</span> şi <span
+class="math inline">\(f\)</span> este izomorfism. ◻</p>
+</div>
+<p>În practică vom considera un reprezentant al acestei clase pe care îl
+vom nota <span class="math inline">\(E(M)\)</span> astfel încât <span
+class="math inline">\(M \trianglelefteq E(M)\)</span>.</p>
+<div class="proposition">
+<p><strong>Propoziţie 3.19</strong>. <em>Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul şi <span class="math inline">\(i
+: M \to Q\)</span> un monomorfism cu <span
+class="math inline">\(Q_R\)</span> injectiv. Următoarele afirmaţii sunt
+echivalente:</em></p>
+<ol>
+<li><p><em><span class="math inline">\((Q,i)\)</span> este o anvelopă
+injectivă a lui <span class="math inline">\(M\)</span>;</em></p></li>
+<li><p><em>pentru orice monomorfism <span class="math inline">\(f : M
+\to Q&#39;\)</span> cu <span class="math inline">\(Q&#39;\)</span>
+injectiv, există un monomorfism <span class="math inline">\(g : Q \to
+Q&#39;\)</span> astfel încât <span class="math inline">\(g i =
+f\)</span>.</em></p></li>
+</ol>
+</div>
+<div class="proof">
+<p><em>Proof.</em> <span class="math inline">\((1) \Rightarrow
+(2)\)</span>. Fie <span class="math inline">\(f : M \to Q&#39;\)</span>
+un monomorfism cu <span class="math inline">\(Q&#39;\)</span> injectiv.
+Prin injectivitatea lui <span class="math inline">\(Q&#39;\)</span>
+există <span class="math inline">\(u : Q \to Q&#39;\)</span> astfel
+încât <span class="math inline">\(u i = f\)</span>. Cum <span
+class="math inline">\(i\)</span> este monomorfism esenţial şi <span
+class="math inline">\(Q&#39;\)</span> este injectiv, imaginea <span
+class="math inline">\(u(Q)\)</span> este un complement al lui <span
+class="math inline">\(f(M)\)</span>, iar din definiţia anvelopei
+injective rezultă că <span class="math inline">\(u\)</span> este
+monomorfism; punem <span class="math inline">\(g=u\)</span>.</p>
+<p><span class="math inline">\((2) \Rightarrow (1)\)</span>. Fie <span
+class="math inline">\((E(M),j)\)</span> o anvelopă injectivă a lui <span
+class="math inline">\(M\)</span>. Aplicând (2) la <span
+class="math inline">\(f=j\)</span> obţinem un monomorfism <span
+class="math inline">\(g : Q \to E(M)\)</span> cu <span
+class="math inline">\(g i = j\)</span>. Cum <span
+class="math inline">\(j\)</span> este monomorfism esenţial, rezultă că
+şi <span class="math inline">\(i\)</span> este monomorfism esenţial,
+deci <span class="math inline">\((Q,i)\)</span> este o anvelopă
+injectivă a lui <span class="math inline">\(M\)</span>. ◻</p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 3.20</strong>. <em>Oricare ar fi <span
+class="math inline">\(R\)</span>-modulele drepte <span
+class="math inline">\(M_1,M_2,\dots,M_n\)</span> avem <span
+class="math display">\[E\!\left(\bigoplus_{i=1}^{n} M_i\right)
+  \cong \bigoplus_{i=1}^{n} E(M_i).\]</span></em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Din 1.9, <span
+class="math inline">\(\bigoplus_{i=1}^{n} E(M_i)\)</span> este o
+extensie esenţială a lui <span class="math inline">\(\bigoplus_{i=1}^{n}
+M_i\)</span>. Cum <span class="math display">\[\bigoplus_{i=1}^{n}
+E(M_i) \cong \prod_{i=1}^{n} E(M_i),\]</span> din 2.1.3 rezultă că <span
+class="math inline">\(\bigoplus_{i=1}^{n} E(M_i)\)</span> este injectiv.
+Prin unicitatea anvelopei injective obţinem <span
+class="math display">\[E\!\left(\bigoplus_{i=1}^{n} M_i\right)
+  \cong \bigoplus_{i=1}^{n} E(M_i).\]</span> ◻</p>
+</div>
+<div class="theorem">
+<p><strong>Teoremă 3.21</strong>. <em>Fie <span
+class="math inline">\(Q\)</span> şi <span
+class="math inline">\(M\)</span> două <span
+class="math inline">\(R\)</span>-module. Atunci <span
+class="math inline">\(Q\)</span> este <span
+class="math inline">\(M\)</span>-injectiv dacă şi numai dacă <span
+class="math inline">\(f(M) \leq Q\)</span>, oricare ar fi <span
+class="math inline">\(f \in
+\mathop{\mathrm{Hom}}(E(M),E(Q))\)</span>.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> „<span class="math inline">\(\Rightarrow\)</span>”
+Fie <span class="math inline">\(f \in
+\mathop{\mathrm{Hom}}(E(M),E(Q))\)</span> şi notăm <span
+class="math display">\[K := \{\,m \in M \mid f(m) \in Q\,\}.\]</span>
+Cum <span class="math inline">\(Q\)</span> este <span
+class="math inline">\(M\)</span>-injectiv, există un morfism <span
+class="math inline">\(\bar{f} : M \to Q\)</span> astfel încât <span
+class="math inline">\(\bar{f}\!\mid_{K} = f\!\mid_{K}\)</span>. Arătăm
+că <span class="math display">\[Q \cap (\bar{f}-f)(M) = 0.\]</span> Fie
+<span class="math inline">\(x \in Q\)</span> şi <span
+class="math inline">\(m \in M\)</span> cu <span class="math inline">\(x
+= (\bar{f}-f)(m)\)</span>. Atunci <span class="math display">\[f(m) =
+\bar{f}(m) - x \in Q,\]</span> deci <span class="math inline">\(m \in
+K\)</span>. Urmează că <span class="math display">\[x = \bar{f}(m) -
+f(m) = f(m) - f(m) = 0.\]</span> Prin urmare <span
+class="math inline">\(Q \cap (\bar{f}-f)(M) = 0\)</span> şi, cum <span
+class="math inline">\(Q \trianglelefteq E(Q)\)</span>, rezultă că <span
+class="math inline">\((\bar{f}-f)(M) = 0\)</span>. Aşadar <span
+class="math inline">\(f(M) = \bar{f}(M) \leq Q\)</span>.</p>
+<p>„<span class="math inline">\(\Leftarrow\)</span>” Întrucât <span
+class="math inline">\(E(Q)\)</span> este injectiv, este suficient să
+considerăm <span class="math inline">\(f \in
+\mathop{\mathrm{Hom}}(M,E(Q))\)</span>. Fie <span
+class="math inline">\(N\)</span> un submodul al lui <span
+class="math inline">\(M\)</span> şi <span class="math inline">\(g : N
+\to Q\)</span> un morfism de <span
+class="math inline">\(R\)</span>-module. Cum <span
+class="math inline">\(E(Q)\)</span> este injectiv, există un morfism
+<span class="math inline">\(\tilde{g} : M \to E(Q)\)</span> astfel încât
+<span class="math inline">\(\tilde{g}\!\mid_{N} = i \circ g\)</span>,
+unde <span class="math inline">\(i : Q \to E(Q)\)</span> este injecţia
+canonică. Prin ipoteză avem <span class="math inline">\(\tilde{g}(M)
+\leq Q\)</span>, astfel încât, identificând <span
+class="math inline">\(\tilde{g}\)</span> cu corestricţia sa la <span
+class="math inline">\(Q\)</span>, obţinem un morfism <span
+class="math inline">\(h : M \to Q\)</span> cu <span
+class="math inline">\(h\!\mid_{N} = g\)</span>. Prin urmare <span
+class="math inline">\(Q\)</span> este <span
+class="math inline">\(M\)</span>-injectiv. ◻</p>
+</div>
+<div class="corollary">
+<p><strong>Corolar 3.22</strong>. <em>Un <span
+class="math inline">\(R\)</span>-modul <span
+class="math inline">\(Q\)</span> este quasi-injectiv dacă şi numai dacă
+<span class="math inline">\(f(Q) \leq Q\)</span> pentru orice <span
+class="math inline">\(f \in
+\mathop{\mathrm{End}}(E(Q))\)</span>.</em></p>
+</div>
+<div class="theorem">
+<p><strong>Teoremă 3.23</strong> (Matlis–Bass). <em>Fie <span
+class="math inline">\(R\)</span> un inel. Atunci <span
+class="math inline">\(R\)</span> este noetherian la dreapta dacă şi
+numai dacă, pentru orice <span class="math inline">\(R\)</span>-modul
+simplu <span class="math inline">\(S_i\)</span> (<span
+class="math inline">\(i \geq 1\)</span>), <span class="math display">\[Q
+:= \bigoplus_{i=1}^{\infty} E(S_i)\]</span> este un <span
+class="math inline">\(R\)</span>-modul injectiv.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> „<span class="math inline">\(\Rightarrow\)</span>”
+Fie <span class="math inline">\(L\)</span> un ideal drept al lui <span
+class="math inline">\(R\)</span>, <span class="math display">\[Q =
+\bigoplus_{i=1}^{\infty} E(S_i)\]</span> şi <span
+class="math inline">\(f : L \to Q\)</span> un morfism de <span
+class="math inline">\(R\)</span>-module. Există elemente <span
+class="math inline">\(a_1,\dots,a_n \in L\)</span> astfel încât <span
+class="math display">\[L = a_1 R + a_2 R + \cdots + a_n R.\]</span> În
+mod evident există <span class="math inline">\(m \geq 1\)</span> astfel
+încât <span class="math inline">\(f(a_k) \in \bigoplus_{j=1}^{m}
+E(S_j)\)</span> pentru orice <span class="math inline">\(k =
+1,\dots,n\)</span>, deci <span class="math display">\[\Im f \subseteq
+\bigoplus_{j=1}^{m} E(S_j).\]</span> Cum <span
+class="math inline">\(\bigoplus_{j=1}^{m} E(S_j)\)</span> este injectiv,
+există <span class="math inline">\(g : R \to \bigoplus_{j=1}^{m}
+E(S_j)\)</span> astfel încât <span class="math inline">\(g\!\mid_{L} =
+f\)</span>. Notăm <span class="math inline">\(\bar{f} = i \circ
+g\)</span>, unde <span class="math inline">\(i : \bigoplus_{j=1}^{m}
+E(S_j) \to Q\)</span> este injecţia canonică. Atunci <span
+class="math inline">\(\bar{f}\!\mid_{L} = f\)</span>, deci <span
+class="math inline">\(Q\)</span> este injectiv.</p>
+<p>„<span class="math inline">\(\Leftarrow\)</span>” Presupunem că <span
+class="math inline">\(R\)</span> nu este noetherian la dreapta. Atunci
+există un şir strict ascendent de ideale la dreapta, finit generate:
+<span class="math display">\[L_1 \subsetneq L_2 \subsetneq \cdots
+\subsetneq L_n \subsetneq \cdots .\]</span> Din lema lui Krull rezultă
+că, pentru orice <span class="math inline">\(n \geq 1\)</span>, există
+un submodul maximal <span class="math inline">\(M_n \subsetneq
+L_n\)</span> astfel încât <span class="math display">\[L_{n-1} \subseteq
+M_n \quad \text{pentru orice } n \geq 2.\]</span> Fie <span
+class="math display">\[L := \bigcup_{k=1}^{\infty} L_k, \qquad
+\pi_k : L_k \longrightarrow L_k/M_k\]</span> proiecţiile canonice şi
+<span class="math display">\[E_k := E(L_k/M_k) \quad \text{pentru orice
+} k \geq 1.\]</span> Atunci <span class="math display">\[E :=
+\bigoplus_{k=1}^{\infty} E_k\]</span> este injectiv şi <span
+class="math display">\[f : L \longrightarrow E, \qquad
+f(a) = \sum_{k=1}^{\infty} \pi_k(a)\]</span> este bine definit. Există
+un element <span class="math inline">\(x \in E_1 \oplus \cdots \oplus
+E_n\)</span> astfel încât <span class="math inline">\(f(a) = x
+a\)</span> pentru orice <span class="math inline">\(a \in L\)</span>.
+Rezultă că <span class="math inline">\(\pi_k(a) = 0\)</span> pentru
+orice <span class="math inline">\(k \geq n+1\)</span>, adică <span
+class="math inline">\(a \in M_k\)</span> pentru orice <span
+class="math inline">\(k \geq n+1\)</span>. Prin urmare <span
+class="math display">\[L \subseteq M_{n+1} \subsetneq L_{n+1} \subseteq
+M_{n+2} \subsetneq L_{n+2}
+\subseteq \cdots \subseteq L,\]</span> contradicţie. Obţinem că <span
+class="math inline">\(R\)</span> este noetherian la dreapta. ◻</p>
 </div>
 </body>
 </html>

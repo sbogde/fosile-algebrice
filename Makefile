@@ -1,8 +1,8 @@
 # Makefile for LaTeX to Website conversion
 
 # Path to LaTeX source
-LATEX_SOURCE = ../antiques-roadshow-algebra-en/main.tex
-LATEX_DIR = ../antiques-roadshow-algebra-en
+LATEX_SOURCE = ../antiques-roadshow-algebra-ro/main.tex
+LATEX_DIR = ../antiques-roadshow-algebra-ro
 
 .PHONY: all clean website pdf html serve
 
@@ -26,7 +26,7 @@ html:
 		--toc \
 		--toc-depth=2 \
 		--css=style.css \
-		--metadata title="The Uniform (Co-Irreducible) Dimension of Rings and Modules" \
+		--lua-filter=tikzcd-filter.lua \
 		-o docs/index.html
 
 # Generate complete website (HTML + assets)
