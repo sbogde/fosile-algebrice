@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>PWA Icon Options (512x512)</title>
+    <style>
+      body {
+        font-family: "Georgia", serif;
+        max-width: 1400px;
+        margin: 40px auto;
+        padding: 20px;
+        background: #f5f5f5;
+      }
+      h1 {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .subtitle {
+        text-align: center;
+        color: #7f8c8d;
+        margin-bottom: 30px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        margin-top: 40px;
+      }
+      .option {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: all 0.3s;
+      }
+      .option:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+      .icon-container {
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+      }
+      .option img {
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+      }
+      .option h3 {
+        color: #34495e;
+        margin: 15px 0 10px 0;
+        font-size: 18px;
+      }
+      .option p {
+        color: #7f8c8d;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .instructions {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 25px;
+        border-radius: 12px;
+        margin: 30px 0;
+      }
+      .instructions h3 {
+        margin-top: 0;
+        font-size: 20px;
+      }
+      .instructions code {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-family: "Courier New", monospace;
+        font-size: 13px;
+        display: inline-block;
+        margin: 3px 0;
+      }
+      .instructions ol {
+        margin: 15px 0;
+        padding-left: 25px;
+      }
+      .instructions li {
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🎨 PWA Icon Options for Fosile Algebrice</h1>
+    <p class="subtitle">
+      30 mathematical designs • 512×512 pixels • Progressive Web App ready
+    </p>
+
+    <div class="instructions">
+      <h3>📱 How to use:</h3>
+      <ol>
+        <li>Preview all options below</li>
+        <li>Choose your favorite and note the number</li>
+        <li>
+          Run: <code>cp docs/pwa-icon-option#.png docs/icon-512.png</code>
+        </li>
+        <li>
+          Generate 192px version:
+          <code
+            >python3 -c "from PIL import Image; img =
+            Image.open('docs/icon-512.png'); img.resize((192, 192),
+            Image.LANCZOS).save('docs/icon-192.png')"</code
+          >
+        </li>
+      </ol>
+    </div>
+
+    <div class="grid">
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option1.png" alt="Option 1" />
+        </div>
+        <h3>Option 1: Gradient ℤₙ</h3>
+        <p>
+          Large ℤ with subscript n on gradient blue background. Classic and bold
+          design emphasizing ring theory.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option2.png" alt="Option 2" />
+        </div>
+        <h3>Option 2: ℤ̂ₙ with Hat</h3>
+        <p>
+          Prominent red caret/hat above ℤ with subscript. Professional academic
+          style with clear visual hierarchy.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option3.png" alt="Option 3" />
+        </div>
+        <h3>Option 3: Module Diagram</h3>
+        <p>
+          Three nodes connected by arrows forming a triangular structure.
+          Represents module homomorphisms visually.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option4.png" alt="Option 4" />
+        </div>
+        <h3>Option 4: Ring ⊕</h3>
+        <p>
+          Large ring with direct sum symbol. Corner module labels M₁-M₄. Perfect
+          for module theory emphasis.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option5.png" alt="Option 5" />
+        </div>
+        <h3>Option 5: Dimension D</h3>
+        <p>
+          Large D with subscript u and dimensional arrows. Directly represents
+          "Dimension uniform" from thesis title.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option6.png" alt="Option 6" />
+        </div>
+        <h3>Option 6: Nested Rings</h3>
+        <p>
+          Concentric circles with central R and algebraic symbols (∈, ⊆, ⊕, ∩)
+          in corners. Rich mathematical symbolism.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option7.png" alt="Option 7" />
+        </div>
+        <h3>Option 7: Infinity ∞</h3>
+        <p>
+          Large infinity symbol with "dim" label. Represents infinite
+          dimensional modules and continuous structures.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option8.png" alt="Option 8" />
+        </div>
+        <h3>Option 8: Commutative Square</h3>
+        <p>
+          Four nodes with arrows forming a commutative diagram. Shows category
+          theory perspective with dashed diagonal.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option9.png" alt="Option 9" />
+        </div>
+        <h3>Option 9: Matrix [M N P Q]</h3>
+        <p>
+          Mathematical bracket notation with 2×2 module arrangement. Clean
+          linear algebra aesthetic.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option10.png" alt="Option 10" />
+        </div>
+        <h3>Option 10: Uniform Badge</h3>
+        <p>
+          Shield/badge design with large U and "dim" subscript. Official
+          academic emblem style for uniform dimension.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option11.png" alt="Option 11" />
+        </div>
+        <h3>Option 11: N ⊆ M Submodule</h3>
+        <p>
+          Large subset symbol with N ⊆ M. Essential algebraic relation showing
+          submodule containment.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option12.png" alt="Option 12" />
+        </div>
+        <h3>Option 12: I ◁ R Ideal</h3>
+        <p>
+          Triangular ideal symbol with I ◁ R. Classic ring theory notation for
+          ideal relationships.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option13.png" alt="Option 13" />
+        </div>
+        <h3>Option 13: R/I Quotient</h3>
+        <p>
+          R over I with division bar and equivalence symbols. Quotient
+          ring/module construction emphasized.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option14.png" alt="Option 14" />
+        </div>
+        <h3>Option 14: φ: R → S Homomorphism</h3>
+        <p>
+          Arrow with φ showing ring homomorphism R → S. Core concept in abstract
+          algebra.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option15.png" alt="Option 15" />
+        </div>
+        <h3>Option 15: R ≅ S Isomorphism</h3>
+        <p>
+          Wavy equals with R ≅ S. Represents structural equivalence between
+          algebraic objects.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option16.png" alt="Option 16" />
+        </div>
+        <h3>Option 16: M₁⊕M₂⊕M₃⊕M₄ Direct Sum</h3>
+        <p>
+          Large circle with plus symbol and four modules. Direct sum
+          decomposition visualization.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option17.png" alt="Option 17" />
+        </div>
+        <h3>Option 17: M ⊗ N Tensor Product</h3>
+        <p>
+          Circle with X (tensor symbol) and modules M, N. Tensor product
+          operation in module theory.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option18.png" alt="Option 18" />
+        </div>
+        <h3>Option 18: ker(φ) → 0 Kernel</h3>
+        <p>
+          Kernel mapping to zero with arrow. Fundamental concept in homomorphism
+          theory.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option19.png" alt="Option 19" />
+        </div>
+        <h3>Option 19: 0→A→B→C→0 Exact</h3>
+        <p>
+          Vertical exact sequence with colored modules. Short exact sequence
+          from homological algebra.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option20.png" alt="Option 20" />
+        </div>
+        <h3>Option 20: ⟨g⟩ Generator</h3>
+        <p>
+          Angle brackets with g inside. Represents generated submodule or cyclic
+          module structure.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option21.png" alt="Option 21" />
+        </div>
+        <h3>Option 21: π (Pi)</h3>
+        <p>
+          Iconic π symbol on gradient background. Universal mathematics symbol
+          recognized worldwide.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option22.png" alt="Option 22" />
+        </div>
+        <h3>Option 22: Σ (Sigma)</h3>
+        <p>
+          Large summation symbol with infinity and n=1 limits. Classic calculus
+          and series notation.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option23.png" alt="Option 23" />
+        </div>
+        <h3>Option 23: ∞ (Infinity)</h3>
+        <p>
+          Glowing multi-colored infinity loops. Mathematical concept of
+          boundless and unlimited.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option24.png" alt="Option 24" />
+        </div>
+        <h3>Option 24: √(x² + y²)</h3>
+        <p>
+          Square root symbol with expression underneath. Pythagorean theorem and
+          algebraic operations.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option25.png" alt="Option 25" />
+        </div>
+        <h3>Option 25: Blackboard Equations</h3>
+        <p>
+          Chalkboard style with multiple equations (x²+y=z, a³+b³=c³) and
+          symbols (π, ∞). Classic classroom math.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option26.png" alt="Option 26" />
+        </div>
+        <h3>Option 26: ∫ (Integral)</h3>
+        <p>
+          Large integral symbol with f(x)dx and limits 0 to ∞. Calculus and
+          continuous mathematics.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option27.png" alt="Option 27" />
+        </div>
+        <h3>Option 27: +−×÷ Operations</h3>
+        <p>
+          Four basic arithmetic operations in colored quadrants with central
+          equals. Elementary math clarity.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option28.png" alt="Option 28" />
+        </div>
+        <h3>Option 28: △○□ Geometry</h3>
+        <p>
+          Triangle, circle, and square in vibrant colors. Basic geometric shapes
+          for visual math identity.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option29.png" alt="Option 29" />
+        </div>
+        <h3>Option 29: Calculator</h3>
+        <p>
+          Digital calculator with screen (123.456) and number buttons. Practical
+          computation tool aesthetic.
+        </p>
+      </div>
+
+      <div class="option">
+        <div class="icon-container">
+          <img src="pwa-icon-option30.png" alt="Option 30" />
+        </div>
+        <h3>Option 30: y=x² Graph</h3>
+        <p>
+          Coordinate system with parabola curve and labeled axes. Classic
+          function plotting visualization.
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="instructions"
+      style="
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        margin-top: 50px;
+      "
+    >
+      <h3>🚀 Next Steps for PWA:</h3>
+      <ol>
+        <li>Choose and create both icon sizes (192px & 512px)</li>
+        <li>Create <code>manifest.json</code> in docs/ folder</li>
+        <li>Add service worker for offline functionality</li>
+        <li>Update index.html with PWA meta tags</li>
+      </ol>
+    </div>
+  </body>
+</html>

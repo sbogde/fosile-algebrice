@@ -89,12 +89,16 @@ $PANDOC_PATH "$LATEX_SOURCE" \
   --lua-filter=tikzcd-filter.lua \
   -o docs/index.html
 
-# Add favicon to HTML
-echo "Adding favicon..."
-sed -i.bak 's|</head>|  <link rel="icon" type="image/svg+xml" href="favicon.svg">\n</head>|' docs/index.html
+# Add favicon and PWA meta tags to HTML
+echo "Adding favicon and PWA support..."
+sed -i.bak 's|</head>|  <link rel="icon" type="image/svg+xml" href="favicon.svg">\n  <link rel="manifest" href="manifest.json">\n  <meta name="theme-color" content="#2c3e50">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <meta name="apple-mobile-web-app-capable" content="yes">\n  <meta name="apple-mobile-web-app-status-bar-style" content="default">\n  <meta name="apple-mobile-web-app-title" content="Fosile Algebrice">\n  <link rel="apple-touch-icon" href="icon-192.png">\n</head>|' docs/index.html
 rm docs/index.html.bak
 
-echo "✅ HTML generated: docs/index.html"
+# Add service worker registration script before closing body tag
+sed -i.bak 's|</body>|  <script>\n    if ("serviceWorker" in navigator) {\n      navigator.serviceWorker.register("/sw.js").then(registration => {\n        console.log("Service Worker registered:", registration);\n      }).catch(error => {\n        console.log("Service Worker registration failed:", error);\n      });\n    }\n  </script>\n</body>|' docs/index.html
+rm docs/index.html.bak
+
+echo "✅ HTML generated with PWA support: docs/index.html"
 echo ""
 
 # Clean up auxiliary files in the LaTeX source directory
