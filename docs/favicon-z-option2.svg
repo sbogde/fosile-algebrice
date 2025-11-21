@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="#1a1a2e" stroke="#2d2d44" stroke-width="2"/>
+  
+  <!-- Hat/caret over Z -->
+  <path d="M 30 20 L 50 10 L 70 20" stroke="#E74C3C" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Mathematical ring symbol ℤ -->
+  <text x="50" y="70" font-family="serif" font-size="60" font-weight="bold" fill="#ECF0F1" text-anchor="middle">ℤ</text>
+  
+  <!-- Subscript n -->
+  <text x="75" y="72" font-family="serif" font-size="24" font-style="italic" fill="#16C79A" text-anchor="middle">n</text>
+</svg>

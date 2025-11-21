@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Favicon Options Preview</title>
+    <style>
+      body {
+        font-family: "Georgia", serif;
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 20px;
+        background: #f5f5f5;
+      }
+      h1 {
+        color: #2c3e50;
+        text-align: center;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+      .option {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.2s;
+      }
+      .option:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+      }
+      .option img {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 15px;
+      }
+      .option h3 {
+        color: #34495e;
+        margin: 10px 0;
+        font-size: 16px;
+      }
+      .option p {
+        color: #7f8c8d;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      .current {
+        grid-column: 1 / -1;
+        background: #ecf0f1;
+      }
+      .instructions {
+        background: #3498db;
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 30px 0;
+      }
+      .instructions code {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 2px 8px;
+        border-radius: 3px;
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🎨 Favicon Options for Fosile Algebrice</h1>
+
+    <div class="instructions">
+      <strong>To use an option:</strong><br />
+      1. Replace <code>docs/favicon.png</code> with your chosen option<br />
+      2. Run <code>./build-website.sh</code> to rebuild<br />
+      3. The favicon will appear in your browser tab
+    </div>
+
+    <div class="grid">
+      <div class="option current">
+        <img src="favicon.png" alt="Current favicon" />
+        <h3>Current Favicon</h3>
+        <p>
+          Ring symbol (ℤ) with subscript R - represents ring theory and abstract
+          algebra
+        </p>
+      </div>
+
+      <div class="option">
+        <img src="favicon-option1.png" alt="Option 1" />
+        <h3>Option 1: Module M</h3>
+        <p>
+          Letter M with dimension arrows - emphasizes module theory and
+          dimensionality
+        </p>
+      </div>
+
+      <div class="option">
+        <img src="favicon-option2.png" alt="Option 2" />
+        <h3>Option 2: Direct Sum</h3>
+        <p>
+          Ring with ⊕ symbol inside - represents direct sum operations on
+          modules
+        </p>
+      </div>
+
+      <div class="option">
+        <img src="favicon-option3.png" alt="Option 3" />
+        <h3>Option 3: Infinity</h3>
+        <p>
+          Infinity symbol - represents infinite dimensional modules and
+          continuous structures
+        </p>
+      </div>
+
+      <div class="option">
+        <img src="favicon-option4.png" alt="Option 4" />
+        <h3>Option 4: Module Diagram</h3>
+        <p>
+          Abstract diagram with nodes and arrows - visualizes module
+          homomorphisms
+        </p>
+      </div>
+
+      <div class="option">
+        <img src="favicon-option5.png" alt="Option 5" />
+        <h3>Option 5: Dimension D</h3>
+        <p>
+          Letter D with subscript u - "Dimension uniform" directly from the
+          thesis title
+        </p>
+      </div>
+
+      <div class="option">
+        <img src="favicon-option6.png" alt="Option 6" />
+        <h3>Option 6: Bracketed M</h3>
+        <p>
+          M in mathematical brackets [M] - clean notation style for module
+          representation
+        </p>
+      </div>
+    </div>
+
+    <div class="instructions" style="background: #27ae60; margin-top: 40px">
+      <strong>Command to replace:</strong><br />
+      <code>cp docs/favicon-option#.png docs/favicon.png</code><br />
+      (Replace # with your choice: 1, 2, 3, 4, 5, or 6)
+    </div>
+  </body>
+</html>

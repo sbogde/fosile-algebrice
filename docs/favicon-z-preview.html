@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ℤₙ Favicon Options</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .option {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        .option img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 15px;
+        }
+        .option h3 {
+            color: #34495e;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .option p {
+            color: #7f8c8d;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .instructions {
+            background: #3498db;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        .instructions code {
+            background: rgba(255,255,255,0.2);
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>ℤₙ Favicon Variants</h1>
+    
+    <div class="instructions">
+        <strong>To use an option:</strong><br>
+        Simply run: <code>cp docs/favicon-z-option#.svg docs/favicon.svg</code><br>
+        (Replace # with 1, 2, 3, 4, or 5)
+    </div>
+    
+    <div class="grid">
+        <div class="option">
+            <img src="favicon-z-option1.svg" alt="Option 1">
+            <h3>Option 1: Classic ℤₙ</h3>
+            <p>Simple and clean - ℤ with subscript n. Dark blue background with blue accent.</p>
+        </div>
+        
+        <div class="option">
+            <img src="favicon-z-option2.svg" alt="Option 2">
+            <h3>Option 2: ℤ̂ₙ with Hat</h3>
+            <p>Hat/caret above ℤ with subscript n. Red accent for the hat, teal for n.</p>
+        </div>
+        
+        <div class="option">
+            <img src="favicon-z-option3.svg" alt="Option 3">
+            <h3>Option 3: ℤⁿ Superscript</h3>
+            <p>Superscript n (top right). Gradient background with golden accent.</p>
+        </div>
+        
+        <div class="option">
+            <img src="favicon-z-option4.svg" alt="Option 4">
+            <h3>Option 4: Wide ℤ̂ₙ</h3>
+            <p>Wide hat over ℤ with subscript n. Teal hat, golden n, deep blue background.</p>
+        </div>
+        
+        <div class="option">
+            <img src="favicon-z-option5.svg" alt="Option 5">
+            <h3>Option 5: Modern ℤ̂ₙ</h3>
+            <p>Minimalist with rounded corners. Double-line hat accent and circled subscript n.</p>
+        </div>
+    </div>
+    
+    <div class="instructions" style="background: #27ae60; margin-top: 40px;">
+        <strong>Quick command:</strong><br>
+        <code>cp docs/favicon-z-option#.svg docs/favicon.svg && ./build-website.sh</code>
+    </div>
+</body>
+</html>
