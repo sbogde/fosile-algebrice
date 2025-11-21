@@ -1,58 +1,23 @@
 #!/bin/bash
-# Netlify build script - HTML only (no PDF compilation)
+# Netlify build script - serves pre-built static files
 
 set -e
 
-# Path to the LaTeX source
-LATEX_SOURCE="../antiques-roadshow-algebra-ro/main.tex"
-
 echo "================================================"
-echo "  Building Website for Netlify"
+echo "  Netlify Deployment"
 echo "================================================"
 echo ""
 
-# Check if LaTeX source exists
-if [ ! -f "$LATEX_SOURCE" ]; then
-  echo "❌ Error: LaTeX source not found at $LATEX_SOURCE"
+# Check if pre-built files exist
+if [ ! -f "docs/index.html" ]; then
+  echo "❌ Error: Pre-built files not found in docs/"
+  echo "   Run ./build-website.sh locally first and commit the docs/ folder"
   exit 1
 fi
 
-# Create docs directory
-echo "Creating output directory..."
-mkdir -p docs
-mkdir -p docs/diagrams
-echo "✅ Directory created"
+echo "✅ Pre-built website found in docs/"
+echo "✅ Ready to deploy!"
 echo ""
-
-# Copy pre-generated diagrams if they exist locally
-# (You'll need to commit these to the repo)
-if [ -d "docs/diagrams" ] && [ "$(ls -A docs/diagrams/*.svg 2>/dev/null)" ]; then
-  echo "✅ Using pre-generated diagrams"
-else
-  echo "⚠️  Warning: No pre-generated diagrams found"
-  echo "   Run ./build-website.sh locally first and commit docs/diagrams/*.svg"
-fi
-echo ""
-
-# Convert to HTML
-echo "Converting LaTeX to HTML with pandoc..."
-pandoc "$LATEX_SOURCE" \
-  --standalone \
-  --mathjax \
-  --toc \
-  --toc-depth=2 \
-  --css=style.css \
-  --lua-filter=tikzcd-filter.lua \
-  -o docs/index.html
-
-echo "✅ HTML generated: docs/index.html"
-echo ""
-
-# Copy CSS if it exists
-if [ -f "docs/style.css" ]; then
-  echo "✅ CSS file found"
-fi
-
 echo "================================================"
-echo "  ✅ Netlify build complete!"
+echo "  ✅ Deployment ready!"
 echo "================================================"
