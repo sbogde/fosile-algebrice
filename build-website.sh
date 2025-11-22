@@ -98,6 +98,13 @@ rm docs/index.html.bak
 sed -i.bak 's|</body>|  <script>\n    if ("serviceWorker" in navigator) {\n      navigator.serviceWorker.register("/sw.js").then(registration => {\n        console.log("Service Worker registered:", registration);\n      }).catch(error => {\n        console.log("Service Worker registration failed:", error);\n      });\n    }\n  </script>\n</body>|' docs/index.html
 rm docs/index.html.bak
 
+# Add cache busting with build timestamp
+echo "Adding cache busting..."
+BUILD_TIMESTAMP=$(date +%s)
+sed -i.bak "s|href=\"style.css\"|href=\"style.css?v=${BUILD_TIMESTAMP}\"|g" docs/index.html
+sed -i.bak "s|src=\"/sw.js\"|src=\"/sw.js?v=${BUILD_TIMESTAMP}\"|g" docs/index.html
+rm docs/index.html.bak
+
 echo "✅ HTML generated with PWA support: docs/index.html"
 echo ""
 
