@@ -25,7 +25,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="style.css?v=1763834054" />
+  <link rel="stylesheet" href="style.css?v=1763848172" />
   <script
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
   type="text/javascript"></script>
@@ -78,6 +78,9 @@ injective</a></li>
 <li><a href="#sume-directe-de-module-coireductibile"
 id="toc-sume-directe-de-module-coireductibile">Sume directe de module
 coireductibile</a></li>
+<li><a href="#domenii-ore-şi-inele-goldie"
+id="toc-domenii-ore-şi-inele-goldie">Domenii Ore şi inele
+Goldie</a></li>
 </ul>
 </nav>
 <h1 id="generalităţi">Generalităţi</h1>
@@ -2549,6 +2552,476 @@ pentru orice <span class="math inline">\(i = 1,\dots,n\)</span>. În plus
 avem <span class="math display">\[\dim M = \sum_{i=1}^n \dim N_i
 .\]</span></p></li>
 </ol>
+</div>
+<h1 id="domenii-ore-şi-inele-goldie">Domenii Ore şi inele Goldie</h1>
+<div class="definition">
+<p><strong>Definiţie 5.1</strong>. Un domeniu de integritate <span
+class="math inline">\(D\)</span> se numeşte <em>domeniu Ore la
+dreapta</em> (respectiv la stânga) dacă <span class="math inline">\(aD
+\cap bD \neq 0\)</span> (respectiv <span class="math inline">\(Da \cap
+Db \neq 0\)</span>) oricare ar fi <span class="math inline">\(a,b \in D
+\setminus \{0\}\)</span>.</p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 5.2</strong>. <em>Fie <span
+class="math inline">\(D\)</span> un domeniu de integritate. Atunci <span
+class="math inline">\(D\)</span> este un domeniu Ore la dreapta dacă şi
+numai dacă <span class="math inline">\(D\)</span> conţine un ideal drept
+coireductibil. În particular, această condiţie este verificată când
+<span class="math inline">\(D\)</span> satisface condiţia lanţurilor
+ascendente pentru sume directe de ideale drepte.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> „<span class="math inline">\(\Rightarrow\)</span>”
+Dacă <span class="math inline">\(D\)</span> este un domeniu Ore la
+dreapta atunci <span class="math inline">\(D_D\)</span> este
+coireductibil.</p>
+<p>„<span class="math inline">\(\Leftarrow\)</span>” Fie <span
+class="math inline">\(X\)</span> un ideal drept coireductibil al lui
+<span class="math inline">\(D\)</span> şi <span class="math inline">\(x
+\in X \setminus \{0\}\)</span>. Aplicaţia <span
+class="math display">\[\varphi_x : D_D \longrightarrow X, \qquad
+\varphi_x(a) = xa\]</span> este un morfism injectiv de <span
+class="math inline">\(D\)</span>-module drepte. Atunci <span
+class="math inline">\(D_D\)</span> este coireductibil şi deci <span
+class="math inline">\(D\)</span> este domeniu Ore la dreapta. ◻</p>
+</div>
+<div class="example">
+<p><strong>Exemplu 5.3</strong>. Fie <span
+class="math inline">\(K\)</span> un corp comutativ şi <span
+class="math inline">\(y\)</span> o nedeterminată. Considerăm <span
+class="math inline">\(K(y)\)</span> corpul de fracţii al inelului de
+polinoame <span class="math inline">\(K[y]\)</span>. Dacă <span
+class="math inline">\(x\)</span> este o altă nedeterminată, considerăm
+<span class="math inline">\(K(y)[x]\)</span> mulţimea polinoamelor cu
+coeficienţi în <span class="math inline">\(K(y)\)</span> şi în
+nedeterminata <span class="math inline">\(x\)</span>. Pe această mulţime
+definim două operaţii: operaţia de adunare fiind adunarea obişnuită a
+polinoamelor, iar operaţia de înmulţire în <span
+class="math inline">\(K(y)[x]\)</span> o definim prin relaţia de
+comutare <span class="math display">\[x f(y) = f(y^{2})x, \qquad f \in
+K(y).\]</span> Se verifică imediat că mulţimea <span
+class="math inline">\(K(y)[x]\)</span>, cu cele două operaţii, este un
+inel unitar. Notăm <span class="math inline">\(A = K(y)[x]\)</span>.
+<span class="math inline">\(A\)</span> este un domeniu de integritate
+necomutativ.</p>
+<p>Orice element din <span class="math inline">\(A\)</span> poate fi pus
+sub formă unică: <span class="math display">\[P(x) = f_{n}(y)x^{n} +
+f_{n-1}(y)x^{n-1} + \dots + f_{1}(y)x + f_{0}(y),\]</span> unde <span
+class="math inline">\(n\)</span> este un număr natural şi <span
+class="math inline">\(f_{0}(y), f_{1}(y), \dots, f_{n}(y) \in
+K(y)\)</span>, <span class="math inline">\(f_{n}(y) \neq 0\)</span>. Vom
+nota <span class="math inline">\(\deg P(x) = n\)</span>.</p>
+<p>Observăm că, dacă <span class="math inline">\(P(x), Q(x) \in
+A\)</span> cu <span class="math inline">\(Q(x) \neq 0\)</span>, există
+două elemente <span class="math inline">\(S(x), R(x) \in A\)</span>
+astfel încât <span class="math display">\[P(x) = S(x)Q(x) + R(x)
+\tag{\(*\)}\]</span> cu <span class="math inline">\(R(x) = 0\)</span>
+sau <span class="math inline">\(\deg R(x) &lt; \deg Q(x)\)</span>. Din
+relaţiile <span class="math inline">\((*)\)</span> rezultă că <span
+class="math inline">\(A\)</span> este inel principal la stânga. Rezultă
+că <span class="math inline">\(A\)</span> satisface condiţia lanţurilor
+ascendente pentru sume directe de ideale la stânga şi deci <span
+class="math inline">\(A\)</span> este domeniu Ore la stânga.</p>
+<p>Să arătăm egalitatea <span class="math inline">\(xA \cap yA =
+0\)</span>. Fie <span class="math inline">\(\alpha \in xA \cap
+yA\)</span>. Atunci <span class="math display">\[\alpha =
+x\bigl(f_{n}(y)x^{n} + \dots + f_{0}(y)\bigr)
+       = yx\bigl(g_{m}(y)x^{m} + \dots + g_{0}(y)\bigr),\]</span> de
+unde <span class="math display">\[f_{n}(y^{2})x^{n+1} + \dots +
+f_{0}(y^{2})x
+= y\bigl(g_{m}(y^{2})x^{m+1} + \dots + g_{0}(y^{2})x\bigr)\]</span> şi
+deci <span class="math inline">\(m = n\)</span>. Rezultă <span
+class="math display">\[f_{n}(y^{2}) = y g_{m}(y^{2}), \dots,
+f_{0}(y^{2}) = y g_{0}(y^{2}),\]</span> ceea ce are loc dacă şi numai
+dacă <span class="math inline">\(f_{n}(y) = \dots = f_{1}(y) = f_{0}(y)
+= 0\)</span> şi deci <span class="math inline">\(\alpha = 0\)</span>.
+Rezultă că <span class="math inline">\(A\)</span> nu este domeniu Ore la
+dreapta.</p>
+</div>
+<div class="center">
+<p><strong>INELE GOLDIE</strong></p>
+</div>
+<div class="definition">
+<p><strong>Definiţie 5.4</strong>. Un ideal drept (respectiv stâng)
+<span class="math inline">\(I\)</span> se numeşte <em>ideal anulator la
+dreapta</em> (respectiv la stânga) dacă există o submulţime nevidă <span
+class="math inline">\(X\)</span> a lui <span
+class="math inline">\(R\)</span> astfel încât <span
+class="math inline">\(I = \operatorname{ann}_{r}(X)\)</span> (respectiv
+<span class="math inline">\(I = \operatorname{ann}_{l}(X)\)</span>).</p>
+<p>Un inel <span class="math inline">\(R\)</span> se numeşte <em>inel
+Goldie la dreapta</em> dacă <span class="math inline">\(R\)</span>
+satisface condiţia lanţurilor ascendente pentru ideale anulatori la
+dreapta şi nu există în <span class="math inline">\(R\)</span> o sumă
+directă infinită de ideale drepte nenule.</p>
+</div>
+<div class="example">
+<p><strong>Exemplu 5.5</strong>. </p>
+<ol>
+<li><p>Dacă <span class="math inline">\(R\)</span> este inel noetherian
+la dreapta, atunci <span class="math inline">\(R\)</span> este inel
+Goldie la dreapta. În particular, <span
+class="math inline">\(\mathbb{Z}\)</span> este inel Goldie.</p></li>
+<li><p>Dacă <span class="math inline">\(R\)</span> este un domeniu de
+integritate, atunci <span class="math inline">\(R\)</span> este inel
+Goldie la dreapta dacă şi numai dacă <span
+class="math inline">\(R\)</span> este domeniu Ore la dreapta.</p></li>
+<li><p>Din exemplul 4.3 rezultă că există inele Goldie la stânga care nu
+sunt Goldie la dreapta.</p></li>
+</ol>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 5.6</strong>. <em>Fie <span
+class="math inline">\(R\)</span> un inel. Atunci <span
+class="math inline">\(R\)</span> verifică condiţia lanţurilor ascendente
+pentru ideale anulatori la dreapta (respectiv la stânga) dacă şi numai
+dacă <span class="math inline">\(R\)</span> verifică condiţia lanţurilor
+descendente pentru ideale anulatori la stânga (respectiv la
+dreapta).</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> “<span class="math inline">\(\Rightarrow\)</span>”
+Fie <span class="math inline">\(I_1 \supseteq I_2 \supseteq \dots
+\supseteq I_n \supseteq \dots\)</span> un şir descendent de ideale
+anulatori la stânga. Pentru orice <span class="math inline">\(j \geq
+1\)</span> există o mulţime nevidă <span class="math inline">\(X_j
+\subseteq R\)</span> astfel încât <span class="math inline">\(I_j =
+\operatorname{ann}_\ell(X_j)\)</span>.</p>
+<p>Atunci obţinem şirul ascendent de ideale anulatori la dreapta <span
+class="math display">\[\operatorname{ann}_r(I_1) \subseteq
+\operatorname{ann}_r(I_2) \subseteq
+  \dots \subseteq \operatorname{ann}_r(I_n) \subseteq \dots\]</span> şi
+deci există <span class="math inline">\(m \geq 1\)</span> astfel încât
+<span class="math inline">\(\operatorname{ann}_r(I_m) =
+\operatorname{ann}_r(I_{m+k})\)</span> pentru orice <span
+class="math inline">\(k \geq 1\)</span>. Rezultă că <span
+class="math display">\[\operatorname{ann}_\ell(\operatorname{ann}_r(I_m))
+  = \operatorname{ann}_\ell(\operatorname{ann}_r(I_{m+k}))
+  \quad \text{pentru orice } k \geq 1,\]</span> adică <span
+class="math inline">\(I_m = I_{m+k}\)</span> pentru orice <span
+class="math inline">\(k \geq 1\)</span>.</p>
+<p>Folosind relaţiile <span
+class="math inline">\(\operatorname{ann}_\ell(\operatorname{ann}_r(\operatorname{ann}_\ell(X)))
+= \operatorname{ann}_\ell(X)\)</span> şi <span
+class="math inline">\(\operatorname{ann}_r(Y) \subseteq
+\operatorname{ann}_r(X)\)</span> dacă <span class="math inline">\(X
+\subseteq Y\)</span>, implicaţia “<span
+class="math inline">\(\Leftarrow\)</span>” se demonstrează analog. ◻</p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 5.7</strong>. <em>Fie <span
+class="math inline">\(R\)</span> un inel semiprim care satisface
+condiţia lanţurilor ascendente pentru ideale anulatori la dreapta. Dacă
+<span class="math inline">\(I\)</span> şi <span
+class="math inline">\(J\)</span> sunt ideale drepte astfel încât <span
+class="math inline">\(I \subseteq J\)</span>, atunci există un element
+<span class="math inline">\(b \in R\)</span> astfel încât <span
+class="math inline">\(bJ \neq 0\)</span> şi <span
+class="math inline">\(bJ \cap I = 0\)</span>.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Din lema precedentă există un element minimal <span
+class="math inline">\(a\)</span> în mulţimea idealelor anulatori la
+stânga astfel încât <span
+class="math inline">\(\operatorname{ann}_\ell(J) \subseteq
+\operatorname{ann}_\ell(I)\)</span>. Atunci <span
+class="math inline">\(aJ \neq 0\)</span>, iar cum <span
+class="math inline">\(R\)</span> este inel semiprim, obţinem <span
+class="math inline">\(aJ \cdot aJ \neq 0\)</span> şi deci există <span
+class="math inline">\(b = x a\)</span> cu <span class="math inline">\(x
+\in J\)</span>, <span class="math inline">\(a \in aJ\)</span> astfel
+încât <span class="math inline">\(x a J \neq 0\)</span>. Evident, <span
+class="math inline">\(bJ \neq 0\)</span>.</p>
+<p>Rămâne să arătăm că <span class="math inline">\(bJ \cap I =
+0\)</span>. Fie <span class="math inline">\(\lambda \in bJ \cap
+I\)</span>, deci <span class="math inline">\(\lambda = b\mu = x a \mu
+\in I\)</span> pentru un <span class="math inline">\(\mu \in J\)</span>.
+Cum <span class="math inline">\(\operatorname{ann}_\ell(J) \subseteq
+\operatorname{ann}_\ell(\lambda)\)</span>, obţinem <span
+class="math display">\[\operatorname{ann}_\ell(J) \subseteq
+\operatorname{ann}_\ell(\lambda)
+  \subseteq \operatorname{ann}_\ell(\mu).\]</span> Deoarece <span
+class="math inline">\(a \in aJ \subseteq aR\)</span>, avem <span
+class="math display">\[\begin{equation}
+\label{eq:4.7-1}
+  x a \in a \quad \text{şi deci} \quad x a J \subseteq aJ .
+\end{equation}\]</span></p>
+<p>Pe de altă parte, <span class="math inline">\(x a J \subseteq
+I\)</span>, iar <span class="math inline">\(\lambda \in I\)</span> şi
+<span class="math inline">\(a \subseteq
+\operatorname{ann}_r(I)\)</span>, astfel încât <span
+class="math display">\[\begin{equation}
+\label{eq:4.7-2}
+  a \subseteq \operatorname{ann}_\ell(\mu).
+\end{equation}\]</span> Dar cum <span class="math inline">\(x a J \neq
+0\)</span>, avem <span class="math display">\[\begin{equation}
+\label{eq:4.7-3}
+  a \nsubseteq \operatorname{ann}_\ell(J).
+\end{equation}\]</span></p>
+<p>Din <a href="#eq:4.7-1" data-reference-type="eqref"
+data-reference="eq:4.7-1">[eq:4.7-1]</a>, <a href="#eq:4.7-2"
+data-reference-type="eqref" data-reference="eq:4.7-2">[eq:4.7-2]</a> şi
+<a href="#eq:4.7-3" data-reference-type="eqref"
+data-reference="eq:4.7-3">[eq:4.7-3]</a> obţinem că <span
+class="math inline">\(\operatorname{ann}_\ell(J) \subseteq
+\operatorname{ann}_\ell(\mu) \cap a\)</span>. Dacă <span
+class="math inline">\(\lambda \neq 0\)</span>, atunci <span
+class="math inline">\(x a \mu \notin
+\operatorname{ann}_\ell(\mu)\)</span> şi, cum <span
+class="math inline">\(x a \in a\)</span>, rezultă că <span
+class="math inline">\(x a \mu \neq 0\)</span>, ceea ce contrazice
+alegerea lui <span class="math inline">\(a\)</span>. Deci <span
+class="math inline">\(\lambda = 0\)</span>, şi atunci <span
+class="math inline">\(bJ \cap I = 0\)</span>. ◻</p>
+</div>
+<div class="corollary">
+<p><strong>Corolar 5.8</strong>. <em>Dacă <span
+class="math inline">\(R\)</span> este un inel Goldie la dreapta
+semiprim, atunci <span class="math inline">\(R\)</span> satisface
+condiţia lanţurilor descendente pentru ideale anulatori la
+dreapta.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Presupunem că există un şir strict descrescător de
+ideale anulatori la dreapta <span class="math display">\[I_1 \supset I_2
+\supset \dots \supset I_n \supset \dots .\]</span> Atunci pentru orice
+<span class="math inline">\(n \geq 1\)</span> avem <span
+class="math inline">\(\operatorname{ann}_\ell(I_n) \neq
+\operatorname{ann}_\ell(I_{n+1})\)</span>. Din Propoziţia 4.7 rezultă că
+pentru orice <span class="math inline">\(n \geq 1\)</span> există un
+ideal drept <span class="math inline">\(K_n\)</span> astfel încât <span
+class="math inline">\(K_n \subseteq I_n\)</span> şi <span
+class="math inline">\(K_n \cap I_{n+1} \neq 0\)</span>. Atunci suma
+directă <span class="math inline">\(\sum_{n \geq 1} K_n\)</span> este o
+sumă directă infinită de ideale drepte nenule, în contradicţie cu faptul
+că <span class="math inline">\(R\)</span> este Goldie la dreapta. ◻</p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 5.9</strong>. <em>Fie <span
+class="math inline">\(R\)</span> un inel semiprim care satisface
+condiţia lanţurilor ascendente pentru ideale anulatori la dreapta. Dacă
+<span class="math inline">\(x, y \in R\)</span> sunt astfel încât <span
+class="math inline">\(xR\)</span> şi <span
+class="math inline">\(yR\)</span> sunt esenţiale în <span
+class="math inline">\(R_R\)</span>, atunci <span
+class="math inline">\(xyR\)</span> este esenţial.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Fie <span class="math inline">\(I \leq R_R\)</span>
+cu <span class="math inline">\(I \neq 0\)</span>. Notăm <span
+class="math display">\[J = \{ I : x \} = \{ a \in R \mid xa \in I
+\}.\]</span> Atunci <span class="math inline">\(J\)</span> este un ideal
+drept al lui <span class="math inline">\(R\)</span>, iar <span
+class="math inline">\(xJ = xR \cap I \neq 0\)</span> deoarece <span
+class="math inline">\(xR \unlhd R_R\)</span>. Cum <span
+class="math inline">\(\operatorname{ann}_r(x) \subseteq J\)</span> şi
+<span class="math inline">\(xJ \neq 0\)</span> iar <span
+class="math inline">\(\operatorname{ann}_\ell(x) = 0\)</span>, obţinem
+<span class="math display">\[\operatorname{ann}_\ell(J) \subseteq
+\operatorname{ann}_\ell(\operatorname{ann}_r(x)).\]</span> Din
+Propoziţia 4.7 rezultă că există un ideal drept <span
+class="math inline">\(K \neq 0\)</span> astfel încât <span
+class="math inline">\(K \subseteq J\)</span> şi <span
+class="math inline">\(K \cap \operatorname{ann}_r(x) = 0\)</span>.</p>
+<p>Notăm apoi <span class="math display">\[L = \{ K : y \} = \{ a \in R
+\mid ya \in K \}.\]</span> Deoarece <span class="math inline">\(yR
+\unlhd R_R\)</span>, avem <span class="math inline">\(yL = yR \cap K
+\neq 0\)</span>. Dacă <span class="math inline">\(xyL = 0\)</span>,
+atunci <span class="math inline">\(yL \subseteq
+\operatorname{ann}_r(x)\)</span> şi deci <span class="math inline">\(yL
+\subseteq \operatorname{ann}_r(x) \cap K = 0\)</span>, contradicţie.
+Prin urmare <span class="math inline">\(xyL \neq 0\)</span>.</p>
+<p>Cum <span class="math inline">\(xyL \subseteq xK \subseteq xJ
+\subseteq xR \cap I\)</span>, rezultă că <span class="math inline">\(0
+\neq xyL \subseteq xyR \cap I\)</span>, ceea ce arată că <span
+class="math inline">\(xyR \unlhd R_R\)</span>. ◻</p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 5.10</strong>. <em>Fie <span
+class="math inline">\(R\)</span> un inel care verifică condiţia
+lanţurilor ascendente pentru ideale anulatori drepte. Atunci, pentru
+orice <span class="math inline">\(a \in R\)</span> există un număr <span
+class="math inline">\(k \geq 0\)</span> astfel încât <span
+class="math display">\[\operatorname{ann}_r(a^n) =
+\operatorname{ann}_r(a^m)
+  \quad \text{pentru orice } n \geq 0 \text{ şi } m \geq k
+.\]</span></em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Avem lanţul ascendent de ideale anulatori la dreapta:
+<span class="math display">\[\mathop{\mathrm{ann}}_r(a) \subseteq
+\mathop{\mathrm{ann}}_r(a^2) \subseteq \cdots \subseteq
+\mathop{\mathrm{ann}}_r(a^n)
+  \subseteq \cdots .\]</span> Fie <span class="math inline">\(k \geq
+0\)</span> astfel încât <span
+class="math inline">\(\mathop{\mathrm{ann}}_r(a^k) =
+\mathop{\mathrm{ann}}_r(a^m)\)</span> pentru orice <span
+class="math inline">\(m \geq k\)</span>. Dacă <span
+class="math inline">\(\lambda \in \mathop{\mathrm{ann}}_r(a^n) \cap
+a^mR\)</span>, atunci <span class="math inline">\(a^n \lambda =
+0\)</span> şi <span class="math inline">\(\lambda = a^m\mu\)</span>, de
+unde <span class="math inline">\(a^{m+n}\mu = 0\)</span>. Cum <span
+class="math inline">\(m+n \geq k\)</span>, obţinem că <span
+class="math inline">\(\mu \in \mathop{\mathrm{ann}}_r(a^k)\)</span> şi
+deci <span class="math inline">\(a^k\mu = 0\)</span>. Cum <span
+class="math inline">\(m \geq k\)</span>, putem scrie <span
+class="math inline">\(\lambda = a^{m-k}a^k\mu = 0\)</span> şi deci <span
+class="math display">\[\mathop{\mathrm{ann}}_r(a^n) \cap a^mR = 0
+.\]</span> ◻</p>
+</div>
+<div class="corollary">
+<p><strong>Corolar 5.11</strong>. <em>Suntem în condiţiile
+propoziţiei 4.10. Dacă <span class="math inline">\(xR \trianglelefteq
+R_R\)</span>, atunci <span class="math inline">\(x\)</span> este element
+regulat în <span class="math inline">\(R\)</span>.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Dacă <span
+class="math inline">\(\mathop{\mathrm{ann}}_r(x) \neq 0\)</span>, atunci
+<span class="math inline">\(0 = \mathop{\mathrm{ann}}_r(R) \neq
+\mathop{\mathrm{ann}}_r(xR)\)</span> şi deci există un ideal drept <span
+class="math inline">\(I \neq 0\)</span> astfel încât <span
+class="math inline">\(I \cap xR = 0\)</span>, contradicţie. Deci <span
+class="math inline">\(\mathop{\mathrm{ann}}_r(x) = 0\)</span>.</p>
+<p>Din Propoziţia 4.9 rezultă că <span class="math inline">\(x^nR
+\trianglelefteq R_R\)</span> pentru orice <span class="math inline">\(n
+\geq 1\)</span>. Aplicând Propoziţia 4.10, găsim <span
+class="math inline">\(k \geq 0\)</span> astfel încât <span
+class="math inline">\(\mathop{\mathrm{ann}}_r(x^n) \cap x^mR =
+0\)</span> pentru orice <span class="math inline">\(m \geq k\)</span>.
+În special <span class="math inline">\(\mathop{\mathrm{ann}}_r(x) =
+0\)</span>, deci <span class="math inline">\(x\)</span> este element
+regulat în <span class="math inline">\(R\)</span>. ◻</p>
+</div>
+<div class="corollary">
+<p><strong>Corolar 5.12</strong>. <em>Fie <span
+class="math inline">\(R\)</span> un inel Goldie la dreapta şi semiprime.
+Dacă <span class="math inline">\(\mathop{\mathrm{ann}}_r(x) =
+0\)</span>, unde <span class="math inline">\(x \in R\)</span>, atunci
+<span class="math inline">\(xR \trianglelefteq R_R\)</span> şi <span
+class="math inline">\(x\)</span> este regulat.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Fie <span class="math inline">\(I\)</span> un ideal
+drept nenul al lui <span class="math inline">\(R\)</span>. Presupunem că
+<span class="math inline">\(I \cap xR = 0\)</span>. Atunci suma <span
+class="math display">\[\sum_{n \geq 1} x^n I\]</span> este directă.
+Într-adevăr, <span class="math inline">\(x^p I \cap \sum_{n \neq p} x^n
+I\)</span> este egală cu <span class="math inline">\(xI \cap x^p
+I\)</span>, dacă <span class="math inline">\(p = 1\)</span>. Dacă <span
+class="math inline">\(y \in xI \cap x^p I\)</span>, atunci <span
+class="math inline">\(y = x\lambda = x^2\mu\)</span>, unde <span
+class="math inline">\(\lambda,\mu \in I\)</span>. Dar atunci <span
+class="math inline">\(\lambda - x\mu \in
+\mathop{\mathrm{ann}}_r(x)\)</span> şi deci <span
+class="math inline">\(\lambda = x\mu\)</span>, de unde obţinem că <span
+class="math inline">\(\lambda \in I \cap xR = 0\)</span>. Rezultă că
+<span class="math inline">\(\lambda = 0\)</span> şi atunci <span
+class="math inline">\(y = 0\)</span>. Aşadar <span
+class="math inline">\(xI \cap x^2 I = 0\)</span> şi cu atât mai mult
+<span class="math inline">\(xI \cap x^p I = 0\)</span> dacă <span
+class="math inline">\(p \neq 1\)</span>. Deci <span
+class="math inline">\(x^p I \cap \sum_{n \neq p} x^n I = 0\)</span> şi
+prin urmare suma <span class="math inline">\(\sum_{n \geq 1} x^n
+I\)</span> este directă, contradicţie.</p>
+<p>Rezultă că <span class="math inline">\(xR \trianglelefteq
+R_R\)</span>. Din Corolarul 4.11 deducem că <span
+class="math inline">\(x\)</span> este element regulat în <span
+class="math inline">\(R\)</span>. ◻</p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 5.13</strong>. <em>Fie <span
+class="math inline">\(R\)</span> un inel Goldie la dreapta şi semiprime.
+Atunci:</em></p>
+<ol>
+<li><p><em>Orice ideal bilateral al lui <span
+class="math inline">\(R\)</span> anulator la dreapta conţine un ideal
+bilateral anulator la dreapta minimal.</em></p></li>
+<li><p><em>Există o sumă directă finită de ideale bilaterale nenule
+anulatori la dreapta minimale ale lui <span
+class="math inline">\(R\)</span>, care este esenţială în <span
+class="math inline">\(R\)</span>.</em></p></li>
+</ol>
+</div>
+<div class="proof">
+<p><em>Proof.</em> (a) Rezultă din Corolarul 4.8.</p>
+<p>(b) Fie <span class="math inline">\(I = I_1 \oplus I_2 \oplus \cdots
+\oplus I_n\)</span> o sumă directă maximală, unde <span
+class="math inline">\(I_1,\dots,I_n\)</span> sunt ideale nenule
+bilaterale anulatori la dreapta minimale ale lui <span
+class="math inline">\(R\)</span>. Fie <span class="math inline">\(K \leq
+R_R\)</span>, <span class="math inline">\(K \neq 0\)</span> astfel încât
+<span class="math inline">\(I \cap K = 0\)</span>. Cum <span
+class="math inline">\(KI \subseteq I \cap K = 0\)</span>, rezultă că
+<span class="math inline">\(K \subseteq
+\mathop{\mathrm{ann}}_r(I)\)</span>. Cum <span
+class="math inline">\(R\)</span> este semiprime, avem <span
+class="math inline">\(I \cap \mathop{\mathrm{ann}}_r(I) = 0\)</span>, de
+unde <span class="math inline">\(I\mathop{\mathrm{ann}}_r(I) =
+0\)</span>, deci <span class="math inline">\(\mathop{\mathrm{ann}}_l(I)
+\subseteq \mathop{\mathrm{ann}}_r(I)\)</span> şi în special <span
+class="math inline">\(\mathop{\mathrm{ann}}_r(I) \neq 0\)</span>. Cum
+<span class="math inline">\(R\)</span> este semiprim, rezultă şi că
+<span class="math inline">\(I \cap \mathop{\mathrm{ann}}_l(I) =
+0\)</span>, unde <span
+class="math inline">\(\mathop{\mathrm{ann}}_l(I)\)</span> este un ideal
+bilateral. Din (a) există un ideal bilateral nenul <span
+class="math inline">\(J\)</span> anulator la dreapta şi minimal astfel
+încât <span class="math inline">\(J \subseteq
+\mathop{\mathrm{ann}}_r(I)\)</span> şi <span class="math inline">\(J
+\cap I = 0\)</span>, ceea ce contrazice alegerea lui <span
+class="math inline">\(I\)</span> ca sumă directă maximală. Prin urmare
+<span class="math inline">\(I \trianglelefteq R\)</span>. ◻</p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 5.14</strong>. <em>Fie <span
+class="math inline">\(R\)</span> un inel Goldie la dreapta şi prim. Dacă
+<span class="math inline">\(I\)</span> este un ideal drept esenţial în
+<span class="math inline">\(R\)</span>, atunci <span
+class="math inline">\(I\)</span> conţine un element regulat al lui <span
+class="math inline">\(R\)</span>.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Fie <span class="math inline">\(a \in I\)</span>
+astfel încât <span
+class="math inline">\(\mathop{\mathrm{ann}}_r(a)\)</span> este minimal
+în mulţimea <span class="math inline">\(\{\mathop{\mathrm{ann}}_r(x)
+\mid x \in I\}\)</span>. Fie <span class="math inline">\(J \leq
+R_R\)</span>, <span class="math inline">\(J \neq 0\)</span> pentru care
+<span class="math inline">\(aR \cap J = 0\)</span>. Cum <span
+class="math inline">\(I \trianglelefteq R_R\)</span>, avem <span
+class="math inline">\(I \cap J \neq 0\)</span>; putem presupune că <span
+class="math inline">\(J\)</span> este un ideal drept nenul al lui <span
+class="math inline">\(R\)</span> inclus în <span
+class="math inline">\(I\)</span> şi pentru care <span
+class="math inline">\(aR \cap J = 0\)</span>.</p>
+<p>Fie <span class="math inline">\(x \in J\)</span>. Dacă <span
+class="math inline">\(\lambda \in \mathop{\mathrm{ann}}_r(a+x)\)</span>,
+atunci <span class="math inline">\(a\lambda + x\lambda = 0\)</span> şi
+deci <span class="math inline">\(x\lambda = -a\lambda \in aR \cap
+J\)</span>, de unde <span class="math inline">\(x\lambda = 0\)</span> şi
+apoi <span class="math inline">\(a\lambda = 0\)</span>. Aşadar <span
+class="math inline">\(\lambda \in \mathop{\mathrm{ann}}_r(a) \cap
+\mathop{\mathrm{ann}}_r(x)\)</span>. Cum incluziunea <span
+class="math display">\[\mathop{\mathrm{ann}}_r(a) \cap
+\mathop{\mathrm{ann}}_r(x) \subseteq
+\mathop{\mathrm{ann}}_r(a+x)\]</span> este evidentă, obţinem <span
+class="math inline">\(\mathop{\mathrm{ann}}_r(a+x) =
+\mathop{\mathrm{ann}}_r(a) \cap \mathop{\mathrm{ann}}_r(x)\)</span>. Cum
+<span class="math inline">\(\mathop{\mathrm{ann}}_r(a)\)</span> este
+minimal, rezultă că <span
+class="math inline">\(\mathop{\mathrm{ann}}_r(a) \subseteq
+\mathop{\mathrm{ann}}_r(x)\)</span> şi deci <span
+class="math inline">\(x\,\mathop{\mathrm{ann}}_r(a) = 0\)</span>, de
+unde <span class="math inline">\(J \mathop{\mathrm{ann}}_r(a) =
+0\)</span>. Cum <span class="math inline">\(R\)</span> este prim, avem
+<span class="math inline">\(\mathop{\mathrm{ann}}_r(a) = 0\)</span>.</p>
+<p>Din Corolarul 4.12 rezultă că <span class="math inline">\(J =
+0\)</span>, contradicţie. Deci trebuie ca <span class="math inline">\(aR
+\trianglelefteq R_R\)</span>, iar din Corolarul 4.11 obţinem că <span
+class="math inline">\(a\)</span> este regulat în <span
+class="math inline">\(R\)</span>. ◻</p>
 </div>
   <script>
     if ("serviceWorker" in navigator) {
