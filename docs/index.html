@@ -2186,6 +2186,263 @@ submodules of <span class="math inline">\(M\)</span>.</em></p>
 applied to each <span class="math inline">\(x \in M \setminus
 N\)</span>. ◻</p>
 </div>
+<div class="proof">
+<p><em>Proof.</em> 1) Rezultă imediat din 3.1.</p>
+<p>2) Fie <span class="math inline">\(M \trianglelefteq E\)</span> o
+extensie esenţială a lui <span class="math inline">\(M\)</span>. Dacă
+<span class="math inline">\(E_1,E_2\)</span> sunt submodule nenule ale
+lui <span class="math inline">\(E\)</span>, atunci <span
+class="math inline">\(M \cap E_1 \neq 0\)</span> şi <span
+class="math inline">\(M \cap E_2 \neq 0\)</span>, de unde rezultă că
+<span class="math display">\[(M \cap E_1) \cap (M \cap E_2) \neq
+0\]</span> şi deci <span class="math inline">\(E_1 \cap E_2 \neq
+0\)</span>, adică <span class="math inline">\(E\)</span> este
+coireductibil. ◻</p>
+</div>
+<div class="lemma">
+<p><strong>Lemă 4.6</strong>. <em>Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul şi <span
+class="math inline">\((M_\alpha)_{\alpha \in \Lambda}\)</span> o familie
+de submodule independente. Dacă <span class="math inline">\(N\)</span>
+este un submodul al lui <span class="math inline">\(M\)</span> astfel
+încât <span class="math display">\[N \cap \Bigl(\sum_{\alpha \in
+\Lambda} M_\alpha\Bigr) \neq 0,\]</span> există un submodul nenul
+într-un <span class="math inline">\(M_\alpha\)</span> izomorf cu un
+submodul din <span class="math inline">\(N\)</span>.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Dacă <span
+class="math inline">\(\operatorname{Card}\Lambda = 1\)</span>, afirmaţia
+este evidentă.</p>
+<p>Dacă <span class="math inline">\(\operatorname{Card}\Lambda =
+2\)</span>, punem <span class="math inline">\(P = N \cap (M_1 +
+M_2)\)</span>. Dacă <span class="math inline">\(N \cap M_1 = 0\)</span>,
+atunci <span class="math inline">\(P \cong (P + M_1)/M_1\)</span> şi
+<span class="math display">\[(P + M_1)/M_1 \leq (M_1 + M_2)/M_1 \cong
+M_2.\]</span> Deci <span class="math inline">\(P\)</span> este izomorf
+cu un submodul din <span class="math inline">\(M_2\)</span>. Dacă <span
+class="math inline">\(\Lambda\)</span> este mulţime finită, procedând
+prin inducţie, demonstraţia se reduce la cazul precedent.</p>
+<p>Dacă <span class="math inline">\(\Lambda\)</span> este infinită,
+considerăm <span class="math inline">\(x \in N \cap \bigl(\sum_{\alpha
+\in \Lambda} M_\alpha\bigr)\)</span>, <span class="math inline">\(x \neq
+0\)</span>. Atunci există <span
+class="math inline">\(\alpha_1,\ldots,\alpha_n \in \Lambda\)</span>
+astfel încât <span class="math display">\[xR \cap (M_{\alpha_1} +
+M_{\alpha_2} + \cdots + M_{\alpha_n}) \neq 0\]</span> şi ne reducem la
+cazul în care <span class="math inline">\(\Lambda\)</span> este
+finită. ◻</p>
+</div>
+<div class="remark">
+<p><em>Observaţie 4.7</em>. Fie <span class="math inline">\(M\)</span>
+un <span class="math inline">\(R\)</span>-modul drept şi <span
+class="math inline">\(\Omega\)</span> mulţimea de submodule
+coireductibile din <span class="math inline">\(M\)</span>. Este posibil
+ca <span class="math inline">\(\Omega = \emptyset\)</span>. Fie <span
+class="math display">\[\mathcal{S} = \bigl\{\Omega&#39; \subseteq \Omega
+\,\bigm|\, \sum_{N \in \Omega&#39;}
+N \text{ este directă} \bigr\}.\]</span> Perechea <span
+class="math inline">\((\mathcal{S},\subseteq)\)</span> este inductivă
+şi, din lema lui Zorn, <span class="math inline">\(\mathcal{S}\)</span>
+are un element maximal <span class="math inline">\(\Omega_0\)</span>.
+Punem <span class="math inline">\(S = \bigoplus_{N \in \Omega_0}
+N\)</span>. Spunem că <span class="math inline">\(S\)</span> este o sumă
+directă maximală de submodule coireductibile din <span
+class="math inline">\(M\)</span>.</p>
+</div>
+<div class="proposition">
+<p><strong>Propoziţie 4.8</strong>. <em>Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul şi <span
+class="math inline">\(S\)</span> o sumă directă maximală de submodule
+coireductibile din <span class="math inline">\(M\)</span>. Dacă <span
+class="math inline">\(N\)</span> este un submodul nenul al lui <span
+class="math inline">\(M\)</span>, atunci următoarele afirmaţii sunt
+echivalente:</em></p>
+<ol>
+<li><p><em><span class="math inline">\(S \cap N \neq
+0\)</span>;</em></p></li>
+<li><p><em><span class="math inline">\(N\)</span> conţine un submodul
+coireductibil.</em></p></li>
+</ol>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Implicaţia <span
+class="math inline">\((1)\Rightarrow(2)\)</span> rezultă din
+lema 3.6.</p>
+<p>Implicaţia <span class="math inline">\((2)\Rightarrow(1)\)</span>
+rezultă din maximalitatea lui <span
+class="math inline">\(S\)</span>. ◻</p>
+</div>
+<div class="theorem">
+<p><strong>Teoremă 4.9</strong>. <em>Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul şi <span
+class="math inline">\(S\)</span> o sumă directă maximală de submodule
+coireductibile din <span class="math inline">\(M\)</span>. Există un
+submodul <span class="math inline">\(K\)</span> maximal printre
+submodulele lui <span class="math inline">\(M\)</span> care nu conţin
+nici un coireductibil, cu proprietăţile:</em></p>
+<ol>
+<li><p><em><span class="math inline">\(S + K\)</span> este
+directă;</em></p></li>
+<li><p><em><span class="math inline">\((S \oplus K) \trianglelefteq
+M\)</span>.</em></p></li>
+</ol>
+</div>
+<div class="proof">
+<p><em>Proof.</em></p>
+<ol>
+<li><p>Fie <span class="math display">\[\mathcal{S} = \{\,L \leq M \mid
+\forall L&#39; \leq L,\; L&#39; \text{ nu este
+coireductibil}\,\}.\]</span> Avem <span
+class="math inline">\(\mathcal{S} \neq \emptyset\)</span> deoarece <span
+class="math inline">\(0 \in \mathcal{S}\)</span> şi <span
+class="math inline">\(\mathcal{S}\)</span> este inductivă. Din lema lui
+Zorn, <span class="math inline">\(\mathcal{S}\)</span> are un element
+maximal <span class="math inline">\(K\)</span>. Din Propoziţia 3.8
+rezultă că <span class="math inline">\(S \cap K = 0\)</span>.</p></li>
+<li><p>Presupunem că <span class="math inline">\(N \cap (S \oplus K) =
+0\)</span>, unde <span class="math inline">\(N\)</span> este un submodul
+nenul al lui <span class="math inline">\(M\)</span>. Atunci <span
+class="math inline">\((N + K) \cap S = 0\)</span> şi din Propoziţia 3.8
+rezultă că <span class="math inline">\(N + K\)</span> nu conţine nici un
+submodul coireductibil, ceea ce contrazice maximalitatea lui <span
+class="math inline">\(K\)</span>. Obţinem că <span
+class="math inline">\((S \oplus K) \trianglelefteq M\)</span>.</p></li>
+</ol>
+<p> ◻</p>
+</div>
+<div class="definition">
+<p><strong>Definiţie 4.10</strong>. Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul. O intersecţie finită de
+submodule <span class="math display">\[\bigcap_{i \in I} N_i \qquad (I
+\text{ finit})\]</span> se numeşte <em>redusă</em> dacă, oricare ar fi
+<span class="math inline">\(i \in I\)</span>, avem <span
+class="math display">\[\bigcap_{i \in I} N_i \neq
+\bigcap_{\substack{j \in I \\ j \neq i}} N_j .\]</span></p>
+<p>Este clar că, dacă avem o intersecţie finită <span
+class="math inline">\(N = \bigcap_{i \in I} N_i\)</span> de submodule
+ireductibile, ea poate fi adusă întotdeauna la o intersecţie redusă de
+submodule ireductibile.</p>
+</div>
+<div class="theorem">
+<p><strong>Teoremă 4.11</strong> (Teorema (Kuros–Ore)). <em>Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul şi <span
+class="math inline">\(N\)</span> un submodul al lui <span
+class="math inline">\(M\)</span>. Presupunem că avem intersecţiile
+finite reduse pentru <span class="math inline">\(N\)</span>: <span
+class="math display">\[N = N_1 \cap N_2 \cap \dots \cap N_m = L_1 \cap
+L_2 \cap \dots \cap L_n ,\]</span> unde <span
+class="math inline">\(N_i\)</span> şi <span
+class="math inline">\(L_j\)</span> sunt submodule ireductibile din <span
+class="math inline">\(M\)</span>. Atunci <span class="math inline">\(m =
+n\)</span>.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Notăm <span class="math inline">\(N_i&#39; = N_1 \cap
+\dots \cap N_{i-1} \cap N_{i+1} \cap \dots \cap N_m\)</span>. Avem că
+<span class="math inline">\(N \subseteq N_i&#39;\)</span> şi <span
+class="math inline">\(N = N_i \cap N_i&#39;\)</span>. Fie <span
+class="math inline">\(P_j = N_i \cap L_j\)</span>, <span
+class="math inline">\(\forall j = 1,\dots,n\)</span>. Atunci <span
+class="math inline">\(N \subseteq P_j \subseteq N_i&#39;\)</span> şi
+<span class="math inline">\(P_j \subseteq L_j\)</span>, de unde rezultă
+că <span class="math display">\[N \subseteq \bigcap_{j=1}^n P_j
+\subseteq \bigcap_{j=1}^n L_j = N,\]</span> şi deci <span
+class="math inline">\(\bigcap_{j=1}^n P_j = N\)</span>.</p>
+<p>Cum <span class="math inline">\(N_i\)</span> este ireductibil în
+<span class="math inline">\(M\)</span>, rezultă că <span
+class="math inline">\(N_i\)</span> este ireductibil în <span
+class="math inline">\(N_i + N_i&#39;\)</span>, şi deci <span
+class="math display">\[\frac{N_i&#39;}{N_i&#39; \cap N_i} \cong
+\frac{N_i + N_i&#39;}{N_i}\]</span> este coirreductibil, ceea ce arată
+că <span class="math inline">\(N\)</span> este ireductibil în <span
+class="math inline">\(N_i&#39;\)</span>.</p>
+<p>Atunci, din egalitatea <span class="math inline">\(N =
+\bigcap_{j=1}^n P_j\)</span>, există un <span
+class="math inline">\(j\)</span> astfel încât <span
+class="math inline">\(N = P_j\)</span>. Deci <span
+class="math inline">\(N = N_i \cap L_j\)</span>, adică <span
+class="math display">\[N = N_i \cap \dots \cap N_{i-1} \cap L_j \cap
+N_{i+1} \cap \dots \cap N_m.\]</span></p>
+<p>Notăm <span class="math inline">\(I = \{1,2,\dots,m\}\)</span>, <span
+class="math inline">\(J = \{1,2,\dots,n\}\)</span> şi fie <span
+class="math inline">\(i_1 \in I\)</span>. Există <span
+class="math inline">\(j_1 \in J\)</span> astfel încât <span
+class="math display">\[N = L_{j_1} \cap \left(\bigcap_{i \ne i_1}
+N_i\right).\]</span></p>
+<p>Deoarece intersecţia este finită, putem să o reducem: din reducerea
+succesivă şi prin faptul că nu dispare niciun <span
+class="math inline">\(L_{j_k}\)</span>, obţinem un şir strict
+descrescător <span class="math display">\[J \supseteq J_1 \supseteq J_2
+\supseteq \dots \supseteq J_r,\]</span> cu cel mult <span
+class="math inline">\(r\le m\)</span> elemente, astfel încât pentru un
+anumit set final <span class="math inline">\(J&#39;\subseteq J\)</span>,
+<span class="math display">\[N = \bigcap_{j\in J&#39;} L_j.\]</span></p>
+<p>Este clar că <span class="math inline">\(r\le m\)</span>. Cum
+intersecţia <span class="math inline">\(N = L_1 \cap \dots \cap
+L_n\)</span> este redusă, avem <span class="math inline">\(J&#39; =
+J\)</span>. Pe de altă parte, <span
+class="math inline">\(J&#39;\)</span> are cel mult <span
+class="math inline">\(r\)</span> elemente, deci <span
+class="math inline">\(n \le r \le m\)</span>, iar simetric <span
+class="math inline">\(m \le n\)</span>. ◻</p>
+</div>
+<div class="theorem">
+<p><strong>Teoremă 4.12</strong>. <em>Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul şi <span
+class="math inline">\((N_i)_{i=1}^m\)</span> şi <span
+class="math inline">\((L_j)_{j=1}^n\)</span> două familii independente
+de submodule coirreductibile astfel încât <span
+class="math display">\[\bigoplus_{i=1}^m N_i \subseteq M
+\quad\text{şi}\quad
+\bigoplus_{j=1}^n L_j \subseteq M\]</span> sunt esenţiale în <span
+class="math inline">\(M\)</span>. Atunci <span class="math inline">\(m =
+n\)</span>.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Notăm <span class="math inline">\(N_k&#39; =
+\bigoplus_{i\ne k} N_i\)</span>, pentru fiecare <span
+class="math inline">\(k=1,\dots,m\)</span>. Atunci <span
+class="math inline">\(N_k \cap N_k&#39; = 0\)</span>.</p>
+<p>Se verifică uşor că mulţimea <span
+class="math display">\[\mathfrak{S}_k = \{P \le M \mid N_k \cap P = 0
+\text{ şi } N_k \subseteq P\}\]</span> este inductivă. Din lema lui
+Zorn, are un element maximal <span class="math inline">\(P_k\)</span>.
+Dacă <span class="math inline">\(Q,Q&#39; \le M\)</span> sunt astfel
+încât <span class="math inline">\(P_k \subseteq Q \subseteq
+Q&#39;\)</span>, atunci <span class="math inline">\(N_k \cap Q \ne
+0\)</span> şi <span class="math inline">\(N_k \cap Q&#39; \ne
+0\)</span>, iar ireductibilitatea lui <span
+class="math inline">\(N_k\)</span> arată că <span
+class="math inline">\(P_k = Q = Q&#39;\)</span>. Deci <span
+class="math inline">\(P_k\)</span> este coirreductibil pentru fiecare
+<span class="math inline">\(k\)</span>.</p>
+<p>Fie <span class="math inline">\(k\in\{1,\dots,m\}\)</span>. Atunci
+<span class="math display">\[N = \bigoplus_{k=1}^m N_k = N_k \oplus
+N_k&#39;.\]</span> Aplicând legea distributivităţii modulare, obţinem
+<span class="math display">\[N \cap P_k = (N_k \oplus N_k&#39;) \cap P_k
+           = N_k + (N_k&#39; \cap P_k),\]</span> deci <span
+class="math inline">\(N \cap P_k = N_k\)</span>. Rezultă că <span
+class="math display">\[N \cap \bigcap_{k=1}^m P_k = \bigcap_{k=1}^m
+(N\cap P_k) = \bigcap_{k=1}^m N_k = 0.\]</span></p>
+<p>Dar <span class="math inline">\(NVM\)</span>, deci <span
+class="math inline">\(\bigcap_{k=1}^m P_k = 0\)</span>.</p>
+<p>Cum <span class="math inline">\(N_i = \bigcap_{k\ne i} P_k\)</span>,
+avem că fiecare intersecţie este redusă.</p>
+<p>Analog, pentru familia <span class="math inline">\((L_j)\)</span>,
+obţinem submodule ireductibile <span
+class="math inline">\((Q_j)\)</span> astfel încât <span
+class="math inline">\(\bigcap_{j=1}^n Q_j = 0\)</span>, reducând
+intersecţia.</p>
+<p>Din teorema Kuros–Ore, rezultă <span class="math inline">\(m =
+n\)</span>. ◻</p>
+</div>
   <script>
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("/sw.js").then(registration => {
