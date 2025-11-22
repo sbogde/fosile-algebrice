@@ -2443,6 +2443,113 @@ intersecţia.</p>
 <p>Din teorema Kuros–Ore, rezultă <span class="math inline">\(m =
 n\)</span>. ◻</p>
 </div>
+<div class="definition">
+<p><strong>Definiţie 4.13</strong>. Spunem că un <span
+class="math inline">\(R\)</span>-modul <span
+class="math inline">\(M\)</span> are <em>dimensiune coireductibilă
+finită</em> dacă există o familie finită independentă <span
+class="math inline">\((N_i)_{i=1}^n\)</span> de submodule coireductibile
+din <span class="math inline">\(M\)</span> astfel încât <span
+class="math display">\[\bigoplus_{i=1}^n N_i \trianglelefteq M.\]</span>
+În acest caz numărul <span class="math inline">\(n\)</span> se numeşte
+<em>dimensiunea coireductibilă</em> a lui <span
+class="math inline">\(M\)</span> şi scriem <span
+class="math inline">\(\dim M = n\)</span>.</p>
+</div>
+<div class="theorem">
+<p><strong>Teoremă 4.14</strong>. <em>Fie <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul. Următoarele afirmaţii sunt
+echivalente:</em></p>
+<ol>
+<li><p><em><span class="math inline">\(M\)</span> are dimensiune
+coireductibilă finită.</em></p></li>
+<li><p><em><span class="math inline">\(M\)</span> satisface condiţia
+lanţurilor ascendente pentru sume directe.</em></p></li>
+</ol>
+</div>
+<div class="proof">
+<p><em>Proof.</em> <em><span class="math inline">\((2) \Rightarrow
+(1)\)</span>.</em> Fie <span
+class="math inline">\(\mathcal{S}&#39;\)</span> şi <span
+class="math inline">\(\mathcal{S}\)</span> două familii finite de
+submodule independente din <span class="math inline">\(M\)</span>.
+Spunem că <span class="math inline">\(\mathcal{S}&#39;\)</span> este o
+<em>rafinare</em> a lui <span class="math inline">\(\mathcal{S}\)</span>
+dacă oricare submodul din <span
+class="math inline">\(\mathcal{S}&#39;\)</span> este conţinut într-un
+submodul din <span class="math inline">\(\mathcal{S}\)</span>. Se
+verifică uşor că relaţia de rafinare este o relaţie de ordine pe
+mulţimea familiilor de submodule ale lui <span
+class="math inline">\(M\)</span>. Cum <span
+class="math inline">\(M\)</span> satisface (2), există o familie <span
+class="math inline">\(\mathcal{S}_0\)</span> de submodule independente
+ale lui <span class="math inline">\(M\)</span>, maximală în raport cu
+relaţia de rafinare.</p>
+<p>Fie <span class="math inline">\(N \in \mathcal{S}_0\)</span>. Dacă
+<span class="math inline">\(N\)</span> nu este coireductibil, există
+două submodule nenule <span class="math inline">\(P,Q \leq N\)</span>
+astfel încât <span class="math inline">\(P \cap Q = 0\)</span>. Este
+clar că din <span class="math inline">\(\mathcal{S}_0\)</span> se obţine
+o rafinare proprie a lui <span
+class="math inline">\(\mathcal{S}_0\)</span>, contradicţie. Rezultă că
+orice submodul din <span class="math inline">\(\mathcal{S}_0\)</span>
+este coireductibil, deci <span class="math inline">\(M\)</span> conţine
+un submodul coireductibil. Dacă <span class="math inline">\(L\)</span>
+este un submodul nenul al lui <span class="math inline">\(M\)</span>,
+atunci şi <span class="math inline">\(L\)</span> satisface condiţia (2)
+şi, prin acelaşi raţionament, <span class="math inline">\(L\)</span>
+conţine un submodul coireductibil.</p>
+<p>Fie acum <span class="math display">\[S = \bigoplus_{i\in I}
+N_i\]</span> o sumă directă maximală de submodule coireductibile din
+<span class="math inline">\(M\)</span> şi <span
+class="math inline">\(N\)</span> un submodul nenul al lui <span
+class="math inline">\(M\)</span>. Cum <span
+class="math inline">\(M\)</span> satisface condiţia lanţurilor
+ascendente pentru sume directe, rezultă că mulţimea <span
+class="math inline">\(I\)</span> este finită. Din Propoziţia 3.8 rezultă
+că <span class="math inline">\(S \cap N \neq 0\)</span>, ceea ce arată
+că <span class="math inline">\(S \trianglelefteq M\)</span>. Prin
+definiţie, <span class="math inline">\(M\)</span> are dimensiune
+coireductibilă finită.</p>
+<p><em><span class="math inline">\((1) \Rightarrow (2)\)</span>.</em>
+Fie <span class="math display">\[S = \bigoplus_{i=1}^n N_i\]</span> o
+sumă directă de submodule coireductibile astfel încât <span
+class="math inline">\(S \trianglelefteq M\)</span>. Dacă <span
+class="math inline">\(N\)</span> este un submodul nenul al lui <span
+class="math inline">\(M\)</span>, atunci <span class="math inline">\(S
+\cap N \neq 0\)</span>, iar din Lema 3.6 rezultă că <span
+class="math inline">\(N\)</span> conţine un submodul coireductibil.</p>
+<p>Fie <span class="math inline">\((L_j)_{j=1}^m\)</span> o familie
+independentă de submodule ale lui <span
+class="math inline">\(M\)</span>. Din paragraful precedent rezultă că
+fiecare <span class="math inline">\(L_j\)</span> conţine un submodul
+coireductibil <span class="math inline">\(P_j\)</span>. Evident, familia
+<span class="math inline">\((P_j)_{j=1}^m\)</span> este independentă.
+Din Teorema 3.12 obţinem că <span class="math inline">\(m \leq
+n\)</span>. Aceasta arată că orice familie independentă de submodule
+poate fi extinsă numai până la o familie finită, ceea ce este echivalent
+cu condiţia lanţurilor ascendente pentru sume directe. ◻</p>
+</div>
+<div class="remark">
+<p><em>Observaţie 4.15</em>. Fie <span class="math inline">\(M\)</span>
+un <span class="math inline">\(R\)</span>-modul. Atunci:</p>
+<ol>
+<li><p>Dacă <span class="math inline">\(N \trianglelefteq M\)</span>,
+atunci <span class="math inline">\(M\)</span> are dimensiune
+coireductibilă finită dacă şi numai dacă <span
+class="math inline">\(N\)</span> are dimensiune coireductibilă finită
+şi, în acest caz, <span class="math inline">\(\dim M = \dim
+N\)</span>.</p></li>
+<li><p>Dacă <span class="math inline">\(M = \bigoplus_{i=1}^n
+N_i\)</span>, atunci <span class="math inline">\(M\)</span> are
+dimensiune coireductibilă finită dacă şi numai dacă fiecare <span
+class="math inline">\(N_i\)</span> are dimensiune coireductibilă finită
+pentru orice <span class="math inline">\(i = 1,\dots,n\)</span>. În plus
+avem <span class="math display">\[\dim M = \sum_{i=1}^n \dim N_i
+.\]</span></p></li>
+</ol>
+</div>
   <script>
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("/sw.js").then(registration => {
