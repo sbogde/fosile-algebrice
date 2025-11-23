@@ -25,7 +25,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="style.css?v=1763893170" />
+  <link rel="stylesheet" href="style.css?v=1763897229" />
   <script
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
   type="text/javascript"></script>
@@ -33,11 +33,11 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <meta name="build-timestamp" content="1763893170">
+  <meta name="build-timestamp" content="1763897229">
   
   <!-- PWA and Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="manifest" href="manifest.json?v=1763893170">
+  <link rel="manifest" href="manifest.json?v=1763897229">
   <meta name="theme-color" content="#2c3e50">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -3292,8 +3292,8 @@ orice <span class="math inline">\(R\)</span>-modul ciclic este o sumă
 directă finită de module coireductibile.</em></p>
 </div>
 <div class="proof">
-<p><em>Demonstratie.</em> Fie <span class="math inline">\(M_R\)</span>
-un modul ciclic, <span class="math inline">\(m \in M\)</span> şi <span
+<p><em>Proof.</em> Fie <span class="math inline">\(M_R\)</span> un modul
+ciclic, <span class="math inline">\(m \in M\)</span> şi <span
 class="math inline">\(N \leq mR\)</span>. Atunci factorul <span
 class="math inline">\(mR/N\)</span> este un modul ciclic şi, prin
 ipoteză, un CS-modul. Aplicând Teorema Osofsky–Smith obţinem că <span
@@ -3302,7 +3302,7 @@ class="math inline">\(M\)</span>) este o sumă directă finită de module
 coireductibile. ◻</p>
 </div>
 <div class="corollary">
-<p><strong>Corolar 6.8</strong> (Corolar 5.8). <em>Dacă <span
+<p><strong>Corolar 6.8</strong>. <em>Dacă <span
 class="math inline">\(N\)</span> este un <span
 class="math inline">\(R\)</span>-modul astfel încât orice modul factor
 al oricărui submodul ciclic al lui <span
@@ -3310,7 +3310,7 @@ class="math inline">\(N\)</span> este injectiv, atunci <span
 class="math inline">\(N\)</span> este semisimplu.</em></p>
 </div>
 <div class="proof">
-<p><em>Demonstratie.</em> Fie <span class="math inline">\(0 \neq x \in
+<p><em>Proof.</em> Fie <span class="math inline">\(0 \neq x \in
 N\)</span> şi <span class="math inline">\(C = xR \leq N\)</span>. Prin
 ipoteză, orice modul factor al unui submodul ciclic al lui <span
 class="math inline">\(C\)</span> este injectiv, deci orice submodul
@@ -3321,13 +3321,264 @@ Din Teorema Osofsky–Smith rezultă că <span class="math display">\[C = xR
 <p>Cum <span class="math display">\[U_i \cong C \big/ \bigoplus_{j \neq
 i} U_j,\]</span> rezultă că fiecare <span
 class="math inline">\(U_i\)</span> este injectiv şi, prin urmare, <span
-class="math inline">\(U_i\)</span> este indecompozabil pentru tot <span
-class="math inline">\(i = 1,\dots,n\)</span> (vezi
-propoziţia 3.1). ◻</p>
+class="math inline">\(U_i\)</span> este indecompozabil pentru orice
+<span class="math inline">\(i = 1,\dots,n\)</span> (vezi
+propoziţia 3.1).</p>
+<p>Fie <span class="math inline">\(y \in U_i\)</span>. Atunci <span
+class="math inline">\(yR \cong yR/0\)</span> este injectiv, adică şirul
+exact <span class="math display">\[0 \longrightarrow yR \longrightarrow
+U_i \longrightarrow U_i / yR \longrightarrow 0\]</span> este scindabil.
+Din 2.1.15 rezultă că <span class="math inline">\(yR\)</span> este
+sumand direct în <span class="math inline">\(U_i\)</span>, şi deci <span
+class="math inline">\(yR = U_i\)</span> sau <span
+class="math inline">\(yR = 0\)</span> pentru orice <span
+class="math inline">\(y \in U_i\)</span>. Obţinem că <span
+class="math inline">\(U_i\)</span> este simplu şi deci <span
+class="math inline">\(C = xR\)</span> este semisimplu pentru orice <span
+class="math inline">\(x \in N\)</span>, de unde rezultă că <span
+class="math inline">\(N\)</span> este semisimplu. ◻</p>
+</div>
+<div id="cor:5.9-RO" class="corollary">
+<p><strong>Corolar 6.9</strong> (Osofsky). <em>Dacă <span
+class="math inline">\(R\)</span> este un inel astfel încât orice <span
+class="math inline">\(R\)</span>-modul ciclic este injectiv, atunci
+<span class="math inline">\(R\)</span> este semisimplu
+artinian.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Observând că putem aplica corolarul de mai sus pentru
+<span class="math inline">\(N = R\)</span>, rezultă că <span
+class="math inline">\(R\)</span> este semisimplu. ◻</p>
+</div>
+<div id="cor:5.10-RO" class="corollary">
+<p><strong>Corolar 6.10</strong>. <em>Fie <span
+class="math inline">\(R\)</span> un inel astfel încât orice <span
+class="math inline">\(R\)</span>-modul ciclic singular este injectiv.
+Atunci orice <span class="math inline">\(R\)</span>-modul singular este
+semisimplu.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Fie <span class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul singular. Submodulele şi modulele
+factor ale unui modul singular sunt singulare. În particular, dacă <span
+class="math inline">\(x \in M \setminus \{0\}\)</span>, orice modul
+factor al oricărui submodul ciclic al lui <span
+class="math inline">\(xR\)</span> este injectiv. Din Corolarul 5.8
+rezultă că <span class="math inline">\(xR\)</span> este semisimplu
+pentru orice <span class="math inline">\(x \in M \setminus
+\{0\}\)</span>, ceea ce arată că <span class="math inline">\(M\)</span>
+este semisimplu. ◻</p>
+</div>
+<div id="lem:5.11-RO" class="lemma">
+<p><strong>Lemă 6.11</strong>. <em>Fie <span
+class="math inline">\(S\)</span> un <span
+class="math inline">\(R\)</span>-modul simplu. Atunci <span
+class="math inline">\(S\)</span> este singular dacă şi numai dacă <span
+class="math inline">\(S \cdot \mathop{\mathrm{soc}}(R) =
+0\)</span>.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Fie <span class="math inline">\(M\)</span> un ideal
+maximal drept al lui <span class="math inline">\(R\)</span>. Arătăm că
+<span class="math inline">\(M \trianglelefteq R_R\)</span> dacă şi numai
+dacă <span class="math inline">\(\mathop{\mathrm{soc}}(R) \subseteq
+M\)</span>.</p>
+<p>Necesitatea este evidentă dacă ţinem cont că <span
+class="math display">\[\mathop{\mathrm{soc}}(R) =
+\bigcap_{L\trianglelefteq R} L,\]</span> unde intersecţia este luată
+peste toate idealele maximale drepte <span
+class="math inline">\(L\)</span> ale lui <span
+class="math inline">\(R_R\)</span>.</p>
+<p>Invers, dacă <span class="math inline">\(M\)</span> nu este esenţial
+în <span class="math inline">\(R\)</span>, există <span
+class="math inline">\(0 \neq a \in R\)</span> astfel încât <span
+class="math inline">\(aR \cap M = 0\)</span>. Folosind maximalitatea lui
+<span class="math inline">\(M\)</span>, <span class="math inline">\(aR
+\oplus M = R\)</span>, adică <span class="math inline">\(aR \cong R /
+M\)</span>, ceea ce arată că <span class="math inline">\(aR\)</span>
+este simplu şi deci <span class="math inline">\(aR \subseteq
+\mathop{\mathrm{soc}}(R)\)</span>, de unde <span
+class="math inline">\(aR \subseteq M\)</span>, contradicţie.</p>
+<p>Cum <span class="math inline">\(S\)</span> este un <span
+class="math inline">\(R\)</span>-modul simplu singular, pentru orice
+<span class="math inline">\(x \in S\)</span>, <span
+class="math inline">\(\mathop{\mathrm{ann}}_R(x)\)</span> este un ideal
+maximal esenţial al lui <span class="math inline">\(R\)</span> şi din
+observaţia de mai sus rezultă că <span
+class="math inline">\(\mathop{\mathrm{soc}}(R) \subseteq
+\mathop{\mathrm{ann}}_R(x)\)</span> pentru orice <span
+class="math inline">\(x \in S\)</span>, ceea ce este echivalent cu
+relaţia <span class="math inline">\(S \cdot \mathop{\mathrm{soc}}(R) =
+0\)</span>. ◻</p>
+</div>
+<div id="cor:5.12-RO" class="corollary">
+<p><strong>Corolar 6.12</strong>. <em>Următoarele afirmaţii sunt
+echivalente:</em></p>
+<ol>
+<li><p><em>Orice <span class="math inline">\(R\)</span>-modul ciclic
+singular este injectiv.</em></p></li>
+<li><p><em>Orice <span class="math inline">\(R\)</span>-modul singular
+este injectiv.</em></p></li>
+</ol>
+</div>
+<div class="proof">
+<p><em>Proof.</em> <em><span class="math inline">\((1) \Rightarrow
+(2)\)</span>.</em> Presupunem că <span class="math inline">\(Z(R_R) \neq
+0\)</span> şi fie <span class="math inline">\(a \in Z(R_R) \setminus
+\{0\}\)</span>. Atunci <span class="math inline">\(aR\)</span> este un
+<span class="math inline">\(R\)</span>-modul ciclic singular, deci
+injectiv. Rezultă că <span class="math inline">\(aR\)</span> este sumand
+direct al lui <span class="math inline">\(R\)</span>, de unde avem că
+există <span class="math inline">\(e = e^2 \in R \setminus
+\{0\}\)</span> astfel încât <span class="math inline">\(aR = eR\)</span>
+şi deci <span class="math inline">\(e \in Z(R_R)\)</span>, contradicţie
+deoarece <span class="math inline">\(\mathop{\mathrm{ann}}_r(e) \cap eR
+= 0\)</span>. Obţinem că <span class="math inline">\(R\)</span> este
+nesingular şi învelişul injectiv al unui modul singular este singular
+(cf. A. W. Goldie, <em>Torsion free modules and rings</em>, J. Algebra
+(1964), 268–287).</p>
+<p>Fie <span class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul singular. Cum <span
+class="math inline">\(E(M)\)</span> este <span
+class="math inline">\(R\)</span>-modul singular, din Corolarul 5.10 avem
+că <span class="math inline">\(E(M)\)</span> este semisimplu. Obţinem că
+<span class="math inline">\(M\)</span> este sumand direct al lui <span
+class="math inline">\(E(M)\)</span> şi deci <span
+class="math inline">\(M = E(M)\)</span>, adică <span
+class="math inline">\(M\)</span> este injectiv.</p>
+<p><em><span class="math inline">\((2) \Rightarrow (1)\)</span>.</em>
+Implicaţia este evidentă. ◻</p>
+</div>
+<div id="cor:5.13-RO" class="corollary">
+<p><strong>Corolar 6.13</strong> (Goodearl). <em>Dacă orice <span
+class="math inline">\(R\)</span>-modul ciclic singular este injectiv,
+atunci:</em></p>
+<ol>
+<li><p><em>orice <span class="math inline">\(R /
+\mathop{\mathrm{soc}}(R)\)</span>-modul simplu este
+injectiv;</em></p></li>
+<li><p><em><span class="math inline">\(R /
+\mathop{\mathrm{soc}}(R)\)</span> este noetherian.</em></p></li>
+</ol>
+</div>
+<div class="proof">
+<p><em>Proof.</em> (1) Fie <span class="math inline">\(S\)</span> un
+<span class="math inline">\(R / \mathop{\mathrm{soc}}(R)\)</span>-modul
+simplu. Cum <span class="math inline">\(S \cdot \mathop{\mathrm{soc}}(R)
+= 0\)</span>, din Lemma 5.11 avem că <span
+class="math inline">\(S\)</span> este <span
+class="math inline">\(R\)</span>-modul simplu singular şi deci <span
+class="math inline">\(S\)</span> este <span
+class="math inline">\(R\)</span>-modul simplu injectiv, de unde rezultă
+că <span class="math inline">\(S\)</span> este <span
+class="math inline">\(R / \mathop{\mathrm{soc}}(R)\)</span>-modul simplu
+injectiv.</p>
+<p>(2) Fie <span class="math inline">\(E = \bigoplus_{i=1}^{\infty}
+S_i\)</span> în <span
+class="math inline">\(\mathrm{Mod}\text{-}R/\mathop{\mathrm{soc}}(R)\)</span>,
+unde <span class="math inline">\(S_i\)</span> este <span
+class="math inline">\(R/\mathop{\mathrm{soc}}(R)\)</span>-modul simplu
+pentru orice <span class="math inline">\(i \geq 1\)</span>. Atunci <span
+class="math inline">\(E = \bigoplus_{i=1}^{\infty} S_i\)</span> în <span
+class="math inline">\(\mathrm{Mod}\text{-}R\)</span>, cu <span
+class="math inline">\(S_i\)</span> <span
+class="math inline">\(R\)</span>-module simple singulare. Rezultă că
+<span class="math inline">\(E\)</span> este <span
+class="math inline">\(R\)</span>-modul singular. Din Corolarul 5.12
+rezultă că <span class="math inline">\(E\)</span> este <span
+class="math inline">\(R\)</span>-modul injectiv şi deci <span
+class="math inline">\(E\)</span> este <span
+class="math inline">\(R/\mathop{\mathrm{soc}}(R)\)</span>-modul
+injectiv. Aplicând teorema Matlis–Bass, avem că <span
+class="math inline">\(R/\mathop{\mathrm{soc}}(R)\)</span> este
+noetherian. ◻</p>
+</div>
+<div class="definition">
+<p><strong>Definiţie 6.14</strong>. Un inel <span
+class="math inline">\(R\)</span> se numeşte <em>PCI-inel la dreapta</em>
+dacă orice <span class="math inline">\(R\)</span>-modul drept care nu
+este izomorf cu <span class="math inline">\(R_R\)</span> este
+injectiv.</p>
+</div>
+<div class="corollary">
+<p><strong>Corolar 6.15</strong> (Damiano). <em>Dacă <span
+class="math inline">\(R\)</span> este PCI-inel la dreapta, atunci <span
+class="math inline">\(R\)</span> este noetherian la dreapta.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Din Corolarul 5.13 avem că <span
+class="math inline">\(R/\mathop{\mathrm{soc}}(R)\)</span> este
+noetherian. Presupunem <span
+class="math inline">\(\mathop{\mathrm{soc}}(R) \neq 0\)</span>. Fie
+<span class="math inline">\(C\)</span> un <span
+class="math inline">\(R/\mathop{\mathrm{soc}}(R)\)</span>-modul ciclic.
+Atunci <span class="math inline">\(C\)</span> este <span
+class="math inline">\(R\)</span>-modul propriu ciclic, deoarece <span
+class="math inline">\(C \cdot \mathop{\mathrm{soc}}(R) = 0\)</span>, dar
+<span class="math inline">\(R \cdot \mathop{\mathrm{soc}}(R) =
+\mathop{\mathrm{soc}}(R) \neq 0\)</span>. Rezultă că <span
+class="math inline">\(C\)</span> este <span
+class="math inline">\(R\)</span>-modul injectiv şi deci <span
+class="math inline">\(R/\mathop{\mathrm{soc}}(R)\)</span>-modul
+injectiv. Din teorema lui Osofsky (Corolarul 5.9) rezultă că <span
+class="math inline">\(R/\mathop{\mathrm{soc}}(R)\)</span> este un inel
+semisimplu.</p>
+<p>Presupunem că <span class="math inline">\(\mathop{\mathrm{soc}}(R)
+\neq R\)</span>. Există <span class="math inline">\(n \geq 1\)</span> şi
+submodule simple <span class="math inline">\(W_i \leq
+R/\mathop{\mathrm{soc}}(R)\)</span>, <span class="math inline">\(i =
+1,\dots,n\)</span>, astfel încât <span
+class="math display">\[R/\mathop{\mathrm{soc}}(R) = W_1 \oplus W_2
+\oplus \dots \oplus W_n.\]</span> Fie <span
+class="math inline">\(\widehat{y} \in W_n\)</span>. Atunci <span
+class="math display">\[W_n \cong \widehat{y}\,R/\mathop{\mathrm{soc}}(R)
+         = \frac{yR +
+\mathop{\mathrm{soc}}(R)}{\mathop{\mathrm{soc}}(R)}
+         \cong \frac{yR}{yR \cap \mathop{\mathrm{soc}}(R)},\]</span> şi
+deci <span class="math inline">\(yR/(yR \cap
+\mathop{\mathrm{soc}}(R))\)</span> este simplu.</p>
+<p>Arătăm că <span
+class="math inline">\(\mathop{\mathrm{soc}}(yR)\)</span> este de lungime
+finită. În caz contrar am putea scrie <span
+class="math display">\[\mathop{\mathrm{soc}}(yR) = S \oplus T \oplus
+U\]</span> cu <span class="math inline">\(S,T,U\)</span> de lungime
+infinită. Evident, <span class="math inline">\(yR/S\)</span> este <span
+class="math inline">\(R\)</span>-modul ciclic. Cum <span
+class="math inline">\(S\)</span> nu este sumand direct al lui <span
+class="math inline">\(yR\)</span>, avem <span class="math inline">\(yR/S
+\not\cong R\)</span>. Rezultă că <span
+class="math inline">\(yR/S\)</span> este injectiv.</p>
+<p>Cum <span class="math inline">\(T \oplus U \cong
+\mathop{\mathrm{soc}}(yR)/S \leq yR/S\)</span>, există un morfism
+injectiv <span class="math display">\[0 \longrightarrow T \oplus U
+\longrightarrow yR/S,\]</span> şi deci putem presupune că <span
+class="math inline">\(E(T) \oplus E(U)\)</span> este un submodul al lui
+<span class="math inline">\(yR/S\)</span>. Există <span
+class="math inline">\(K \leq yR/S\)</span> astfel încât <span
+class="math display">\[yR/S = E(T) \oplus E(U) \oplus K.\]</span> Atunci
+<span class="math display">\[\frac{yR}{\mathop{\mathrm{soc}}(yR)}
+    \cong \frac{yR/S}{(S \oplus T \oplus U)/S}
+    \cong \frac{E(T)}{T} \oplus \frac{E(U)}{U} \oplus K,\]</span>
+contradicţie cu faptul că <span
+class="math inline">\(yR/\mathop{\mathrm{soc}}(yR)\)</span> este
+simplu.</p>
+<p>Obţinem astfel că <span
+class="math inline">\(\mathop{\mathrm{soc}}(yR)\)</span> este de lungime
+finită. Cum orice <span class="math inline">\(R\)</span>-modul simplu
+este injectiv, <span
+class="math inline">\(\mathop{\mathrm{soc}}(yR)\)</span> este <span
+class="math inline">\(R\)</span>-modul injectiv şi deci sumand direct al
+lui <span class="math inline">\(yR\)</span>. Rezultă că există un modul
+simplu <span class="math inline">\(U\)</span> astfel încât <span
+class="math display">\[yR = \mathop{\mathrm{soc}}(yR) \oplus U,\]</span>
+şi deci <span class="math inline">\(y \in
+\mathop{\mathrm{soc}}(R)\)</span>, ceea ce arată că <span
+class="math inline">\(R = \mathop{\mathrm{soc}}(R)\)</span>, adică <span
+class="math inline">\(R\)</span> este semisimplu. ◻</p>
 </div>
   <script>
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/sw.js?v=1763893170").then(registration => {
+      navigator.serviceWorker.register("/sw.js?v=1763897229").then(registration => {
         console.log("Service Worker registered:", registration);
       }).catch(error => {
         console.log("Service Worker registration failed:", error);
