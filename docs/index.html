@@ -25,12 +25,19 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="style.css?v=1763849763" />
+  <link rel="stylesheet" href="style.css?v=1763893170" />
   <script
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
   type="text/javascript"></script>
+  <!-- Cache Control -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="build-timestamp" content="1763893170">
+  
+  <!-- PWA and Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="manifest.json?v=1763893170">
   <meta name="theme-color" content="#2c3e50">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -48,6 +55,11 @@ Student: Sorin Bogde</p>
 <p class="date">Universitatea Bucureşti, Facultatea de Matematică<br />
 1999</p>
 </header>
+<div style="text-align: center; margin: 2em 0; padding: 1em; background-color: #f0f0f0; border-radius: 8px;">
+  <a href="thesis.pdf" download style="display: inline-block; padding: 0.75em 1.5em; background-color: #2c3e50; color: white; text-decoration: none; border-radius: 4px; font-weight: bold; transition: background-color 0.3s;">
+    📥 Descarcă PDF (Download PDF)
+  </a>
+</div>
 <nav id="TOC" role="doc-toc">
 <ul>
 <li><a href="#generalităţi" id="toc-generalităţi">Generalităţi</a>
@@ -3176,11 +3188,146 @@ L.\]</span> Avem <span class="math display">\[P_n \cap S
   = L \cap \left( \bigoplus_{i=1}^n S_i \right)
   = V \cap \left( \bigoplus_{i=1}^n S_i \right)
   = \bigoplus_{i=1}^n V_i,\]</span> şi deci <span
-class="math inline">\(P_n \cap S\)</span> este.... ◻</p>
+class="math inline">\(P_n \cap S\)</span> este submodul finit generat al
+lui <span class="math inline">\(S\)</span>.</p>
+<p>Rezultă că <span class="math inline">\(P_n \cap S\)</span> este
+sumand direct al lui <span class="math inline">\(X\)</span>. Dar <span
+class="math inline">\(S \trianglelefteq X_R\)</span> şi deci <span
+class="math display">\[P_n := \left(\bigoplus_{i=1}^n D_i\right) \cap L
+\leq S
+\quad \text{pentru orice } n \geq 1,\]</span> ceea ce arată că <span
+class="math inline">\(D \cap L \leq S\)</span>.</p>
+<p>Atunci, folosind legea distributivităţii modulare, avem <span
+class="math display">\[\frac{D}{S} \cap \frac{L+S}{S}
+   = \frac{D \cap (L+S)}{S}
+   = \frac{S + D \cap L}{S}
+   = 0.\]</span> Cum <span class="math inline">\(\dfrac{D}{S}
+\trianglelefteq\dfrac{E+S}{S}\)</span>, rezultă că <span
+class="math inline">\(L+S = S\)</span>, adică <span
+class="math inline">\(L \leq S\)</span>. Obţinem că <span
+class="math inline">\(L\)</span> este semisimplu şi, cum <span
+class="math inline">\(V \trianglelefteq L\)</span>, rezultă <span
+class="math inline">\(V = L\)</span>, contradicţie. Deci <span
+class="math inline">\(X/S\)</span> nu este CS-modul. ◻</p>
+</div>
+<div id="thm:Osofsky-Smith" class="theorem">
+<p><strong>Teoremă 6.6</strong> (Teorema Osofsky–Smith). <em>Fie <span
+class="math inline">\(R\)</span> un inel şi <span
+class="math inline">\(M\)</span> un <span
+class="math inline">\(R\)</span>-modul ciclic astfel încât <span
+class="math inline">\(mR\)</span> este complet CS pentru orice <span
+class="math inline">\(m \in M\)</span>. Atunci <span
+class="math inline">\(M\)</span> este o sumă directă finită de module
+coireductibile.</em></p>
+</div>
+<div class="proof">
+<p><em>Demonstratie.</em> Orice CS-modul indecompozabil este
+coireductibil şi deci este suficient să arătăm că <span
+class="math inline">\(M\)</span> este o sumă directă finită de module
+indecompozabile.</p>
+<p>Presupunem că <span class="math inline">\(M\)</span> nu admite o
+astfel de scriere. Atunci există <span class="math display">\[M = A_1
+\oplus B_1,
+\quad
+0 \neq A_1, B_1 \leq M,\]</span> unde <span
+class="math inline">\(B_1\)</span> nu este o sumă directă de module
+indecompozabile. Rezultă că putem scrie <span class="math display">\[B_1
+= A_2 \oplus B_2,
+\quad
+0 \neq A_2, B_2 \leq B_1,\]</span> unde <span
+class="math inline">\(B_2\)</span> nu este sumă directă de module
+indecompozabile.</p>
+<p>Repetând procedeul, obţinem <span class="math display">\[0 \neq A_i,
+B_i \leq M \quad (i \geq 1)\]</span> cu <span class="math display">\[M =
+A_1 \oplus \cdots \oplus A_n \oplus B_n
+\quad (n \geq 1)\]</span> şi <span class="math display">\[A_{n+1} \oplus
+A_{n+2} \oplus \cdots \leq B_n
+\quad (n \geq 1).\]</span></p>
+<p>Cum fiecare <span class="math inline">\(A_i\)</span> este ciclic,
+alegem pentru fiecare <span class="math inline">\(i \geq 1\)</span> un
+submodul maximal <span class="math inline">\(C_i \leq A_i\)</span>.
+Notăm <span class="math display">\[C := \bigoplus_{i \geq 1} C_i,
+\qquad
+P := M/C,
+\qquad
+S := \bigoplus_{i \geq 1} \frac{A_i}{C_i}.\]</span> Atunci <span
+class="math inline">\(S\)</span> este un submodul semisimplu, numărabil
+generat, al lui <span class="math inline">\(P\)</span>.</p>
+<p>Pentru orice <span class="math inline">\(n \geq 1\)</span>, aplicând
+legea distributivităţii modulare, avem <span class="math display">\[(A_1
+\oplus \cdots \oplus A_n \oplus C)
+  \cap (B_n + C)
+= C + (A_1 \oplus \cdots \oplus A_n) \cap B_n
+= C + \bigoplus_{k \geq n+1} C_k
+= C.\]</span> Prin urmare <span class="math display">\[P = \frac{M}{C}
+  = \frac{A_1 \oplus \cdots \oplus A_n \oplus C}{C}
+    \oplus \frac{B_n + C}{C}
+  \quad \text{pentru orice } n \geq 1.\]</span></p>
+<p>Dacă <span class="math inline">\(T \leq S\)</span> este un submodul
+finit generat, există un <span class="math inline">\(n \geq 1\)</span>
+astfel încât <span class="math display">\[T = \frac{A_1 \oplus \cdots
+\oplus A_n + C}{C},\]</span> de unde rezultă că orice submodul finit
+generat al lui <span class="math inline">\(S\)</span> este sumand direct
+al lui <span class="math inline">\(P\)</span>.</p>
+<p>Fie acum <span class="math inline">\(X\)</span> un submodul al lui
+<span class="math inline">\(P\)</span> astfel încât <span
+class="math inline">\(S \trianglelefteq X \leq P\)</span>, <span
+class="math inline">\(X\)</span> este CS-modul şi orice submodul finit
+generat al lui <span class="math inline">\(S\)</span> este sumand direct
+în <span class="math inline">\(X\)</span>. Dacă <span
+class="math inline">\(\operatorname{soc}(X)\)</span> este soclul lui
+<span class="math inline">\(X\)</span>, atunci <span
+class="math inline">\(S \trianglelefteq\operatorname{soc}(X)\)</span>
+şi, cum <span class="math inline">\(S \trianglelefteq X\)</span>,
+obţinem <span class="math inline">\(S =
+\operatorname{soc}(X)\)</span>.</p>
+<p>Rezultă că sunt satisfăcute ipotezele lemei precedente şi deci <span
+class="math inline">\(X/S\)</span> nu este CS-modul, contradicţie. ◻</p>
+</div>
+<div class="corollary">
+<p><strong>Corolar 6.7</strong>. <em>Fie <span
+class="math inline">\(R\)</span> un inel astfel încât orice <span
+class="math inline">\(R\)</span>-modul ciclic este CS-modul. Atunci
+orice <span class="math inline">\(R\)</span>-modul ciclic este o sumă
+directă finită de module coireductibile.</em></p>
+</div>
+<div class="proof">
+<p><em>Demonstratie.</em> Fie <span class="math inline">\(M_R\)</span>
+un modul ciclic, <span class="math inline">\(m \in M\)</span> şi <span
+class="math inline">\(N \leq mR\)</span>. Atunci factorul <span
+class="math inline">\(mR/N\)</span> este un modul ciclic şi, prin
+ipoteză, un CS-modul. Aplicând Teorema Osofsky–Smith obţinem că <span
+class="math inline">\(mR\)</span> (şi deci <span
+class="math inline">\(M\)</span>) este o sumă directă finită de module
+coireductibile. ◻</p>
+</div>
+<div class="corollary">
+<p><strong>Corolar 6.8</strong> (Corolar 5.8). <em>Dacă <span
+class="math inline">\(N\)</span> este un <span
+class="math inline">\(R\)</span>-modul astfel încât orice modul factor
+al oricărui submodul ciclic al lui <span
+class="math inline">\(N\)</span> este injectiv, atunci <span
+class="math inline">\(N\)</span> este semisimplu.</em></p>
+</div>
+<div class="proof">
+<p><em>Demonstratie.</em> Fie <span class="math inline">\(0 \neq x \in
+N\)</span> şi <span class="math inline">\(C = xR \leq N\)</span>. Prin
+ipoteză, orice modul factor al unui submodul ciclic al lui <span
+class="math inline">\(C\)</span> este injectiv, deci orice submodul
+ciclic al lui <span class="math inline">\(C\)</span> este complet CS.
+Din Teorema Osofsky–Smith rezultă că <span class="math display">\[C = xR
+= \bigoplus_{i=1}^n U_i\]</span> pentru anumite submodule coireductibile
+<span class="math inline">\(U_i\)</span>.</p>
+<p>Cum <span class="math display">\[U_i \cong C \big/ \bigoplus_{j \neq
+i} U_j,\]</span> rezultă că fiecare <span
+class="math inline">\(U_i\)</span> este injectiv şi, prin urmare, <span
+class="math inline">\(U_i\)</span> este indecompozabil pentru tot <span
+class="math inline">\(i = 1,\dots,n\)</span> (vezi
+propoziţia 3.1). ◻</p>
 </div>
   <script>
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/sw.js").then(registration => {
+      navigator.serviceWorker.register("/sw.js?v=1763893170").then(registration => {
         console.log("Service Worker registered:", registration);
       }).catch(error => {
         console.log("Service Worker registration failed:", error);
