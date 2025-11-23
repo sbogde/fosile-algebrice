@@ -89,20 +89,18 @@ $PANDOC_PATH "$LATEX_SOURCE" \
   --lua-filter=tikzcd-filter.lua \
   -o docs/index.html
 
-# Add favicon and PWA meta tags to HTML
-echo "Adding favicon and PWA support..."
-sed -i.bak 's|</head>|  <link rel="icon" type="image/svg+xml" href="favicon.svg">\n  <link rel="manifest" href="manifest.json">\n  <meta name="theme-color" content="#2c3e50">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <meta name="apple-mobile-web-app-capable" content="yes">\n  <meta name="apple-mobile-web-app-status-bar-style" content="default">\n  <meta name="apple-mobile-web-app-title" content="Fosile Algebrice">\n  <link rel="apple-touch-icon" href="icon-192.png">\n</head>|' docs/index.html
-rm docs/index.html.bak
+# Add favicon and PWA meta tags to HTML with cache busting
+echo "Adding favicon and PWA support with cache busting..."
+BUILD_TIMESTAMP=$(date +%s)
+
+sed -i.bak "s|</head>|  <!-- Cache Control -->\n  <meta http-equiv=\"Cache-Control\" content=\"no-cache, no-store, must-revalidate\">\n  <meta http-equiv=\"Pragma\" content=\"no-cache\">\n  <meta http-equiv=\"Expires\" content=\"0\">\n  <meta name=\"build-timestamp\" content=\"${BUILD_TIMESTAMP}\">\n  \n  <!-- PWA and Favicon -->\n  <link rel=\"icon\" type=\"image/svg+xml\" href=\"favicon.svg\">\n  <link rel=\"manifest\" href=\"manifest.json?v=${BUILD_TIMESTAMP}\">\n  <meta name=\"theme-color\" content=\"#2c3e50\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n  <meta name=\"apple-mobile-web-app-status-bar-style\" content=\"default\">\n  <meta name=\"apple-mobile-web-app-title\" content=\"Fosile Algebrice\">\n  <link rel=\"apple-touch-icon\" href=\"icon-192.png\">\n</head>|" docs/index.html
+
+# Version the CSS file reference
+sed -i.bak "s|href=\"style.css\"|href=\"style.css?v=${BUILD_TIMESTAMP}\"|g" docs/index.html
 
 # Add service worker registration script before closing body tag
-sed -i.bak 's|</body>|  <script>\n    if ("serviceWorker" in navigator) {\n      navigator.serviceWorker.register("/sw.js").then(registration => {\n        console.log("Service Worker registered:", registration);\n      }).catch(error => {\n        console.log("Service Worker registration failed:", error);\n      });\n    }\n  </script>\n</body>|' docs/index.html
-rm docs/index.html.bak
+sed -i.bak "s|</body>|  <script>\n    if (\"serviceWorker\" in navigator) {\n      navigator.serviceWorker.register(\"/sw.js?v=${BUILD_TIMESTAMP}\").then(registration => {\n        console.log(\"Service Worker registered:\", registration);\n      }).catch(error => {\n        console.log(\"Service Worker registration failed:\", error);\n      });\n    }\n  </script>\n</body>|" docs/index.html
 
-# Add cache busting with build timestamp
-echo "Adding cache busting..."
-BUILD_TIMESTAMP=$(date +%s)
-sed -i.bak "s|href=\"style.css\"|href=\"style.css?v=${BUILD_TIMESTAMP}\"|g" docs/index.html
-sed -i.bak "s|src=\"/sw.js\"|src=\"/sw.js?v=${BUILD_TIMESTAMP}\"|g" docs/index.html
 rm docs/index.html.bak
 
 echo "✅ HTML generated with PWA support: docs/index.html"
