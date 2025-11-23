@@ -103,6 +103,11 @@ sed -i.bak "s|</body>|  <script>\n    if (\"serviceWorker\" in navigator) {\n   
 
 rm docs/index.html.bak
 
+# Add PDF download link after header
+echo "Adding PDF download link..."
+sed -i.bak 's|</header>|</header>\n<div style="text-align: center; margin: 2em 0; padding: 1em; background-color: #f0f0f0; border-radius: 8px;">\n  <a href="thesis.pdf" download style="display: inline-block; padding: 0.75em 1.5em; background-color: #2c3e50; color: white; text-decoration: none; border-radius: 4px; font-weight: bold; transition: background-color 0.3s;">\n    📥 Descarcă PDF (Download PDF)\n  </a>\n</div>|' docs/index.html
+rm docs/index.html.bak
+
 echo "✅ HTML generated with PWA support: docs/index.html"
 echo ""
 
